@@ -12,7 +12,7 @@ import { blogImages } from "./media/images";
  * 5. بدون featured/sidebar → يظهر في شبكة «آخر المقالات».
  * 6. أضف المحتوى في `posts-content.ts` تحت نفس الـ slug (## عنوان فرعي ، ### عنوان فرعي صغير).
  * 7. الصورة: أضفها في `src/lib/media/blog-images.ts` وضع الملف في `public/images/`
- * 8. احفظ الملف — Sitemap وصفحات المقالات تُحدَّث تلقائياً عند البناء.
+ * 8. احفظ الملف — عند البناء يُحدَّث sitemap.xml تلقائياً (scripts/generate-static-seo.mjs).
  */
 export type BlogPost = {
   slug: string;

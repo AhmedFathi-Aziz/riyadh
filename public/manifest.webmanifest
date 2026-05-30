@@ -1,0 +1,16 @@
+{
+  "name": "عزل الرياض للمحترفين",
+  "short_name": "عزل الرياض",
+  "description": "الشركة الرائدة في كشف تسربات المياه وعزل الأسطح والخزانات بالرياض. دقة، سرعة، وضمان معتمد يصل إلى 10 سنوات.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f9ff",
+  "theme_color": "#001e40",
+  "lang": "ar",
+  "dir": "rtl",
+  "orientation": "portrait-primary",
+  "categories": [
+    "business",
+    "utilities"
+  ]
+}

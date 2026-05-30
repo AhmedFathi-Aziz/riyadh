@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://manzilcare.com
+Sitemap: https://manzilcare.com/sitemap.xml

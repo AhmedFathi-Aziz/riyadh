@@ -5,8 +5,7 @@
   "scripts": {
     "predev": "node scripts/generate-static-seo.mjs",
     "dev": "next dev",
-    "prebuild": "node scripts/generate-static-seo.mjs",
-    "build": "next build",
+    "build": "node scripts/verify-no-metadata-routes.mjs && node scripts/generate-static-seo.mjs && next build",
     "preview:static": "npx serve out",
     "start": "next start",
     "lint": "eslint",

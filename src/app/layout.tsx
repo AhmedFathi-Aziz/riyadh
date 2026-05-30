@@ -25,6 +25,7 @@ export default function RootLayout({
       className={`${fontVariables} scroll-smooth`}
     >
       <head>
+        <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

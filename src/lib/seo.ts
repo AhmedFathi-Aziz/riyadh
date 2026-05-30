@@ -98,7 +98,6 @@ export function getBaseMetadata(): Metadata {
       description,
       images: [ogImage],
     },
-    manifest: "/manifest.webmanifest",
     robots: {
       index: true,
       follow: true,

@@ -11,7 +11,7 @@
 | الحقل | القيمة |
 |--------|--------|
 | Framework preset | **None** |
-| Build command | `npm run build` |
+| Build command | `npm run build` (لا تستخدم `npx next build` وحده) |
 | Build output directory | `out` |
 | Root directory | `/` (جذر المشروع) |
 
@@ -23,6 +23,11 @@
 | `NEXT_PUBLIC_SITE_URL` | `https://manzilcare.com` (أو نطاقك على Pages مؤقتاً) |
 
 5. **Save and Deploy**. بعد النشر اربط النطاق من **Custom domains**.
+
+إذا فشل البناء بخطأ `manifest.webmanifest` أو `robots.txt`:
+- تأكد أن آخر commit على GitHub **حذف** `src/app/manifest.ts` و `robots.ts` و `sitemap.ts`.
+- من Cloudflare: **Deployments** → **Retry deployment** → فعّل **Clear build cache**.
+- تأكد أن **Build command** = `npm run build` وليس `npx next build` فقط.
 
 ## 2) من الطرفية (Wrangler)
 

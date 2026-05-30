@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "preview:static": "npx serve out",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "images": "powershell -ExecutionPolicy Bypass -File scripts/download-original-images.ps1"
   },
   "dependencies": {
     "next": "16.2.6",

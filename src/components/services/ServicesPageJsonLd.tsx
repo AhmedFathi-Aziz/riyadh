@@ -11,7 +11,7 @@ export function ServicesPageJsonLd() {
   const itemList = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "خدمات عزل الرياض للمحترفين",
+    name: "خدمات ManzilCare",
     description:
       "خدمات كشف تسربات المياه وعزل الأسطح والخزانات والحمامات وترميم المنازل في الرياض",
     url: `${url}/services`,

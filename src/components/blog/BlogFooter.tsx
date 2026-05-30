@@ -9,19 +9,16 @@ export function BlogFooter() {
     <footer className="mt-20 w-full bg-primary px-gutter py-margin-desktop rtl">
       <div className="mx-auto mb-12 grid max-w-max-width grid-cols-1 gap-12 md:grid-cols-4">
         <div className="col-span-1 md:col-span-2">
-          <div className="mb-6 flex items-center gap-3">
+          <Link href="/" className="mb-6 inline-block">
             <OptimizedImage
               src={siteConfig.logo.src}
-              alt=""
-              width={40}
-              height={40}
-              className="h-10 w-10 brightness-0 invert"
-              aria-hidden
+              alt={siteConfig.logo.alt}
+              width={siteConfig.logo.width}
+              height={siteConfig.logo.height}
+              sizes="200px"
+              className="h-28 w-auto max-w-[200px] rounded-lg bg-white object-contain p-2 shadow-soft"
             />
-            <span className="font-display text-headline-md font-extrabold text-on-primary">
-              {siteConfig.name}
-            </span>
-          </div>
+          </Link>
           <p className="max-w-sm text-on-primary/70">
             الشركة الرائدة في مجال العزل المائي والحراري والكشف عن تسربات
             المياه في مدينة الرياض باستخدام أحدث التقنيات العالمية.

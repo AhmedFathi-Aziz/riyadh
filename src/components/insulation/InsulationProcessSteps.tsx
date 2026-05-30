@@ -4,6 +4,7 @@ import { insulationPage } from "@/lib/insulation-page";
 export function InsulationProcessSteps() {
   return (
     <section
+      id="work-steps"
       aria-labelledby="process-heading"
       className="relative overflow-hidden bg-primary-container/10 py-margin-desktop"
     >
@@ -13,7 +14,7 @@ export function InsulationProcessSteps() {
             id="process-heading"
             className="text-display-lg font-bold text-primary"
           >
-            خطوات عملنا الاحترافية
+            خطوات العمل
           </h2>
           <p className="mt-2 text-on-surface-variant">
             منهجية علمية تضمن نتائج تدوم لعقود.

@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/site";
 const quickLinks = [
   { href: "/", label: "الرئيسية" },
   { href: "/services", label: "خدماتنا" },
+  { href: "/areas", label: "أحياء الرياض" },
   { href: "/insulation", label: "العزل" },
   { href: "/#testimonials", label: "آراء العملاء" },
   { href: "/contact", label: "اتصل بنا" },
@@ -23,19 +24,16 @@ export function Footer() {
       <div className="mx-auto w-full max-w-max-width">
         <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-4">
           <div className="col-span-1 md:col-span-2">
-            <div className="mb-6 flex items-center gap-4">
+            <Link href="/" className="mb-6 inline-block">
               <OptimizedImage
                 src={siteConfig.logo.src}
-                alt=""
-                width={64}
-                height={64}
-                className="h-16 w-16 brightness-0 invert"
-                aria-hidden
+                alt={siteConfig.logo.alt}
+                width={siteConfig.logo.width}
+                height={siteConfig.logo.height}
+                sizes="200px"
+                className="h-32 w-auto max-w-[220px] rounded-xl bg-white object-contain p-2 shadow-soft"
               />
-              <span className="font-display text-headline-md font-extrabold">
-                {siteConfig.name}
-              </span>
-            </div>
+            </Link>
             <p className="mb-6 max-w-md opacity-80">
               نحن الشركة الرائدة في حلول كشف التسربات والعزل في منطقة الرياض.
               نجمع بين الخبرة المحلية والتقنيات العالمية لنضمن سلامة عقارك من

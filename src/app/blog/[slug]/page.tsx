@@ -4,11 +4,16 @@ import { OptimizedImage } from "@/components/OptimizedImage";
 import { blogImages } from "@/lib/media/images";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArticleJsonLd } from "@/components/blog/ArticleJsonLd";
 import { BlogFooter } from "@/components/blog/BlogFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { BreadcrumbNav } from "@/components/seo/BreadcrumbNav";
+import { PageStructuredData } from "@/components/seo/PageStructuredData";
+import { StandardPageSections } from "@/components/seo/StandardPageSections";
 import { blogPosts, getPostBySlug } from "@/lib/blog";
+import { breadcrumbs } from "@/lib/seo/breadcrumbs";
+import { getFaqsForPage } from "@/lib/seo/page-faqs";
 import { createPageMetadata } from "@/lib/seo";
+import { buildArticleSchema } from "@/lib/seo/structured-data";
 import { siteConfig } from "@/lib/site";
 
 type PageProps = {
@@ -28,9 +33,10 @@ export async function generateMetadata({
 
   return createPageMetadata({
     title: post.title,
+    titleSuffix: "مدونة ManzilCare",
     description: post.excerpt,
     path: `/blog/${post.slug}`,
-    keywords: [post.category, "عزل الرياض", "كشف تسربات"],
+    keywords: [post.category, "ManzilCare", "كشف تسربات"],
     image: post.image,
   });
 }
@@ -40,23 +46,29 @@ export default async function BlogArticlePage({ params }: PageProps) {
   const post = getPostBySlug(slug);
   if (!post) notFound();
   const cover = blogImages[slug];
+  const crumb = breadcrumbs.post(post.title, post.slug);
+  const faqs = getFaqsForPage({ max: 5 });
 
   return (
     <>
-      <ArticleJsonLd post={post} />
+      <PageStructuredData
+        breadcrumbs={crumb}
+        faqs={faqs}
+        extra={[
+          buildArticleSchema({
+            title: post.title,
+            excerpt: post.excerpt,
+            slug: post.slug,
+            publishedAt: post.publishedAt,
+            category: post.category,
+            readTime: post.readTime,
+            imageSrc: post.image.src,
+          }),
+        ]}
+      />
       <SiteHeader activePage="blog" />
       <article className="mx-auto max-w-max-width px-6 pt-32 pb-16">
-        <nav aria-label="مسار التنقل" className="mb-8 text-label-sm text-on-surface-variant">
-          <Link href="/" className="hover:text-primary">
-            الرئيسية
-          </Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-primary">
-            المدونة
-          </Link>
-          <span className="mx-2">/</span>
-          <span className="text-primary">{post.category}</span>
-        </nav>
+        <BreadcrumbNav items={crumb} />
 
         <div className="mb-6 flex flex-wrap items-center gap-3">
           <span className="rounded-full bg-secondary-container px-3 py-1 text-label-sm text-on-secondary-container">
@@ -96,10 +108,9 @@ export default async function BlogArticlePage({ params }: PageProps) {
 
         <BlogMarkdown content={post.content} />
 
+        <StandardPageSections faqs={faqs} showServices={false} />
+
         <div className="mt-12 rounded-2xl bg-surface-container-low p-8 text-center">
-          <h2 className="mb-4 text-headline-md font-semibold text-primary">
-            تحتاج مساعدة في {post.category}؟
-          </h2>
           <p className="mb-6 text-on-surface-variant">
             فريق {siteConfig.name} جاهز لمعاينة مجانية في الرياض.
           </p>

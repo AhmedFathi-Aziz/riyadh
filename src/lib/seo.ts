@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
+import { DEFAULT_META_DESCRIPTION, DEFAULT_TITLE_SUFFIX } from "./seo/constants";
+import { formatPageTitle } from "./seo/structured-data";
 import { siteConfig } from "./site";
 
 type PageMetadataOptions = {
+  /** الجزء الرئيسي — يطابق H1 */
   title: string;
-  description: string;
+  /** بعد | — الافتراضي: فحص دقيق بدون تكسير */
+  titleSuffix?: string;
+  description?: string;
   path: string;
   keywords?: string[];
   image?: { src: string; alt: string };
@@ -11,20 +16,21 @@ type PageMetadataOptions = {
 
 export function createPageMetadata({
   title,
-  description,
+  titleSuffix = DEFAULT_TITLE_SUFFIX,
+  description = DEFAULT_META_DESCRIPTION,
   path,
   keywords = [],
   image,
 }: PageMetadataOptions): Metadata {
   const { name, url, locale, keywords: siteKeywords, images } = siteConfig;
   const canonicalPath = path.startsWith("/") ? path : `/${path}`;
-  const fullTitle = `${title} | ${name}`;
+  const absoluteTitle = formatPageTitle(title, titleSuffix);
   const ogImage = image?.src ?? images.hero.src;
   const ogAlt = image?.alt ?? images.hero.alt;
   const allKeywords = [...new Set([...siteKeywords, ...keywords])];
 
   return {
-    title,
+    title: { absolute: absoluteTitle },
     description,
     keywords: allKeywords,
     alternates: {
@@ -36,14 +42,14 @@ export function createPageMetadata({
       locale,
       url: canonicalPath,
       siteName: name,
-      title: fullTitle,
+      title: absoluteTitle,
       description,
       countryName: "Saudi Arabia",
       images: [{ url: ogImage, width: 1200, height: 630, alt: ogAlt }],
     },
     twitter: {
       card: "summary_large_image",
-      title: fullTitle,
+      title: absoluteTitle,
       description,
       images: [ogImage],
     },
@@ -51,19 +57,22 @@ export function createPageMetadata({
 }
 
 export function getBaseMetadata(): Metadata {
-  const { name, description, url, keywords, locale, language, images, tagline } =
+  const { name, description, url, keywords, locale, language, images } =
     siteConfig;
 
-  const title = `${name} | ${tagline}`;
+  const defaultTitle = formatPageTitle(
+    "كشف تسربات المياه بالرياض",
+    DEFAULT_TITLE_SUFFIX,
+  );
   const ogImage = images.hero.src;
 
   return {
     metadataBase: new URL(url),
     title: {
-      default: title,
-      template: `%s | ${name}`,
+      default: defaultTitle,
+      template: "%s",
     },
-    description,
+    description: description || DEFAULT_META_DESCRIPTION,
     keywords: [...keywords],
     authors: [{ name }],
     creator: name,
@@ -80,8 +89,8 @@ export function getBaseMetadata(): Metadata {
       locale,
       url: "/",
       siteName: name,
-      title,
-      description,
+      title: defaultTitle,
+      description: description || DEFAULT_META_DESCRIPTION,
       countryName: "Saudi Arabia",
       images: [
         {
@@ -94,8 +103,8 @@ export function getBaseMetadata(): Metadata {
     },
     twitter: {
       card: "summary_large_image",
-      title,
-      description,
+      title: defaultTitle,
+      description: description || DEFAULT_META_DESCRIPTION,
       images: [ogImage],
     },
     robots: {

@@ -1,21 +1,17 @@
-import { Almarai, Tajawal } from "next/font/google";
+import { IBM_Plex_Sans_Arabic } from "next/font/google";
 
-/** Body & UI — وضوح عالي في الفقرات والنماذج */
-export const bodyFont = Tajawal({
-  subsets: ["arabic", "latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-tajawal",
-  display: "swap",
-  preload: true,
-});
-
-/** العناوين — مألوف في السعودية، أوضح للهيرو والعناوين */
-export const displayFont = Almarai({
+/**
+ * IBM Plex Sans Arabic — وضوح عالي للنصوص والعناوين في الواجهات العربية.
+ */
+export const arabicFont = IBM_Plex_Sans_Arabic({
   subsets: ["arabic"],
-  weight: ["700", "800"],
-  variable: "--font-almarai",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-plex-arabic",
   display: "swap",
   preload: true,
 });
 
-export const fontVariables = `${bodyFont.variable} ${displayFont.variable}`;
+export const bodyFont = arabicFont;
+export const displayFont = arabicFont;
+
+export const fontVariables = arabicFont.variable;

@@ -36,7 +36,7 @@ export function Features() {
             id="features-heading"
             className="mb-4 text-headline-md font-semibold text-primary"
           >
-            لماذا يختارنا نخبة عملاء الرياض؟
+            المميزات
           </h2>
           <div className="mx-auto h-1 w-24 rounded-full bg-secondary-container" />
         </div>

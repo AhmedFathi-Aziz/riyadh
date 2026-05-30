@@ -9,7 +9,8 @@
     "preview:static": "npx serve out",
     "start": "next start",
     "lint": "eslint",
-    "images": "powershell -ExecutionPolicy Bypass -File scripts/download-original-images.ps1"
+    "images": "powershell -ExecutionPolicy Bypass -File scripts/download-original-images.ps1",
+    "areas:data": "node scripts/build-neighborhoods-registry.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

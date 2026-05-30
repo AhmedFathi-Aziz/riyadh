@@ -5,10 +5,11 @@ import { servicesCatalog } from "@/lib/services-catalog";
 import { siteConfig } from "@/lib/site";
 
 const serviceDetailLinks: Record<string, string> = {
-  "tank-insulation": "/insulation#water-insulation",
-  "roof-insulation": "/insulation#thermal-insulation",
-  "bathroom-insulation": "/insulation#water-insulation",
-  "home-restoration": "/services#home-restoration",
+  "leak-detection": "/services/leak-detection-water-riyadh",
+  "tank-insulation": "/services/tank-insulation-riyadh",
+  "roof-insulation": "/services/roof-insulation-riyadh",
+  "bathroom-insulation": "/services/bathroom-insulation-riyadh",
+  "home-restoration": "/services/leak-repair-water-riyadh",
 };
 
 export function ServicesBentoGrid() {
@@ -50,13 +51,21 @@ export function ServicesBentoGrid() {
               <p className="mb-6 max-w-xl text-body-md opacity-90">
                 {featured.description}
               </p>
-              <a
-                href={`tel:${siteConfig.phoneE164}`}
-                className="inline-flex w-fit items-center gap-2 rounded-lg bg-secondary-container px-6 py-2 text-label-sm text-on-secondary-container transition-colors hover:bg-secondary-fixed"
-              >
-                <Icon name="call" size="sm" />
-                فحص مجاني الآن
-              </a>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/services/leak-detection-water-riyadh"
+                  className="inline-flex w-fit items-center gap-2 rounded-lg bg-secondary-container px-6 py-2 text-label-sm text-on-secondary-container transition-colors hover:bg-secondary-fixed"
+                >
+                  الدليل الكامل
+                </Link>
+                <a
+                  href={`tel:${siteConfig.phoneE164}`}
+                  className="inline-flex w-fit items-center gap-2 rounded-lg border border-on-primary/40 px-6 py-2 text-label-sm transition-colors hover:bg-on-primary/10"
+                >
+                  <Icon name="call" size="sm" />
+                  فحص مجاني
+                </a>
+              </div>
             </div>
           </article>
         </div>

@@ -5,7 +5,7 @@ import { serviceOptions } from "@/lib/contact-page";
 import { siteConfig } from "@/lib/site";
 
 const inputClass =
-  "w-full rounded-xl border border-outline bg-surface-container-lowest p-3 text-on-surface outline-none transition-all focus:border-secondary focus:ring-2 focus:ring-secondary/30";
+  "w-full rounded-xl border border-outline-variant/40 bg-white p-2.5 text-body-md text-on-surface outline-none transition-all focus:border-secondary focus:ring-2 focus:ring-secondary/25";
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -33,11 +33,11 @@ export function ContactForm() {
   }
 
   return (
-    <div className="rounded-3xl border border-outline-variant/30 bg-white p-8 shadow-lg">
-      <h2 className="mb-2 text-headline-md font-semibold text-primary">
+    <div className="shadow-soft-md rounded-2xl bg-white p-6">
+      <h2 className="mb-2 text-body-lg font-bold text-primary">
         أرسل طلبك الآن
       </h2>
-      <p className="mb-6 text-on-surface-variant">
+      <p className="mb-5 text-label-sm text-on-surface-muted">
         املأ النموذج وسنتواصل معك خلال دقائق عبر واتساب أو الهاتف.
       </p>
 
@@ -48,7 +48,7 @@ export function ContactForm() {
       ) : (
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="contact-name" className="mb-1 block text-sm font-bold">
+            <label htmlFor="contact-name" className="mb-1 block text-label-sm font-semibold text-primary">
               الاسم الكامل <span className="text-error">*</span>
             </label>
             <input
@@ -62,7 +62,7 @@ export function ContactForm() {
             />
           </div>
           <div>
-            <label htmlFor="contact-phone" className="mb-1 block text-sm font-bold">
+            <label htmlFor="contact-phone" className="mb-1 block text-label-sm font-semibold text-primary">
               رقم الجوال <span className="text-error">*</span>
             </label>
             <input
@@ -77,7 +77,7 @@ export function ContactForm() {
             />
           </div>
           <div>
-            <label htmlFor="contact-district" className="mb-1 block text-sm font-bold">
+            <label htmlFor="contact-district" className="mb-1 block text-label-sm font-semibold text-primary">
               الحي / المنطقة
             </label>
             <input
@@ -89,7 +89,7 @@ export function ContactForm() {
             />
           </div>
           <div>
-            <label htmlFor="contact-service" className="mb-1 block text-sm font-bold">
+            <label htmlFor="contact-service" className="mb-1 block text-label-sm font-semibold text-primary">
               نوع الخدمة
             </label>
             <select id="contact-service" name="service" className={inputClass} defaultValue="">
@@ -104,7 +104,7 @@ export function ContactForm() {
             </select>
           </div>
           <div>
-            <label htmlFor="contact-message" className="mb-1 block text-sm font-bold">
+            <label htmlFor="contact-message" className="mb-1 block text-label-sm font-semibold text-primary">
               تفاصيل إضافية
             </label>
             <textarea
@@ -117,11 +117,11 @@ export function ContactForm() {
           </div>
           <button
             type="submit"
-            className="w-full rounded-xl bg-primary py-4 text-lg font-bold text-on-primary shadow-md transition-opacity hover:opacity-90"
+            className="w-full rounded-xl bg-primary py-3 text-body-md font-bold text-on-primary shadow-sm transition-opacity hover:opacity-90"
           >
             إرسال عبر واتساب
           </button>
-          <p className="text-center text-label-sm text-on-surface-variant">
+          <p className="text-center text-label-sm text-on-surface-muted">
             بالضغط على إرسال، ستُفتح محادثة واتساب مع فريقنا مباشرة.
           </p>
         </form>

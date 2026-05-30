@@ -12,9 +12,10 @@ export function SiteHeader({
   activePage = "home",
   variant = "default",
 }: SiteHeaderProps) {
-  const logoGap = variant === "services" ? "gap-3" : "gap-4";
   const logoClass =
-    variant === "glass" ? "h-12 w-auto object-contain" : "h-12 w-12 object-contain";
+    variant === "services"
+      ? "h-12 w-auto max-w-[9.5rem] object-contain sm:max-w-[11rem]"
+      : "h-12 w-auto max-w-[10rem] object-contain sm:h-14 sm:max-w-[12rem]";
   const navLinkActive =
     variant === "glass"
       ? "active-nav-border border-b-2 border-primary pb-1 text-label-sm font-bold text-primary"
@@ -26,19 +27,20 @@ export function SiteHeader({
 
   const inner = (
     <>
-      <Link href="/" className={`flex items-center ${logoGap}`}>
+      <Link
+        href="/"
+        className="flex shrink-0 items-center"
+        aria-label={`${siteConfig.name} — الرئيسية`}
+      >
         <OptimizedImage
           src={siteConfig.logo.src}
           alt={siteConfig.logo.alt}
           width={siteConfig.logo.width}
           height={siteConfig.logo.height}
-          sizes="48px"
+          sizes="(max-width: 768px) 152px, 192px"
           className={logoClass}
           priority
         />
-        <span className="font-display text-headline-md font-bold text-primary">
-          {siteConfig.name}
-        </span>
       </Link>
 
       <nav

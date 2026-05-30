@@ -1,0 +1,1432 @@
+[
+  {
+    "slug": "al-narjis",
+    "nameAr": "النرجس",
+    "region": "north",
+    "profile": "villa_luxury",
+    "era": "growth_2000s",
+    "landmark": "واجهة شمال الرياض",
+    "housingNote": "فلل مستقلة بأسطح مسطحة وخزانات علوية كبيرة",
+    "featured": true
+  },
+  {
+    "slug": "al-yasmin",
+    "nameAr": "الياسمين",
+    "region": "north",
+    "profile": "villa_luxury",
+    "era": "growth_2000s",
+    "landmark": "محور الشمال التجاري",
+    "housingNote": "فلل حديثة ومجمعات سكنية مغلقة",
+    "featured": true
+  },
+  {
+    "slug": "al-malqa",
+    "nameAr": "الملقا",
+    "region": "north",
+    "profile": "villa_luxury",
+    "era": "growth_2000s",
+    "landmark": "قرب بوليفارد الرياض",
+    "housingNote": "فلل فاخرة وعمائر سكنية منخفضة",
+    "featured": true
+  },
+  {
+    "slug": "hittin",
+    "nameAr": "حطين",
+    "region": "north",
+    "profile": "villa_luxury",
+    "era": "growth_2000s",
+    "landmark": "منطقة شمال غربية راقية",
+    "housingNote": "فلل واسعة مع مسابح وأسطح عازلة",
+    "featured": false
+  },
+  {
+    "slug": "al-sahafa",
+    "nameAr": "الصحافة",
+    "region": "north",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "قرب طريق الملك فهد",
+    "housingNote": "مزيج فلل وعمائر ومحلات تجارية",
+    "featured": true
+  },
+  {
+    "slug": "al-arid",
+    "nameAr": "العارض",
+    "region": "north",
+    "profile": "villa_standard",
+    "era": "new_2010s",
+    "landmark": "توسع سكني شمالي",
+    "housingNote": "فلل متوسطة وعمائر حديثة",
+    "featured": true
+  },
+  {
+    "slug": "al-nafil",
+    "nameAr": "النفل",
+    "region": "north",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "شمال الرياض",
+    "housingNote": "فلل وشقق في عمائر منخفضة",
+    "featured": false
+  },
+  {
+    "slug": "al-aqiq",
+    "nameAr": "العقيق",
+    "region": "north",
+    "profile": "villa_luxury",
+    "era": "growth_2000s",
+    "landmark": "شمال غرب الرياض",
+    "housingNote": "فلل راقية ومجمعات",
+    "featured": false
+  },
+  {
+    "slug": "al-rabie",
+    "nameAr": "الربيع",
+    "region": "north",
+    "profile": "compound_gated",
+    "era": "growth_2000s",
+    "landmark": "مجمعات سكنية",
+    "housingNote": "مجمعات مغلقة وفلل",
+    "featured": false
+  },
+  {
+    "slug": "al-nakheel",
+    "nameAr": "النخيل",
+    "region": "north",
+    "profile": "villa_standard",
+    "era": "established_1990s",
+    "landmark": "شمال الرياض",
+    "housingNote": "فلل قديمة ومتوسطة تحتاج صيانة دورية",
+    "featured": false
+  },
+  {
+    "slug": "al-wadi",
+    "nameAr": "الوادي",
+    "region": "north",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "شمال الرياض",
+    "housingNote": "فلل على طرازات متعددة",
+    "featured": false
+  },
+  {
+    "slug": "al-ghadir",
+    "nameAr": "الغدير",
+    "region": "north",
+    "profile": "villa_luxury",
+    "era": "growth_2000s",
+    "landmark": "شمال الرياض",
+    "housingNote": "فلل حديثة بمساحات خضراء",
+    "featured": false
+  },
+  {
+    "slug": "al-muhammadiyah",
+    "nameAr": "المحمدية",
+    "region": "north",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "شمال وسط",
+    "housingNote": "فلل وعمائر وخدمات تجارية",
+    "featured": false
+  },
+  {
+    "slug": "al-sulaimaniyah",
+    "nameAr": "السليمانية",
+    "region": "north",
+    "profile": "apartment_towers",
+    "era": "established_1990s",
+    "landmark": "شمال وسط الرياض",
+    "housingNote": "أبراج سكنية وعمائر قديمة",
+    "featured": false
+  },
+  {
+    "slug": "al-murooj",
+    "nameAr": "المروج",
+    "region": "north",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "شمال الرياض",
+    "housingNote": "فلل وعمائر سكنية",
+    "featured": false
+  },
+  {
+    "slug": "king-fahd-district",
+    "nameAr": "الملك فهد",
+    "region": "north",
+    "profile": "commercial_mix",
+    "era": "established_1990s",
+    "landmark": "محور تجاري شمالي",
+    "housingNote": "أبراج ومكاتب ومباني مختلطة",
+    "featured": false
+  },
+  {
+    "slug": "al-qirawan",
+    "nameAr": "القيروان",
+    "region": "north",
+    "profile": "villa_standard",
+    "era": "new_2010s",
+    "landmark": "شمال شرق",
+    "housingNote": "فلل جديدة وطرق واسعة",
+    "featured": false
+  },
+  {
+    "slug": "salahuddin",
+    "nameAr": "صلاح الدين",
+    "region": "north",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "شمال الرياض",
+    "housingNote": "عمائر سكنية ومحلات",
+    "featured": false
+  },
+  {
+    "slug": "al-mughrazat",
+    "nameAr": "المغرزات",
+    "region": "north",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "شمال",
+    "housingNote": "فلل متوسطة",
+    "featured": false
+  },
+  {
+    "slug": "al-mursalat",
+    "nameAr": "المرسلات",
+    "region": "north",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "شمال",
+    "housingNote": "عمائر وفلل",
+    "featured": false
+  },
+  {
+    "slug": "al-nuzha",
+    "nameAr": "النزهة",
+    "region": "north",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "شمال وسط",
+    "housingNote": "عمائر سكنية كثيفة",
+    "featured": false
+  },
+  {
+    "slug": "al-waha",
+    "nameAr": "الواحة",
+    "region": "north",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "شمال",
+    "housingNote": "فلل وحدائق",
+    "featured": false
+  },
+  {
+    "slug": "al-izdihar",
+    "nameAr": "الازدهار",
+    "region": "north",
+    "profile": "villa_luxury",
+    "era": "growth_2000s",
+    "landmark": "شمال",
+    "housingNote": "فلل حديثة",
+    "featured": false
+  },
+  {
+    "slug": "al-khuzama",
+    "nameAr": "الخزامى",
+    "region": "north",
+    "profile": "villa_luxury",
+    "era": "new_2010s",
+    "landmark": "شمال",
+    "housingNote": "فلل راقية حديثة",
+    "featured": false
+  },
+  {
+    "slug": "al-thumamah",
+    "nameAr": "الثمامة",
+    "region": "north",
+    "profile": "villa_luxury",
+    "era": "new_2010s",
+    "landmark": "مخططات شمالية",
+    "housingNote": "فلل فاخرة جديدة",
+    "featured": false
+  },
+  {
+    "slug": "king-abdullah",
+    "nameAr": "الملك عبدالله",
+    "region": "north",
+    "profile": "villa_luxury",
+    "era": "new_2010s",
+    "landmark": "مخطط ملكي",
+    "housingNote": "فلل ومجمعات حديثة",
+    "featured": false
+  },
+  {
+    "slug": "king-khalid",
+    "nameAr": "الملك خالد",
+    "region": "north",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "شمال",
+    "housingNote": "فلل وعمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-rafiah",
+    "nameAr": "الرفيعة",
+    "region": "north",
+    "profile": "villa_standard",
+    "era": "established_1990s",
+    "landmark": "شمال",
+    "housingNote": "فلل قديمة تحتاج عزل دوري",
+    "featured": false
+  },
+  {
+    "slug": "al-andalus",
+    "nameAr": "الأندلس",
+    "region": "north",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "شمال غرب",
+    "housingNote": "عمائر وفلل",
+    "featured": false
+  },
+  {
+    "slug": "al-zahra",
+    "nameAr": "الزهراء",
+    "region": "north",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "شمال",
+    "housingNote": "عمائر سكنية",
+    "featured": false
+  },
+  {
+    "slug": "al-mather",
+    "nameAr": "المعذر",
+    "region": "north",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "قرب المعذر",
+    "housingNote": "فلل وعمائر",
+    "featured": false
+  },
+  {
+    "slug": "umm-al-hamam-west",
+    "nameAr": "أم الحمام الغربي",
+    "region": "north",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "غرب شمال",
+    "housingNote": "عمائر وفلل",
+    "featured": false
+  },
+  {
+    "slug": "al-aqrabiyah",
+    "nameAr": "العقربية",
+    "region": "north",
+    "profile": "villa_standard",
+    "era": "established_1990s",
+    "landmark": "شمال",
+    "housingNote": "فلل وعمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-olaya",
+    "nameAr": "العليا",
+    "region": "central",
+    "profile": "commercial_mix",
+    "era": "established_1990s",
+    "landmark": "قلب الرياض التجاري",
+    "housingNote": "أبراج ومكاتب وشقق فندقية",
+    "featured": false
+  },
+  {
+    "slug": "al-faisaliyah",
+    "nameAr": "الفيصلية",
+    "region": "central",
+    "profile": "commercial_mix",
+    "era": "established_1990s",
+    "landmark": "برج الفيصلية",
+    "housingNote": "مكاتب وعمارات تجارية",
+    "featured": false
+  },
+  {
+    "slug": "al-mutamarat",
+    "nameAr": "المؤتمرات",
+    "region": "central",
+    "profile": "commercial_mix",
+    "era": "growth_2000s",
+    "landmark": "مركز المعارض",
+    "housingNote": "مباني خدمية وفنادق",
+    "featured": false
+  },
+  {
+    "slug": "al-safa",
+    "nameAr": "الصفا",
+    "region": "central",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "وسط الرياض",
+    "housingNote": "عمائر سكنية وتجارية",
+    "featured": false
+  },
+  {
+    "slug": "al-rahmaniyah",
+    "nameAr": "الرحمانية",
+    "region": "central",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "وسط",
+    "housingNote": "عمائر وفلل",
+    "featured": false
+  },
+  {
+    "slug": "al-wurud",
+    "nameAr": "الورود",
+    "region": "central",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "وسط الرياض",
+    "housingNote": "عمائر سكنية",
+    "featured": false
+  },
+  {
+    "slug": "al-murabba",
+    "nameAr": "المربع",
+    "region": "central",
+    "profile": "heritage_dense",
+    "era": "established_1990s",
+    "landmark": "تاريخي وسط البلد",
+    "housingNote": "مباني قديمة وأسوار تقليدية",
+    "featured": false
+  },
+  {
+    "slug": "al-foutah",
+    "nameAr": "الفوطة",
+    "region": "central",
+    "profile": "heritage_dense",
+    "era": "established_1990s",
+    "landmark": "وسط تاريخي",
+    "housingNote": "مباني قديمة وشقق",
+    "featured": false
+  },
+  {
+    "slug": "al-wizarat",
+    "nameAr": "الوزارات",
+    "region": "central",
+    "profile": "commercial_mix",
+    "era": "established_1990s",
+    "landmark": "مكاتب حكومية",
+    "housingNote": "مباني إدارية",
+    "featured": false
+  },
+  {
+    "slug": "al-malaz",
+    "nameAr": "الملز",
+    "region": "central",
+    "profile": "heritage_dense",
+    "era": "established_1990s",
+    "landmark": "جنوب وسط",
+    "housingNote": "عمائر قديمة وأسواق",
+    "featured": false
+  },
+  {
+    "slug": "skakah",
+    "nameAr": "سكاكا",
+    "region": "central",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "وسط",
+    "housingNote": "عمائر سكنية",
+    "featured": false
+  },
+  {
+    "slug": "al-mansourah",
+    "nameAr": "المنصورة",
+    "region": "central",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "وسط",
+    "housingNote": "عمائر ومحلات",
+    "featured": false
+  },
+  {
+    "slug": "al-shumaisi",
+    "nameAr": "الشميسي",
+    "region": "central",
+    "profile": "heritage_dense",
+    "era": "established_1990s",
+    "landmark": "وسط قديم",
+    "housingNote": "مباني قديمة وشوارع ضيقة",
+    "featured": false
+  },
+  {
+    "slug": "al-dubbat",
+    "nameAr": "الضباط",
+    "region": "central",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "وسط",
+    "housingNote": "عمائر سكنية",
+    "featured": false
+  },
+  {
+    "slug": "al-batha",
+    "nameAr": "البطحاء",
+    "region": "central",
+    "profile": "heritage_dense",
+    "era": "established_1990s",
+    "landmark": "وسط تاريخي",
+    "housingNote": "مباني قديمة وأسواق",
+    "featured": false
+  },
+  {
+    "slug": "manfouha",
+    "nameAr": "منفوحة",
+    "region": "central",
+    "profile": "heritage_dense",
+    "era": "established_1990s",
+    "landmark": "جنوب وسط",
+    "housingNote": "مباني قديمة كثيفة",
+    "featured": false
+  },
+  {
+    "slug": "al-oud",
+    "nameAr": "العود",
+    "region": "central",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "وسط",
+    "housingNote": "عمائر سكنية",
+    "featured": false
+  },
+  {
+    "slug": "al-murqab",
+    "nameAr": "المرقب",
+    "region": "central",
+    "profile": "heritage_dense",
+    "era": "established_1990s",
+    "landmark": "وسط",
+    "housingNote": "مباني قديمة",
+    "featured": false
+  },
+  {
+    "slug": "qurtubah",
+    "nameAr": "قرطبة",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "شرق الرياض",
+    "housingNote": "فلل وعمائر وازدحام سكاني",
+    "featured": true
+  },
+  {
+    "slug": "al-yarmuk",
+    "nameAr": "اليرموك",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "شرق الرياض",
+    "housingNote": "عمائر قديمة وحديثة",
+    "featured": false
+  },
+  {
+    "slug": "ishbiliyah",
+    "nameAr": "اشبيلية",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "شرق",
+    "housingNote": "فلل وعمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-khalij",
+    "nameAr": "الخليج",
+    "region": "east",
+    "profile": "apartment_towers",
+    "era": "growth_2000s",
+    "landmark": "شرق",
+    "housingNote": "أبراج سكنية",
+    "featured": false
+  },
+  {
+    "slug": "al-rawdah",
+    "nameAr": "الروضة",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "شرق وسط",
+    "housingNote": "عمائر وفلل",
+    "featured": false
+  },
+  {
+    "slug": "al-hamra",
+    "nameAr": "الحمراء",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "شرق",
+    "housingNote": "عمائر سكنية",
+    "featured": false
+  },
+  {
+    "slug": "al-rimal",
+    "nameAr": "الرمال",
+    "region": "east",
+    "profile": "villa_standard",
+    "era": "new_2010s",
+    "landmark": "شرق الرياض",
+    "housingNote": "فلل وعمائر جديدة",
+    "featured": true
+  },
+  {
+    "slug": "al-naseem-east",
+    "nameAr": "النسيم الشرقي",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "شرق",
+    "housingNote": "فلل وعمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-naseem-west",
+    "nameAr": "النسيم الغربي",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "شرق",
+    "housingNote": "عمائر كثيفة",
+    "featured": false
+  },
+  {
+    "slug": "al-munsiyah",
+    "nameAr": "المونسية",
+    "region": "east",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "شرق شمال",
+    "housingNote": "فلل وعمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-falah",
+    "nameAr": "الفلاح",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "شرق",
+    "housingNote": "عمائر سكنية",
+    "featured": false
+  },
+  {
+    "slug": "al-nahdah",
+    "nameAr": "النهضة",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "شرق",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-saadah",
+    "nameAr": "السعادة",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "شرق",
+    "housingNote": "عمائر سكنية",
+    "featured": false
+  },
+  {
+    "slug": "al-maizaliyah",
+    "nameAr": "المعيزلية",
+    "region": "east",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "شرق",
+    "housingNote": "فلل وعمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-shuhada",
+    "nameAr": "الشهداء",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "شرق",
+    "housingNote": "عمائر وفلل",
+    "featured": false
+  },
+  {
+    "slug": "al-rawabi",
+    "nameAr": "الروابي",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "شرق",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-manar",
+    "nameAr": "المنار",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "شرق",
+    "housingNote": "فلل وعمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-janadriyah",
+    "nameAr": "الجنادرية",
+    "region": "east",
+    "profile": "villa_standard",
+    "era": "established_1990s",
+    "landmark": "مهرجان الجنادريية",
+    "housingNote": "فلل واستراحات",
+    "featured": false
+  },
+  {
+    "slug": "al-qadisiyah",
+    "nameAr": "القادسية",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "شرق",
+    "housingNote": "عمائر كثيفة",
+    "featured": false
+  },
+  {
+    "slug": "al-namudhajiyah",
+    "nameAr": "النموذجية",
+    "region": "east",
+    "profile": "villa_standard",
+    "era": "established_1990s",
+    "landmark": "شرق",
+    "housingNote": "فلل نموذجية",
+    "featured": false
+  },
+  {
+    "slug": "al-dubiyat",
+    "nameAr": "الدوبيات",
+    "region": "east",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "شرق",
+    "housingNote": "فلل",
+    "featured": false
+  },
+  {
+    "slug": "al-farooq",
+    "nameAr": "الفاروق",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "شرق",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-rayyan-east",
+    "nameAr": "الريان",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "شرق",
+    "housingNote": "عمائر وفلل",
+    "featured": false
+  },
+  {
+    "slug": "al-salam-east",
+    "nameAr": "السلام",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "شرق",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-jamiyah",
+    "nameAr": "الجامعة",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "قرب الجامعة",
+    "housingNote": "عمائر طلابية وسكنية",
+    "featured": false
+  },
+  {
+    "slug": "al-nasriyah",
+    "nameAr": "الناصرية",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "شرق",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-khaleej-north",
+    "nameAr": "الخليج الشمالي",
+    "region": "east",
+    "profile": "apartment_towers",
+    "era": "new_2010s",
+    "landmark": "شرق",
+    "housingNote": "أبراج حديثة",
+    "featured": false
+  },
+  {
+    "slug": "al-dahiyah",
+    "nameAr": "الضاحية",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "شرق",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-rabwah-east",
+    "nameAr": "الربوة",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "شرق",
+    "housingNote": "فلل وعمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-shemaysi-east",
+    "nameAr": "الشميسي الشرقي",
+    "region": "east",
+    "profile": "heritage_dense",
+    "era": "established_1990s",
+    "landmark": "شرق قديم",
+    "housingNote": "مباني قديمة",
+    "featured": false
+  },
+  {
+    "slug": "al-aziziyah-east",
+    "nameAr": "العزيزية الشرقية",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "شرق",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-sinaiyah-east",
+    "nameAr": "الصناعية الشرقية",
+    "region": "east",
+    "profile": "industrial_edge",
+    "era": "established_1990s",
+    "landmark": "منطقة ورش",
+    "housingNote": "ورش ومستودعات ومساكن",
+    "featured": false
+  },
+  {
+    "slug": "dhahrat-laban",
+    "nameAr": "ظهرة لبن",
+    "region": "west",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "غرب الرياض",
+    "housingNote": "فلل على تلال غربية",
+    "featured": false
+  },
+  {
+    "slug": "al-suwaidi",
+    "nameAr": "السويدي",
+    "region": "west",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "غرب",
+    "housingNote": "عمائر وفلل قديمة",
+    "featured": false
+  },
+  {
+    "slug": "al-ariqah",
+    "nameAr": "العريجاء",
+    "region": "west",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "غرب",
+    "housingNote": "فلل وعمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-sultanah",
+    "nameAr": "السلطانة",
+    "region": "west",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "غرب",
+    "housingNote": "عمائر سكنية",
+    "featured": false
+  },
+  {
+    "slug": "laban",
+    "nameAr": "لبن",
+    "region": "west",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "غرب",
+    "housingNote": "فلل متوسطة",
+    "featured": false
+  },
+  {
+    "slug": "al-duraihimiyah",
+    "nameAr": "الدريهمية",
+    "region": "west",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "غرب",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "tuwaiq",
+    "nameAr": "طويق",
+    "region": "west",
+    "profile": "villa_standard",
+    "era": "new_2010s",
+    "landmark": "غرب",
+    "housingNote": "فلل جديدة",
+    "featured": false
+  },
+  {
+    "slug": "namar",
+    "nameAr": "نمار",
+    "region": "west",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "جنوب غرب",
+    "housingNote": "فلل واستراحات",
+    "featured": false
+  },
+  {
+    "slug": "al-awali",
+    "nameAr": "العوالي",
+    "region": "west",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "غرب",
+    "housingNote": "فلل",
+    "featured": false
+  },
+  {
+    "slug": "al-badee",
+    "nameAr": "البديع",
+    "region": "west",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "غرب",
+    "housingNote": "فلل",
+    "featured": false
+  },
+  {
+    "slug": "al-mahdiyah",
+    "nameAr": "المهدية",
+    "region": "west",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "غرب",
+    "housingNote": "عمائر وفلل",
+    "featured": false
+  },
+  {
+    "slug": "al-hazm-west",
+    "nameAr": "الحزم",
+    "region": "west",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "غرب",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-suwaidi-west",
+    "nameAr": "السويدي الغربي",
+    "region": "west",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "غرب",
+    "housingNote": "عمائر كثيفة",
+    "featured": false
+  },
+  {
+    "slug": "diriyah",
+    "nameAr": "الدرعية",
+    "region": "west",
+    "profile": "heritage_dense",
+    "era": "established_1990s",
+    "landmark": "الدرعية التاريخية",
+    "housingNote": "مباني تراثية وفلل جديدة",
+    "featured": false
+  },
+  {
+    "slug": "al-uyaynah",
+    "nameAr": "العيينة",
+    "region": "west",
+    "profile": "villa_standard",
+    "era": "established_1990s",
+    "landmark": "غرب",
+    "housingNote": "فلل",
+    "featured": false
+  },
+  {
+    "slug": "al-jubailah",
+    "nameAr": "الجبيلة",
+    "region": "west",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "غرب",
+    "housingNote": "فلل",
+    "featured": false
+  },
+  {
+    "slug": "shubra",
+    "nameAr": "شبرا",
+    "region": "west",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "غرب",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-awaly-west",
+    "nameAr": "العوالي الغربية",
+    "region": "west",
+    "profile": "villa_standard",
+    "era": "new_2010s",
+    "landmark": "غرب",
+    "housingNote": "فلل حديثة",
+    "featured": false
+  },
+  {
+    "slug": "al-ghroob",
+    "nameAr": "الغروب",
+    "region": "west",
+    "profile": "villa_standard",
+    "era": "new_2010s",
+    "landmark": "غرب",
+    "housingNote": "فلل",
+    "featured": false
+  },
+  {
+    "slug": "al-hada-west",
+    "nameAr": "الهدا",
+    "region": "west",
+    "profile": "villa_luxury",
+    "era": "new_2010s",
+    "landmark": "غرب مرتفع",
+    "housingNote": "فلل بإطلالات",
+    "featured": false
+  },
+  {
+    "slug": "al-mahamid",
+    "nameAr": "المحاميد",
+    "region": "west",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "غرب",
+    "housingNote": "فلل",
+    "featured": false
+  },
+  {
+    "slug": "al-salam-west",
+    "nameAr": "السلام الغربي",
+    "region": "west",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "غرب",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-aziziyah",
+    "nameAr": "العزيزية",
+    "region": "south",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "جنوب الرياض",
+    "housingNote": "عمائر كثيفة",
+    "featured": false
+  },
+  {
+    "slug": "al-shifa",
+    "nameAr": "الشفا",
+    "region": "south",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "جنوب",
+    "housingNote": "فلل وعمائر",
+    "featured": false
+  },
+  {
+    "slug": "badr",
+    "nameAr": "بدر",
+    "region": "south",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "جنوب",
+    "housingNote": "فلل",
+    "featured": false
+  },
+  {
+    "slug": "al-maseef",
+    "nameAr": "المصيف",
+    "region": "south",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "جنوب",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-manakh",
+    "nameAr": "المناخ",
+    "region": "south",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "جنوب",
+    "housingNote": "عمائر قديمة",
+    "featured": false
+  },
+  {
+    "slug": "al-marwah",
+    "nameAr": "المروة",
+    "region": "south",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "جنوب",
+    "housingNote": "فلل وعمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-yamamah",
+    "nameAr": "اليمامة",
+    "region": "south",
+    "profile": "heritage_dense",
+    "era": "established_1990s",
+    "landmark": "جنوب",
+    "housingNote": "مباني قديمة",
+    "featured": false
+  },
+  {
+    "slug": "al-dar-al-bayda",
+    "nameAr": "الدار البيضاء",
+    "region": "south",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "جنوب",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-uqayqiyah",
+    "nameAr": "العكيشية",
+    "region": "south",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "جنوب",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "khashm-al-an",
+    "nameAr": "خشم العان",
+    "region": "south",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "جنوب شرق",
+    "housingNote": "فلل",
+    "featured": false
+  },
+  {
+    "slug": "al-hazm-south",
+    "nameAr": "الحزم الجنوبي",
+    "region": "south",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "جنوب",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-iskan-south",
+    "nameAr": "الإسكان",
+    "region": "south",
+    "profile": "apartment_towers",
+    "era": "established_1990s",
+    "landmark": "إسكان شعبي",
+    "housingNote": "أبراج إسكان",
+    "featured": false
+  },
+  {
+    "slug": "al-shemaysi-south",
+    "nameAr": "الشميسي الجنوبي",
+    "region": "south",
+    "profile": "heritage_dense",
+    "era": "established_1990s",
+    "landmark": "جنوب",
+    "housingNote": "مباني قديمة",
+    "featured": false
+  },
+  {
+    "slug": "al-fakhriyah",
+    "nameAr": "الفاخرية",
+    "region": "south",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "جنوب",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-mansourah-south",
+    "nameAr": "المنصورة الجنوبية",
+    "region": "south",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "جنوب",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-shaab",
+    "nameAr": "الشعب",
+    "region": "south",
+    "profile": "heritage_dense",
+    "era": "established_1990s",
+    "landmark": "جنوب",
+    "housingNote": "مباني قديمة كثيفة",
+    "featured": false
+  },
+  {
+    "slug": "al-zahra-south",
+    "nameAr": "الزهراء الجنوبية",
+    "region": "south",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "جنوب",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-safa-south",
+    "nameAr": "الصفا الجنوبية",
+    "region": "south",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "جنوب",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-rawdah-south",
+    "nameAr": "الروضة الجنوبية",
+    "region": "south",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "جنوب",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-nafl-south",
+    "nameAr": "النفل الجنوبي",
+    "region": "south",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "جنوب",
+    "housingNote": "فلل",
+    "featured": false
+  },
+  {
+    "slug": "al-ajwad",
+    "nameAr": "الأجواد",
+    "region": "south",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "جنوب",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-masani",
+    "nameAr": "المصانع",
+    "region": "south",
+    "profile": "industrial_edge",
+    "era": "established_1990s",
+    "landmark": "منطقة صناعية",
+    "housingNote": "مصانع ومساكن",
+    "featured": false
+  },
+  {
+    "slug": "al-shubra-south",
+    "nameAr": "شبرا الجنوبية",
+    "region": "south",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "جنوب",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-amal",
+    "nameAr": "العمل",
+    "region": "central",
+    "profile": "commercial_mix",
+    "era": "established_1990s",
+    "landmark": "وسط",
+    "housingNote": "مكاتب وورش",
+    "featured": false
+  },
+  {
+    "slug": "al-sinaiyah",
+    "nameAr": "الصناعية",
+    "region": "central",
+    "profile": "industrial_edge",
+    "era": "established_1990s",
+    "landmark": "وسط صناعي",
+    "housingNote": "ورش ومستودعات",
+    "featured": false
+  },
+  {
+    "slug": "al-nakhil-central",
+    "nameAr": "النخيل المركزي",
+    "region": "central",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "وسط",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-faiha",
+    "nameAr": "الفيحاء",
+    "region": "east",
+    "profile": "mixed_residential",
+    "era": "established_1990s",
+    "landmark": "شرق",
+    "housingNote": "عمائر",
+    "featured": false
+  },
+  {
+    "slug": "al-wadi-east",
+    "nameAr": "الوادي الشرقي",
+    "region": "east",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "شرق",
+    "housingNote": "فلل",
+    "featured": false
+  },
+  {
+    "slug": "al-ghadir-east",
+    "nameAr": "الغدير الشرقي",
+    "region": "east",
+    "profile": "villa_standard",
+    "era": "new_2010s",
+    "landmark": "شرق",
+    "housingNote": "فلل جديدة",
+    "featured": false
+  },
+  {
+    "slug": "al-narjis-east",
+    "nameAr": "النرجس الشرقي",
+    "region": "north",
+    "profile": "villa_luxury",
+    "era": "new_2010s",
+    "landmark": "امتداد النرجس",
+    "housingNote": "فلل حديثة",
+    "featured": false
+  },
+  {
+    "slug": "al-yasmin-south",
+    "nameAr": "الياسمين الجنوبي",
+    "region": "north",
+    "profile": "villa_luxury",
+    "era": "new_2010s",
+    "landmark": "جنوب الياسمين",
+    "housingNote": "فلل",
+    "featured": false
+  },
+  {
+    "slug": "al-malqa-east",
+    "nameAr": "الملقا الشرقية",
+    "region": "north",
+    "profile": "villa_luxury",
+    "era": "new_2010s",
+    "landmark": "امتداد الملقا",
+    "housingNote": "فلل فاخرة",
+    "featured": false
+  },
+  {
+    "slug": "al-sahafa-south",
+    "nameAr": "الصحافة الجنوبية",
+    "region": "north",
+    "profile": "mixed_residential",
+    "era": "growth_2000s",
+    "landmark": "جنوب الصحافة",
+    "housingNote": "عمائر وفلل",
+    "featured": false
+  },
+  {
+    "slug": "al-arid-west",
+    "nameAr": "العارض الغربي",
+    "region": "north",
+    "profile": "villa_standard",
+    "era": "new_2010s",
+    "landmark": "غرب العارض",
+    "housingNote": "فلل جديدة",
+    "featured": false
+  },
+  {
+    "slug": "al-nafal-north",
+    "nameAr": "النفل الشمالي",
+    "region": "north",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "شمال النفل",
+    "housingNote": "فلل",
+    "featured": false
+  },
+  {
+    "slug": "al-qirawan-east",
+    "nameAr": "القيروان الشرقي",
+    "region": "north",
+    "profile": "villa_standard",
+    "era": "new_2010s",
+    "landmark": "شرق القيروان",
+    "housingNote": "فلل",
+    "featured": false
+  },
+  {
+    "slug": "al-rabie-west",
+    "nameAr": "الربيع الغربي",
+    "region": "north",
+    "profile": "compound_gated",
+    "era": "growth_2000s",
+    "landmark": "مجمعات",
+    "housingNote": "مجمعات مغلقة",
+    "featured": false
+  },
+  {
+    "slug": "al-nakheel-north",
+    "nameAr": "النخيل الشمالي",
+    "region": "north",
+    "profile": "villa_standard",
+    "era": "growth_2000s",
+    "landmark": "شمال النخيل",
+    "housingNote": "فلل",
+    "featured": false
+  }
+]

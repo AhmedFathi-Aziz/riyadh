@@ -1,7 +1,7 @@
 {
-  "name": "عزل الرياض للمحترفين",
-  "short_name": "عزل الرياض",
-  "description": "الشركة الرائدة في كشف تسربات المياه وعزل الأسطح والخزانات بالرياض. دقة، سرعة، وضمان معتمد يصل إلى 10 سنوات.",
+  "name": "ManzilCare",
+  "short_name": "ManzilCare",
+  "description": "ManzilCare — كشف تسربات المياه وعزل الأسطح والخزانات بالرياض. دقة، سرعة، وضمان معتمد يصل إلى 10 سنوات.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f8f9ff",

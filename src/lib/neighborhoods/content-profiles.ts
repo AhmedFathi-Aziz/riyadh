@@ -1,0 +1,251 @@
+import type {
+  NeighborhoodEra,
+  NeighborhoodProfile,
+  NeighborhoodRegion,
+} from "./types";
+
+export const REGION_LABELS: Record<NeighborhoodRegion, string> = {
+  north: "شمال الرياض",
+  east: "شرق الرياض",
+  west: "غرب الرياض",
+  south: "جنوب الرياض",
+  central: "وسط الرياض",
+};
+
+export const ERA_LABELS: Record<NeighborhoodEra, string> = {
+  new_2010s: "مخططات حديثة منذ 2010",
+  growth_2000s: "توسع سكني منذ أوائل الألفية",
+  established_1990s: "أحياء مستقرة من تسعينيات وما قبل",
+};
+
+export const PROFILE_BUILDINGS: Record<NeighborhoodProfile, string[]> = {
+  villa_luxury: [
+    "فلل مستقلة بمساحات واسعة وأسطح مسطحة",
+    "مجمعات سكنية مغلقة ببوابات ومراقبة",
+    "خزانات مياه علوية كبيرة وغرف تمديدات على السطح",
+    "مسابح خاصة وغرف خدمة تحتاج عزل مائي دقيق",
+    "وحدات تكييف مركزي أو مخفي بأسقف مستعارة",
+  ],
+  villa_standard: [
+    "فلل متوسطة المساحة بحديقة أمامية",
+    "عمائر سكنية منخفضة (دورين إلى أربعة)",
+    "أسطح خرسانية مع مناور ومواسير ظاهرة",
+    "خزانات علوية تقليدية تحتاج فحص دوري",
+  ],
+  apartment_towers: [
+    "أبراج سكنية متعددة الطوابق",
+    "شقق بشبكات صرف داخلية معقدة",
+    "أسطح مشتركة وخزانات جماعية",
+    "مواقف underground قد تتأثر بتسربات علوية",
+  ],
+  mixed_residential: [
+    "مزيج فلل وعمائر ومحلات تجارية",
+    "مباني بأعمار مختلفة على نفس الشارع",
+    "أسطح متنوعة: بيتومين قديم، فوم جزئي، أو بدون عزل",
+  ],
+  compound_gated: [
+    "مجمعات مغلقة بفلل متشابهة",
+    "صيانة مشتركة للأسطح والممرات",
+    "خزانات ومحطات ضخ متقاربة",
+  ],
+  commercial_mix: [
+    "أبراج مكاتب وشقق فندقية",
+    "واجهات زجاجية وأسطح معدات",
+    "محلات وقبوهات تحتاج عزل رطوبة",
+  ],
+  heritage_dense: [
+    "مباني قديمة بشبكات مياه متهالكة",
+    "أسقف مستعارة وحمامات صغيرة",
+    "جدران سميكة قد تخفي تسربات طويلة",
+  ],
+  industrial_edge: [
+    "ورش ومستودعات بأسطح معدنية",
+    "مباني سكنية ملاصقة لمناطق عمل",
+    "خزانات أرضية وخطوط رئيسية",
+  ],
+};
+
+export const PROFILE_PROBLEMS: Record<NeighborhoodProfile, string[]> = {
+  villa_luxury: [
+    "تسربات من خزانات علوية تظهر كبقع على أسقف غرف النوم",
+    "تمددات حرارية في أسطح الفلل تسبب تشققات عند المناور",
+    "تسربات مسابح خاصة نحو الأساسات أو الجدران المشتركة",
+    "تكثيف مياه التكييف على الأسطح يتحول إلى رطوبة داخلية",
+    "وصلات غير محكمة حول أغطية الصرف بعد أمطار غزيرة",
+  ],
+  villa_standard: [
+    "تسربات بطيئة من مواسير علوية داخل الجدران",
+    "خزانات قديمة بدون إيبوكسي تسرب للأسقف السفلية",
+    "ميول أسطح غير كافية وتجمع مياه أمطار",
+    "رطوبة في الحمامات العلوية دون أسباب ظاهرة",
+  ],
+  apartment_towers: [
+    "تسربات بين الطوابق عبر شبكات الصرف المشتركة",
+    "خزانات جماعية تؤثر على عدة شقق دفعة واحدة",
+    "تسربات من أسطح مشتركة لصالات ومواقف",
+    "صعوبة تحديد مصدر التسرب دون أجهزة دقيقة",
+  ],
+  mixed_residential: [
+    "اختلاف عمر المباني يعني أكثر من نوع تسرب في الحي",
+    "محلات أرضية تتأثر بتسربات حمامات علوية",
+    "أسطح قديمة بجانب فلل جديدة بعزل مختلف",
+  ],
+  compound_gated: [
+    "تسربات من صيانة خزان مشترك في المجمع",
+    "مسؤولية مشتركة بين الملاك تؤخر الإصلاح",
+    "تسربات حدائق وري تتسرب نحو الأساسات",
+  ],
+  commercial_mix: [
+    "تسربات من أسطح معدات التكييف والتمديدات",
+    "أنظمة إطفاء ومواسير كثيفة تزيد نقاط الضعف",
+    "تسربات في قبوهات مواقف السيارات",
+  ],
+  heritage_dense: [
+    "مواسير حديدية قديمة بالصدأ والتسرب الخفي",
+    "أسقف مستعارة تخفي بقعاً لأشهر قبل ظهورها",
+    "رطوبة ارتفاع في الجدرار الخارجية",
+  ],
+  industrial_edge: [
+    "تسربات من خزانات أرضية صناعية",
+    "مياه أمطار على أسطح معدنية غير محكمة",
+    "تسربات تؤثر على مساكن قريبة من الورش",
+  ],
+};
+
+export const REGION_PROBLEMS: Record<NeighborhoodRegion, string[]> = {
+  north: [
+    "حرارة صيفية عالية تزيد تمدد طبقات العزل القديمة",
+    "عواصف رملية تسد مصافي الصرف على الأسطح",
+  ],
+  east: [
+    "كثافة سكانية تعني ضغطاً على شبكات الصرف",
+    "تمدد حضري سريع مع مباني بأعمار متقاربة",
+  ],
+  west: [
+    "تضاريس متدرجة قد تسرّع جريان مياه الأمطار نحو واجهات",
+    "فلل على مرتفعات تحتاج فحص ميول دقيق",
+  ],
+  south: [
+    "مباني أقدم بشبكات مياه تحتاج صيانة استباقية",
+    "تسربات متكررة في عمائر الإسكان الكثيف",
+  ],
+  central: [
+    "أنظمة مياه قديمة في مباني مركزية",
+    "تحديثات تشطيب دون عزل وقائي كافٍ",
+  ],
+};
+
+export const SERVICE_CATALOG: Record<
+  string,
+  { title: string; reason: string }
+> = {
+  "leak-detection-water-riyadh": {
+    title: "كشف تسربات المياه بالرياض",
+    reason: "تحديد مصدر التسرب بدقة قبل أي تكسير",
+  },
+  "leak-detection-no-damage-riyadh": {
+    title: "كشف تسربات بدون تكسير",
+    reason: "مناسب للشقق والفلل ذات التشطيبات الحساسة",
+  },
+  "leak-repair-water-riyadh": {
+    title: "إصلاح تسربات المياه",
+    reason: "إغلاق التسرب بعد التشخيص مع ضمان",
+  },
+  "leak-detection-tanks-riyadh": {
+    title: "كشف تسربات الخزانات",
+    reason: "فحص الخزانات العلوية والأرضية الشائعة في الحي",
+  },
+  "tank-insulation-riyadh": {
+    title: "عزل الخزانات",
+    reason: "حماية المياه ومنع تسربات طويلة الأمد",
+  },
+  "roof-insulation-riyadh": {
+    title: "عزل الأسطح",
+    reason: "منع مياه الأمطار وتقليل الحرارة على السطح",
+  },
+  "foam-insulation-riyadh": {
+    title: "عزل الفوم",
+    reason: "حل متكامل حراري ومائي للأسطح الواسعة",
+  },
+  "bathroom-insulation-riyadh": {
+    title: "عزل الحمامات",
+    reason: "منع تسرب الرطوبة للأدوار السفلية",
+  },
+  "leak-detection-pools-riyadh": {
+    title: "كشف تسربات المسابح",
+    reason: "للفلل ذات المسابح الخاصة",
+  },
+  "pool-insulation-riyadh": {
+    title: "عزل المسابح",
+    reason: "معالجة شقوق البلاط والغشاء",
+  },
+};
+
+export const PROFILE_SERVICES: Record<NeighborhoodProfile, string[]> = {
+  villa_luxury: [
+    "leak-detection-water-riyadh",
+    "leak-detection-no-damage-riyadh",
+    "leak-detection-tanks-riyadh",
+    "roof-insulation-riyadh",
+    "leak-detection-pools-riyadh",
+  ],
+  villa_standard: [
+    "leak-detection-water-riyadh",
+    "leak-repair-water-riyadh",
+    "leak-detection-tanks-riyadh",
+    "roof-insulation-riyadh",
+  ],
+  apartment_towers: [
+    "leak-detection-water-riyadh",
+    "leak-detection-no-damage-riyadh",
+    "leak-repair-water-riyadh",
+    "bathroom-insulation-riyadh",
+  ],
+  mixed_residential: [
+    "leak-detection-water-riyadh",
+    "leak-detection-no-damage-riyadh",
+    "leak-repair-water-riyadh",
+    "roof-insulation-riyadh",
+  ],
+  compound_gated: [
+    "leak-detection-water-riyadh",
+    "leak-detection-tanks-riyadh",
+    "tank-insulation-riyadh",
+    "roof-insulation-riyadh",
+  ],
+  commercial_mix: [
+    "leak-detection-water-riyadh",
+    "leak-repair-water-riyadh",
+    "roof-insulation-riyadh",
+    "foam-insulation-riyadh",
+  ],
+  heritage_dense: [
+    "leak-detection-no-damage-riyadh",
+    "leak-detection-water-riyadh",
+    "leak-repair-water-riyadh",
+    "bathroom-insulation-riyadh",
+  ],
+  industrial_edge: [
+    "leak-detection-water-riyadh",
+    "leak-detection-tanks-riyadh",
+    "roof-insulation-riyadh",
+    "foam-insulation-riyadh",
+  ],
+};
+
+export const FEATURED_INTROS: Record<string, string> = {
+  "al-narjis":
+    "حي النرجس من أبرز أحياء شمال الرياض؛ يتميز بفلل واسعة وأسطح مسطحة وخزانات علوية كبيرة. كثير من البلاغات لدينا هنا مرتبطة بتمدد الأسطح صيفاً أو بتسرب خفي من مناور قديمة بعد هطول أمطار غزيرة.",
+  "al-yasmin":
+    "الياسمين يجمع بين فلل راقية ومجمعات سكنية قريبة من محاور تجارية شمال الرياض. الشبكات تحت الأرضية كثيفة، ما يجعل **كشف تسربات بدون تكسير** خياراً مفضلاً قبل أي ترميم.",
+  "al-malqa":
+    "الملقا يضم فللاً فاخرة قريبة من مناطق ترفيهية؛ الملاك يهتمون بعزل حراري ومائي متكامل. ننفّذ كثيراً فحوصات خزانات علوية ومسابح خاصة في هذا الحي.",
+  "al-arid":
+    "العارض حي توسع حديث؛ مبانٍ جديدة أحياناً تُسلّم بعزل غير مكتمل أو وصلات صرف ضعيفة. المعاينة المبكرة بعد السكن توفر تكاليف إصلاح لاحقة.",
+  "al-rimal":
+    "الرمال في شرق الرياض يمزج فللاً جديدة وعمائراً؛ تنوع أعمار المباني يعني اختلاف أنماط التسرب من حيّ إلى آخر في نفس المنطقة.",
+  "al-sahafa":
+    "الصحافة قريبة من محاور حركة رئيسية؛ يجمع بين فلل وعمائر ومحلات. تسربات الحمامات في الطوابق العليا تؤثر أحياناً على واجهات تجارية أرضية.",
+  qurtubah:
+    "قرطبة من أحياء شرق الرياض الكثيفة؛ عمائر وفلل متجاورة. الضغط على شبكات الصرف يزيد احتمال تسربات بين الطوابق، ويحتاج تشخيصاً دقيقاً.",
+};

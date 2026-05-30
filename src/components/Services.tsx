@@ -36,9 +36,9 @@ export function Services() {
               placeholder="blur"
               blurDataURL={images.services.blurDataURL}
               sizes="(max-width: 768px) 100vw, 50vw"
-              width={640}
-              height={480}
-              className="relative z-10 rounded-3xl shadow-2xl"
+              width={images.services.width}
+              height={images.services.height}
+              className="relative z-10 w-full rounded-3xl shadow-2xl"
             />
           </div>
 
@@ -48,11 +48,14 @@ export function Services() {
             </span>
             <h2
               id="services-heading"
-              className="mb-6 text-display-lg-mobile font-bold text-primary md:text-display-lg"
+              className="mb-4 text-display-lg-mobile font-bold text-primary md:text-display-lg"
             >
-              حلول هندسية لمشاكل الرطوبة والتسرب
+              خدماتنا
             </h2>
-            <p className="mb-8 text-body-lg text-on-surface-variant">
+            <p className="mb-6 text-body-md font-medium text-primary">
+              حلول هندسية لمشاكل الرطوبة والتسرب
+            </p>
+            <p className="mb-8 text-body-lg text-on-surface-muted">
               نقدم خدمات احترافية تلبي تطلعات سكان الرياض، مع مراعاة الظروف
               المناخية القاسية والحلول المستدامة.
             </p>
@@ -70,7 +73,7 @@ export function Services() {
                     <h3 className="text-headline-md font-semibold text-primary">
                       {item.title}
                     </h3>
-                    <p className="text-on-surface-variant">
+                    <p className="text-body-md text-on-surface-muted">
                       {item.description}
                     </p>
                   </div>

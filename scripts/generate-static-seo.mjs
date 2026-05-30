@@ -10,6 +10,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
 const publicDir = path.join(root, "public");
 const blogDir = path.join(root, "content", "blog");
+const servicesDir = path.join(root, "content", "services");
+const neighborhoodsFile = path.join(root, "data", "riyadh-neighborhoods.json");
 
 const baseUrl = (
   process.env.NEXT_PUBLIC_SITE_URL || "https://manzilcare.com"
@@ -41,6 +43,7 @@ if (fs.existsSync(blogDir)) {
 const staticPaths = [
   { path: "", priority: "1.0", changefreq: "weekly" },
   { path: "/services", priority: "0.9", changefreq: "weekly" },
+  { path: "/areas", priority: "0.9", changefreq: "weekly" },
   { path: "/insulation", priority: "0.9", changefreq: "weekly" },
   { path: "/contact", priority: "0.9", changefreq: "monthly" },
   { path: "/blog", priority: "0.85", changefreq: "daily" },
@@ -55,9 +58,39 @@ const urlEntry = (loc, lastmod, changefreq, priority) => `  <url>
     <priority>${priority}</priority>
   </url>`;
 
+const neighborhoodPages = [];
+if (fs.existsSync(neighborhoodsFile)) {
+  const list = JSON.parse(fs.readFileSync(neighborhoodsFile, "utf8"));
+  for (const n of list) {
+    if (n.slug) neighborhoodPages.push({ slug: n.slug });
+  }
+}
+
+const servicePages = [];
+if (fs.existsSync(servicesDir)) {
+  for (const file of fs.readdirSync(servicesDir)) {
+    if (
+      !file.endsWith(".md") ||
+      file.startsWith("_") ||
+      !/^[a-z0-9]+(?:-[a-z0-9]+)*\.md$/.test(file)
+    ) {
+      continue;
+    }
+    servicePages.push({
+      slug: file.replace(/\.md$/, ""),
+    });
+  }
+}
+
 const sitemapUrls = [
   ...staticPaths.map((p) =>
     urlEntry(`${baseUrl}${p.path}`, now, p.changefreq, p.priority),
+  ),
+  ...servicePages.map((p) =>
+    urlEntry(`${baseUrl}/services/${p.slug}`, now, "monthly", "0.88"),
+  ),
+  ...neighborhoodPages.map((p) =>
+    urlEntry(`${baseUrl}/areas/${p.slug}`, now, "monthly", "0.87"),
   ),
   ...posts.map((p) =>
     urlEntry(
@@ -83,10 +116,10 @@ Sitemap: ${baseUrl}/sitemap.xml
 `;
 
 const manifest = {
-  name: "عزل الرياض للمحترفين",
-  short_name: "عزل الرياض",
+  name: "ManzilCare",
+  short_name: "ManzilCare",
   description:
-    "الشركة الرائدة في كشف تسربات المياه وعزل الأسطح والخزانات بالرياض. دقة، سرعة، وضمان معتمد يصل إلى 10 سنوات.",
+    "ManzilCare — كشف تسربات المياه وعزل الأسطح والخزانات بالرياض. دقة، سرعة، وضمان معتمد يصل إلى 10 سنوات.",
   start_url: "/",
   display: "standalone",
   background_color: "#f8f9ff",

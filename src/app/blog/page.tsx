@@ -4,17 +4,20 @@ import { BlogFooter } from "@/components/blog/BlogFooter";
 import { BlogHero } from "@/components/blog/BlogHero";
 import { BlogLatestGrid } from "@/components/blog/BlogLatestGrid";
 import { BlogNewsletter } from "@/components/blog/BlogNewsletter";
-import { BlogPageJsonLd } from "@/components/blog/BlogPageJsonLd";
 import { SiteHeader } from "@/components/SiteHeader";
+import { PageStructuredData } from "@/components/seo/PageStructuredData";
+import { StandardPageSections } from "@/components/seo/StandardPageSections";
 import { blogMeta } from "@/lib/blog";
+import { breadcrumbs } from "@/lib/seo/breadcrumbs";
+import { getFaqsForPage } from "@/lib/seo/page-faqs";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: blogMeta.title,
+  title: "مدونة عزل وكشف التسربات بالرياض",
   description: blogMeta.description,
   path: blogMeta.path,
   keywords: [
-    "مدونة عزل الرياض",
+    "مدونة ManzilCare",
     "نصائح عزل الأسطح",
     "كشف تسربات المياه",
     "عزل فوم بولي يوريثان",
@@ -23,15 +26,18 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 export default function BlogPage() {
+  const faqs = getFaqsForPage();
+
   return (
     <>
-      <BlogPageJsonLd />
+      <PageStructuredData breadcrumbs={breadcrumbs.blog()} faqs={faqs} />
       <SiteHeader activePage="blog" />
       <BlogHero />
       <main className="mx-auto max-w-max-width px-6 py-12">
         <BlogFeaturedGrid />
         <BlogLatestGrid />
         <BlogNewsletter />
+        <StandardPageSections faqs={faqs} showServices={false} />
       </main>
       <BlogFooter />
     </>

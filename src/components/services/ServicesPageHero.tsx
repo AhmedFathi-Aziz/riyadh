@@ -9,7 +9,7 @@ export function ServicesPageHero() {
         <span>خبراء العزل المعتمدون في الرياض</span>
       </div>
       <h1 className="mb-6 text-display-lg font-bold text-primary md:text-display-lg">
-        خدماتنا الهندسية المتكاملة
+        كشف تسربات المياه وعزل الأسطح بالرياض
       </h1>
       <p className="mx-auto mb-8 max-w-3xl text-body-lg leading-relaxed text-on-surface-variant">
         نقدم حلولاً احترافية لحماية منزلك وممتلكاتك من مخاطر التسربات والرطوبة

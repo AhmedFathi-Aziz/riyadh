@@ -10,18 +10,16 @@ export function InsulationFooter() {
       <div className="mx-auto max-w-max-width">
         <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-4">
           <div className="col-span-1 md:col-span-2">
-            <div className="mb-6 flex items-center gap-4">
+            <Link href="/" className="mb-6 inline-block">
               <OptimizedImage
                 src={siteConfig.logo.src}
-                alt="Logo"
-                width={40}
-                height={40}
-                className="h-10 w-auto brightness-0 invert"
+                alt={siteConfig.logo.alt}
+                width={siteConfig.logo.width}
+                height={siteConfig.logo.height}
+                sizes="200px"
+                className="h-28 w-auto max-w-[200px] rounded-lg bg-white object-contain p-2 shadow-soft"
               />
-              <span className="font-display text-headline-md font-extrabold">
-                {siteConfig.name}
-              </span>
-            </div>
+            </Link>
             <p className="mb-6 max-w-md leading-relaxed text-on-primary/70">
               الشركة الرائدة في مجال عزل الأسطح وكشف تسربات المياه في مدينة
               الرياض. نعتمد على التقنيات الألمانية والحلول الهندسية المبتكرة

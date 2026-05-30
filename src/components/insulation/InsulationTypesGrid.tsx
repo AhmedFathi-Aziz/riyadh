@@ -8,6 +8,7 @@ export function InsulationTypesGrid() {
 
   return (
     <section
+      id="our-services"
       aria-labelledby="insulation-types-heading"
       className="mx-auto max-w-max-width px-gutter py-margin-desktop rtl"
     >
@@ -16,7 +17,7 @@ export function InsulationTypesGrid() {
           id="insulation-types-heading"
           className="mb-4 text-display-lg font-bold text-primary"
         >
-          أنواع العزل المتخصصة
+          خدماتنا
         </h2>
         <p className="mx-auto max-w-3xl text-on-surface-variant">
           نعتمد على أفضل المواد العالمية المختبرة لتحمل الظروف المناخية القاسية
@@ -96,9 +97,9 @@ export function InsulationTypesGrid() {
         </article>
 
         <article className="flex flex-col justify-center rounded-3xl border border-outline-variant/30 bg-surface-container-highest p-8 md:col-span-8">
-          <h3 className="mb-6 text-headline-md font-semibold text-primary">
-            {riyadhBenefits.title}
-          </h3>
+          <h2 className="mb-6 text-headline-md font-semibold text-primary">
+            المميزات
+          </h2>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {riyadhBenefits.items.map((item) => (
               <div key={item.title} className="flex items-start gap-3">

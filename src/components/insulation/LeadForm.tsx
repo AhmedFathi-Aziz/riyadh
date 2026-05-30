@@ -3,6 +3,9 @@
 import { FormEvent, useState } from "react";
 import { siteConfig } from "@/lib/site";
 
+const inputClass =
+  "w-full rounded-xl border border-outline-variant/40 bg-white p-2.5 text-body-md text-on-surface outline-none transition-all focus:border-secondary focus:ring-2 focus:ring-secondary/25";
+
 export function LeadForm() {
   const [submitted, setSubmitted] = useState(false);
 
@@ -25,18 +28,21 @@ export function LeadForm() {
   }
 
   return (
-    <div className="rounded-3xl bg-surface p-8 text-on-surface shadow-2xl">
-      <h3 className="mb-6 text-headline-md font-semibold text-primary">
+    <div className="shadow-soft-md rounded-2xl bg-white p-6">
+      <h3 className="mb-5 text-body-lg font-bold text-primary">
         اطلب استشارة مجانية
       </h3>
       {submitted ? (
-        <p className="text-on-surface-variant">
+        <p className="text-label-sm text-on-surface-muted">
           شكراً لك! تم فتح واتساب لإرسال طلبك. سيتواصل معك فريقنا قريباً.
         </p>
       ) : (
-        <form className="space-y-4" onSubmit={handleSubmit}>
+        <form className="space-y-3.5" onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="lead-name" className="mb-1 block text-sm font-bold">
+            <label
+              htmlFor="lead-name"
+              className="mb-1 block text-label-sm font-semibold text-primary"
+            >
               الاسم
             </label>
             <input
@@ -45,13 +51,13 @@ export function LeadForm() {
               type="text"
               required
               placeholder="اسمك الكريم"
-              className="w-full rounded-xl border border-outline bg-surface-container-lowest p-3 outline-none transition-all focus:border-secondary focus:ring-2 focus:ring-secondary"
+              className={inputClass}
             />
           </div>
           <div>
             <label
               htmlFor="lead-phone"
-              className="mb-1 block text-sm font-bold"
+              className="mb-1 block text-label-sm font-semibold text-primary"
             >
               رقم الجوال
             </label>
@@ -62,13 +68,13 @@ export function LeadForm() {
               required
               placeholder="05xxxxxxxx"
               dir="ltr"
-              className="w-full rounded-xl border border-outline bg-surface-container-lowest p-3 outline-none transition-all focus:border-secondary focus:ring-2 focus:ring-secondary"
+              className={inputClass}
             />
           </div>
           <div>
             <label
               htmlFor="lead-district"
-              className="mb-1 block text-sm font-bold"
+              className="mb-1 block text-label-sm font-semibold text-primary"
             >
               الحي / المنطقة
             </label>
@@ -77,12 +83,12 @@ export function LeadForm() {
               name="district"
               type="text"
               placeholder="مثلاً: الملقا"
-              className="w-full rounded-xl border border-outline bg-surface-container-lowest p-3 outline-none transition-all focus:border-secondary focus:ring-2 focus:ring-secondary"
+              className={inputClass}
             />
           </div>
           <button
             type="submit"
-            className="w-full rounded-xl bg-primary py-4 text-lg font-bold text-on-primary shadow-lg transition-opacity hover:opacity-90"
+            className="w-full rounded-xl bg-primary py-3 text-body-md font-bold text-on-primary shadow-sm transition-opacity hover:opacity-90"
           >
             إرسال الطلب
           </button>

@@ -29,6 +29,11 @@
 - من Cloudflare: **Deployments** → **Retry deployment** → فعّل **Clear build cache**.
 - تأكد أن **Build command** = `npm run build` وليس `npx next build` فقط.
 
+إذا فشل البناء عند `npm ci` ورسالة مثل `Missing: @emnapi/core` أو `package-lock.json`:
+- تأكد أن **`package-lock.json` مرفوع مع المشروع** على GitHub (لا تحذفه من Git).
+- بعد أي تغيير في `package.json` شغّل محلياً `npm install` ثم ارفع `package-lock.json` مع التعديل.
+- أعد النشر مع **Clear build cache**.
+
 ## 2) من الطرفية (Wrangler)
 
 ```bash

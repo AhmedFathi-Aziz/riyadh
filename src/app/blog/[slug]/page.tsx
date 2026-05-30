@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BlogMarkdown } from "@/components/blog/BlogMarkdown";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { blogImages } from "@/lib/media/images";
 import Link from "next/link";
@@ -93,11 +94,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
           />
         </div>
 
-        <div className="prose-blog mx-auto max-w-3xl space-y-6 text-body-lg leading-relaxed text-on-surface-variant">
-          {post.paragraphs.map((block, index) => (
-            <ArticleBlock key={`${post.slug}-${index}`} text={block} />
-          ))}
-        </div>
+        <BlogMarkdown content={post.content} />
 
         <div className="mt-12 rounded-2xl bg-surface-container-low p-8 text-center">
           <h2 className="mb-4 text-headline-md font-semibold text-primary">
@@ -137,39 +134,4 @@ export default async function BlogArticlePage({ params }: PageProps) {
       <BlogFooter />
     </>
   );
-}
-
-function ArticleBlock({ text }: { text: string }) {
-  const imageMatch = text.match(/^!\[([^\]]*)\]\((\/images\/[^)]+)\)$/);
-  if (imageMatch) {
-    const [, alt, src] = imageMatch;
-    return (
-      <figure className="my-8 overflow-hidden rounded-2xl">
-        <div className="relative aspect-[21/9] w-full sm:aspect-video">
-          <OptimizedImage
-            src={src}
-            alt={alt}
-            fill
-            sizes="(max-width: 768px) 100vw, 720px"
-            className="object-contain bg-surface-container-low"
-          />
-        </div>
-      </figure>
-    );
-  }
-  if (text.startsWith("## ")) {
-    return (
-      <h2 className="mt-10 mb-4 border-r-4 border-secondary pr-4 text-headline-md font-semibold text-primary">
-        {text.slice(3)}
-      </h2>
-    );
-  }
-  if (text.startsWith("### ")) {
-    return (
-      <h3 className="mt-8 mb-3 text-body-lg font-semibold text-primary">
-        {text.slice(4)}
-      </h3>
-    );
-  }
-  return <p>{text}</p>;
 }

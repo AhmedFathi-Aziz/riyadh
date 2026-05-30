@@ -9,19 +9,33 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
 const publicDir = path.join(root, "public");
-const blogPath = path.join(root, "src", "lib", "blog.ts");
+const blogDir = path.join(root, "content", "blog");
 
 const baseUrl = (
   process.env.NEXT_PUBLIC_SITE_URL || "https://manzilcare.com"
 ).replace(/\/$/, "");
 
-const blogSource = fs.readFileSync(blogPath, "utf8");
 const posts = [];
-const entryRe =
-  /slug:\s*"([^"]+)"[\s\S]*?publishedAt:\s*"(\d{4}-\d{2}-\d{2})"/g;
-let match;
-while ((match = entryRe.exec(blogSource)) !== null) {
-  posts.push({ slug: match[1], publishedAt: match[2] });
+if (fs.existsSync(blogDir)) {
+  for (const file of fs.readdirSync(blogDir)) {
+    if (
+      !file.endsWith(".md") ||
+      file.startsWith("_") ||
+      file === "README.md" ||
+      !/^[a-z0-9]+(?:-[a-z0-9]+)*\.md$/.test(file)
+    ) {
+      continue;
+    }
+    const raw = fs.readFileSync(path.join(blogDir, file), "utf8");
+    const slug = file.replace(/\.md$/, "");
+    const dateMatch = raw.match(/^publishedAt:\s*"?(\d{4}-\d{2}-\d{2})"?/m);
+    const draftMatch = raw.match(/^draft:\s*true/m);
+    if (draftMatch) continue;
+    posts.push({
+      slug,
+      publishedAt: dateMatch?.[1] ?? new Date().toISOString().slice(0, 10),
+    });
+  }
 }
 
 const staticPaths = [

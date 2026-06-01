@@ -45,10 +45,10 @@ export const originalImageSources = {
     768,
   ),
   tank: localImage(
-    "service-tank.jpg",
+    "blog-tank-leak.png",
     "داخل خزان مياه معزول بطلاء إيبوكسي أزرق احترافي في الرياض",
-    1200,
-    900,
+    1536,
+    1024,
   ),
   roof: localImage(
     "blog-bitumen-roof.png",

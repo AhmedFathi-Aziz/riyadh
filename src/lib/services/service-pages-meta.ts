@@ -33,7 +33,7 @@ export const servicePagesMeta: ServicePageMeta[] = [
     title: "كشف تسربات الخزانات بالرياض",
     description:
       "كشف تسربات الخزانات العلوية والأرضية في الرياض دون تخمين: فحص ضغط، كاميرا، وعزل إيبوكسي. حماية الأساسات ومياه الشرب.",
-    coverImage: "service-tank.jpg",
+    coverImage: "blog-tank-leak.png",
     imageAlt: "فحص داخلي لخزان مياه معزول بالإيبوكسي في الرياض",
     icon: "water_drop",
     relatedSlugs: [

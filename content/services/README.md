@@ -7,7 +7,7 @@
 1. أضف تعريفاً في `src/lib/services/service-pages-meta.ts`
 2. أنشئ `content/services/your-slug.md` (3000+ كلمة، بدون frontmatter)
 3. أضف صورة الغلاف في `public/images/` إن لزم
-4. `git push` — يُحدَّث sitemap تلقائياً
+4. `git push` — عند النشر (`npm run build` على Cloudflare) يُولَّد `sitemap.xml` تلقائياً ولا حاجة لتحديثه يدوياً
 
 ## البنية المطلوبة في المحتوى
 

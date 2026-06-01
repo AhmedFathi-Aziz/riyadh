@@ -6,7 +6,7 @@ export function InsulationFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary px-gutter py-margin-desktop text-on-primary rtl">
+    <footer className="bg-primary px-4 py-12 text-on-primary sm:px-gutter sm:py-margin-desktop rtl">
       <div className="mx-auto max-w-max-width">
         <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-4">
           <div className="col-span-1 md:col-span-2">
@@ -99,48 +99,54 @@ export function InsulationFooter() {
             <h3 className="mb-6 font-bold text-secondary-container">
               تواصل معنا
             </h3>
-            <div className="space-y-4">
-              <div className="flex items-center gap-3 text-on-primary/80">
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3 text-on-primary/80">
                 <span
-                  className="material-symbols-outlined text-secondary-container"
+                  className="material-symbols-outlined mt-0.5 shrink-0 text-secondary-container"
                   aria-hidden
                 >
                   location_on
                 </span>
-                <span>الرياض، حي الصحافة، طريق الملك فهد</span>
-              </div>
-              <div className="flex items-center gap-3 text-on-primary/80">
+                <span className="min-w-0 flex-1 leading-relaxed">
+                  الرياض، حي الصحافة، طريق الملك فهد
+                </span>
+              </li>
+              <li className="flex items-start gap-3 text-on-primary/80">
                 <span
-                  className="material-symbols-outlined text-secondary-container"
+                  className="material-symbols-outlined mt-0.5 shrink-0 text-secondary-container"
                   aria-hidden
                 >
                   call
                 </span>
-                <a href={`tel:${siteConfig.phoneE164}`} className="hover:underline">
-                  0500 000 000
+                <a
+                  href={`tel:${siteConfig.phoneE164}`}
+                  dir="ltr"
+                  className="whitespace-nowrap hover:underline"
+                >
+                  {siteConfig.phoneDisplay}
                 </a>
-              </div>
-              <div className="flex items-center gap-3 text-on-primary/80">
+              </li>
+              <li className="flex items-start gap-3 text-on-primary/80">
                 <span
-                  className="material-symbols-outlined text-secondary-container"
+                  className="material-symbols-outlined mt-0.5 shrink-0 text-secondary-container"
                   aria-hidden
                 >
                   mail
                 </span>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="hover:underline"
+                  className="min-w-0 break-all hover:underline sm:break-normal"
                 >
                   {siteConfig.email}
                 </a>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-on-primary/10 pt-8 text-sm text-on-primary/60 md:flex-row">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-on-primary/10 pt-6 text-center text-sm text-on-primary/60 sm:pt-8 md:flex-row md:text-start">
           <p>© {year} جميع الحقوق محفوظة لـ{siteConfig.legalName}</p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             <span>تحت إشراف هندسي متكامل</span>
             <span>ضمان يصل إلى 15 عاماً</span>
           </div>

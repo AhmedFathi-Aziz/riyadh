@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Icon } from "@/components/Icon";
 import { insulationPage } from "@/lib/insulation-page";
 import { siteConfig } from "@/lib/site";
+import { primaryCtaOnDark } from "@/lib/ui/button-styles";
 
 export function InsulationHero() {
   const { hero } = insulationPage;
@@ -31,9 +32,9 @@ export function InsulationHero() {
           <p className="mb-8 text-body-lg opacity-90">{hero.subtitle}</p>
           <Link
             href={`tel:${siteConfig.phoneE164}`}
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-secondary-container px-8 py-3 font-semibold text-on-secondary-container transition-transform hover:scale-[1.02]"
+            className={`inline-flex items-center justify-center gap-2 rounded-xl px-8 py-3 font-semibold hover:scale-[1.02] ${primaryCtaOnDark}`}
           >
-            <Icon name="bolt" size="md" />
+            <Icon name="bolt" size="md" className="text-primary" />
             احجز فحصاً مجانياً
           </Link>
         </div>

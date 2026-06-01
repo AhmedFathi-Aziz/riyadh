@@ -5,7 +5,6 @@ import { InsulationHero } from "@/components/insulation/InsulationHero";
 import { InsulationPortfolio } from "@/components/insulation/InsulationPortfolio";
 import { InsulationProcessSteps } from "@/components/insulation/InsulationProcessSteps";
 import { InsulationTypesGrid } from "@/components/insulation/InsulationTypesGrid";
-import { MobileFloatingContact } from "@/components/MobileFloatingContact";
 import { SiteHeader } from "@/components/SiteHeader";
 import { PageStructuredData } from "@/components/seo/PageStructuredData";
 import { StandardPageSections } from "@/components/seo/StandardPageSections";
@@ -51,7 +50,6 @@ export default function InsulationPage() {
         <InsulationCtaSection />
       </main>
       <InsulationFooter />
-      <MobileFloatingContact />
     </>
   );
 }

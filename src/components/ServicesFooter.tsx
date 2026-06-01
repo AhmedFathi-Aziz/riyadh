@@ -7,8 +7,8 @@ export function ServicesFooter() {
   const { phoneE164, email, address } = siteConfig;
 
   return (
-    <footer className="w-full bg-primary px-gutter py-margin-desktop rtl">
-      <div className="mx-auto mb-12 grid max-w-max-width grid-cols-1 gap-12 md:grid-cols-3">
+    <footer className="w-full bg-primary px-4 py-12 text-on-primary sm:px-gutter sm:py-margin-desktop rtl">
+      <div className="mx-auto mb-10 grid max-w-max-width grid-cols-1 gap-10 sm:mb-12 sm:gap-12 md:grid-cols-3">
         <div>
           <Link href="/" className="mb-6 inline-block">
             <OptimizedImage
@@ -46,12 +46,12 @@ export function ServicesFooter() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-8 md:col-span-2">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-8 md:col-span-2">
           <nav aria-label="روابط سريعة">
-            <h3 className="mb-6 text-headline-md font-semibold text-on-primary">
+            <h3 className="mb-4 text-lg font-semibold sm:mb-6 sm:text-headline-md">
               روابط سريعة
             </h3>
-            <ul className="space-y-4">
+            <ul className="space-y-3 sm:space-y-4">
               <li>
                 <Link
                   href="#"
@@ -96,24 +96,24 @@ export function ServicesFooter() {
           </nav>
 
           <div>
-            <h3 className="mb-6 text-headline-md font-semibold text-on-primary">
+            <h3 className="mb-4 text-lg font-semibold sm:mb-6 sm:text-headline-md">
               تواصل معنا
             </h3>
             <ul className="space-y-4">
-              <li className="flex items-center gap-3 text-on-primary/80">
+              <li className="flex items-start gap-3 text-on-primary/80">
                 <span
-                  className="material-symbols-outlined text-secondary-container"
+                  className="material-symbols-outlined mt-0.5 shrink-0 text-secondary-container"
                   aria-hidden
                 >
                   location_on
                 </span>
-                <span className="text-body-md">
+                <span className="min-w-0 flex-1 text-body-md leading-relaxed">
                   {address.addressLocality}، المملكة العربية السعودية
                 </span>
               </li>
-              <li className="flex items-center gap-3 text-on-primary/80">
+              <li className="flex items-start gap-3 text-on-primary/80">
                 <span
-                  className="material-symbols-outlined text-secondary-container"
+                  className="material-symbols-outlined mt-0.5 shrink-0 text-secondary-container"
                   aria-hidden
                 >
                   call
@@ -121,21 +121,21 @@ export function ServicesFooter() {
                 <a
                   href={`tel:${phoneE164}`}
                   dir="ltr"
-                  className="text-body-md hover:underline"
+                  className="min-w-0 whitespace-nowrap text-body-md hover:underline"
                 >
-                  +966 500 000 000
+                  {siteConfig.phoneDisplay}
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-on-primary/80">
+              <li className="flex items-start gap-3 text-on-primary/80">
                 <span
-                  className="material-symbols-outlined text-secondary-container"
+                  className="material-symbols-outlined mt-0.5 shrink-0 text-secondary-container"
                   aria-hidden
                 >
                   mail
                 </span>
                 <a
                   href={`mailto:${email}`}
-                  className="text-body-md hover:underline"
+                  className="min-w-0 break-all text-body-md hover:underline sm:break-normal"
                 >
                   {email}
                 </a>
@@ -145,11 +145,11 @@ export function ServicesFooter() {
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-max-width flex-col items-center justify-between gap-4 border-t border-on-primary/10 pt-8 md:flex-row">
+      <div className="mx-auto flex max-w-max-width flex-col items-center justify-between gap-4 border-t border-on-primary/10 pt-6 text-center sm:pt-8 md:flex-row md:text-start">
         <p className="text-label-sm text-on-primary/60">
           © {year} جميع الحقوق محفوظة لـ{siteConfig.legalName}
         </p>
-        <div className="flex gap-6" aria-hidden>
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6" aria-hidden>
           <span className="material-symbols-outlined text-4xl text-secondary-container">
             verified_user
           </span>

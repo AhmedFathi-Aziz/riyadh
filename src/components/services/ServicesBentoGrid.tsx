@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Icon } from "@/components/Icon";
 import { servicesCatalog } from "@/lib/services-catalog";
 import { siteConfig } from "@/lib/site";
+import { primaryCtaOnDark } from "@/lib/ui/button-styles";
 
 const serviceDetailLinks: Record<string, string> = {
   "leak-detection": "/services/leak-detection-water-riyadh",
@@ -54,7 +55,7 @@ export function ServicesBentoGrid() {
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="/services/leak-detection-water-riyadh"
-                  className="inline-flex w-fit items-center gap-2 rounded-lg bg-secondary-container px-6 py-2 text-label-sm text-on-secondary-container transition-colors hover:bg-secondary-fixed"
+                  className={`inline-flex w-fit items-center gap-2 rounded-lg px-6 py-2 text-label-sm font-semibold ${primaryCtaOnDark}`}
                 >
                   الدليل الكامل
                 </Link>
@@ -76,7 +77,13 @@ export function ServicesBentoGrid() {
             className="group flex flex-col overflow-hidden rounded-xl border border-outline-variant/30 bg-white shadow-sm transition-all duration-500 hover:shadow-xl md:col-span-4"
           >
             <article id={card.id} className="flex h-full flex-col">
-              <div className="h-48 overflow-hidden">
+              <div
+                className={
+                  card.id === "bathroom-insulation"
+                    ? "h-52 overflow-hidden bg-surface-container-low"
+                    : "h-48 overflow-hidden"
+                }
+              >
                 <OptimizedImage
                   src={card.image.src}
                   alt={card.image.alt}
@@ -85,7 +92,11 @@ export function ServicesBentoGrid() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                   placeholder="blur"
                   blurDataURL={card.image.blurDataURL}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className={
+                    card.id === "bathroom-insulation"
+                      ? "h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                      : "h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  }
                 />
               </div>
               <div className="flex flex-grow flex-col p-6">

@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { Icon } from "@/components/Icon";
 import { siteConfig } from "@/lib/site";
+import { primaryCtaOnDark } from "@/lib/ui/button-styles";
 
 export function NewsletterForm() {
   const [done, setDone] = useState(false);
@@ -43,7 +44,7 @@ export function NewsletterForm() {
           />
           <button
             type="submit"
-            className="shrink-0 rounded-xl bg-secondary-container px-8 py-4 font-bold text-on-secondary-container transition-colors hover:bg-secondary hover:text-on-secondary"
+            className={`shrink-0 rounded-xl px-8 py-4 font-bold ${primaryCtaOnDark}`}
           >
             اشترك الآن
           </button>

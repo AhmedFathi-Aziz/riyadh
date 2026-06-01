@@ -20,7 +20,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-primary px-gutter py-margin-desktop text-on-primary rtl">
+    <footer className="w-full bg-primary px-4 py-12 text-on-primary sm:px-gutter sm:py-margin-desktop rtl">
       <div className="mx-auto w-full max-w-max-width">
         <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-4">
           <div className="col-span-1 md:col-span-2">
@@ -98,7 +98,7 @@ export function Footer() {
           <p className="text-label-sm opacity-60">
             © {year} جميع الحقوق محفوظة لـ{siteConfig.legalName}
           </p>
-          <div className="flex gap-6 text-label-sm opacity-60">
+          <div className="flex flex-wrap justify-center gap-4 text-label-sm opacity-60 sm:justify-end sm:gap-6">
             <Link href="#" className="hover:text-on-primary">
               سياسة الخصوصية
             </Link>

@@ -49,10 +49,10 @@ export const blogImageSources: Record<string, ImageSourceEntry> = {
     682,
   ),
   "bathroom-waterproofing-riyadh-guide": local(
-    "blog-bathroom-v2.jpg",
-    "حمام حديث بتشطيب عصري يحتاج عزل مائي احترافي قبل التبليط",
-    1280,
-    853,
+    "service-bathroom-kitchen-insulation.png",
+    "عزل الحمامات والمطابخ — حماية من تسربات المياه والرطوبة في الرياض",
+    1024,
+    682,
   ),
   "roof-insulation-save-electricity-riyadh": local(
     "blog-thermal-roof.png",

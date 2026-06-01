@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Icon } from "@/components/Icon";
 import { serviceAreas } from "@/lib/contact-page";
 import { siteConfig } from "@/lib/site";
+import { primaryCtaOnDark } from "@/lib/ui/button-styles";
 
 const contactMethods = [
   {
@@ -86,9 +87,9 @@ export function ContactInfoPanel() {
         </p>
         <Link
           href={`tel:${siteConfig.phoneE164}`}
-          className="inline-flex items-center gap-2 rounded-lg bg-secondary-container px-5 py-2.5 text-sm font-bold text-on-secondary-container"
+          className={`inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-bold ${primaryCtaOnDark}`}
         >
-          <Icon name="calendar_today" size="sm" />
+          <Icon name="calendar_today" size="sm" className="text-primary" />
           احجز موعدك
         </Link>
       </div>

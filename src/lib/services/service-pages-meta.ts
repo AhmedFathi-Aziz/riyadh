@@ -16,10 +16,10 @@ export const servicePagesMeta: ServicePageMeta[] = [
     keyword: "كشف تسربات المياه بالرياض",
     title: "كشف تسربات المياه بالرياض",
     description:
-      "كشف تسربات المياه في الرياض بدقة عالية: أجهزة صوتية وحرارية، تقرير مصور، إصلاح موضعي وضمان. معاينة مجانية في جميع الأحياء.",
-    coverImage: "service-leak-detection.png",
+      "كشف تسربات المياه بالرياض بدقة: صوتي، حراري، وغاز تتبع. تقرير مصور، إصلاح موضعي، ومعاينة مجانية في كل الأحياء.",
+    coverImage: "leak-detection-water-riyadh-hero.webp",
     imageAlt:
-      "فني يكشف تسرب مياه بجانب مكيف على سطح مبنى بأجهزة كشف صوتية في الرياض",
+      "فريق ManzilCare يكشف تسرب مياه في فيلا بالرياض بأجهزة كشف دون تكسير عشوائي",
     icon: "search_check",
     relatedSlugs: [
       "leak-detection-no-damage-riyadh",
@@ -125,8 +125,9 @@ export const servicePagesMeta: ServicePageMeta[] = [
     title: "عزل الحمامات بالرياض",
     description:
       "عزل حمامات ومطابخ في الرياض قبل وبعد التشطيب. منع الرطوبة والتسرب للأدوار السفلية مع مواد معتمدة.",
-    coverImage: "blog-bathroom-v2.jpg",
-    imageAlt: "حمام حديث يحتاج عزل مائي احترافي قبل التشطيب في الرياض",
+    coverImage: "service-bathroom-kitchen-insulation.png",
+    imageAlt:
+      "عزل الحمامات والمطابخ — حماية من تسربات المياه والرطوبة في الرياض",
     icon: "bathtub",
     relatedSlugs: [
       "leak-repair-water-riyadh",

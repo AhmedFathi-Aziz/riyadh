@@ -11,7 +11,7 @@
 | الحقل | القيمة |
 |--------|--------|
 | Framework preset | **None** |
-| Build command | `npm run build` (لا تستخدم `npx next build` وحده) |
+| Build command | `npm run build` (لا تستخدم `npx next build` وحده — `prebuild` يولّد `sitemap.xml` تلقائياً) |
 | Build output directory | `out` |
 | Root directory | `/` (جذر المشروع) |
 
@@ -52,6 +52,17 @@ npm run preview:static
 ```
 
 يفتح المجلد `out/` كموقع ثابت على `http://localhost:3000` (أو المنفذ الذي يعرضه `serve`).
+
+## Sitemap تلقائي عند النشر
+
+عند كل `npm run build` (محلياً أو على Cloudflare) يُشغَّل `prebuild` ويُحدَّث:
+
+- `public/sitemap.xml` — من الخدمات (`content/services/*.md`)، الأحياء (`data/riyadh-neighborhoods.json`)، والمدونة
+- `public/robots.txt` و `manifest.webmanifest`
+
+**لا تحتاج** تشغيل سكربت يدوي قبل `git push`. أضف المحتوى → ارفع → النشر يبني الموقع والـ sitemap معاً.
+
+تأكد في Cloudflare أن **Build command** = `npm run build` وليس `npx next build` فقط.
 
 ## ملاحظات
 

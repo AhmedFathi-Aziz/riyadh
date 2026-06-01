@@ -1,4 +1,5 @@
 import { OptimizedImage } from "@/components/OptimizedImage";
+import { SiteHeaderMobileNav } from "@/components/SiteHeaderMobileNav";
 import Link from "next/link";
 import { mainNavLinks, type NavPageId } from "@/lib/navigation";
 import { siteConfig } from "@/lib/site";
@@ -49,7 +50,6 @@ export function SiteHeader({
       >
         {mainNavLinks.map((link) => {
           const isActive = "pageId" in link && link.pageId === activePage;
-
           return (
             <Link
               key={link.href}
@@ -63,42 +63,23 @@ export function SiteHeader({
         })}
       </nav>
 
-      {variant === "services" ? (
+      <div className="relative z-[60] flex shrink-0 items-center gap-2 sm:gap-3">
         <Link
           href="/contact"
-          className="rounded-lg bg-primary px-6 py-2.5 text-label-sm text-on-primary transition-all hover:opacity-90"
+          className={`hidden min-h-10 shrink-0 items-center justify-center rounded-lg bg-primary px-4 py-2 text-label-sm text-on-primary transition-all hover:opacity-90 md:inline-flex md:px-6 ${
+            variant === "services" ? "md:py-2.5" : "md:py-2 md:shadow-md"
+          }`}
         >
           اطلب اقتباس
         </Link>
-      ) : (
-        <div className="flex items-center gap-4">
-          <Link
-            href="/contact"
-            className={`rounded-lg bg-primary text-label-sm text-on-primary transition-all hover:opacity-90 ${
-              variant === "glass"
-                ? "px-6 py-2 shadow-md"
-                : "px-6 py-2 shadow-md"
-            }`}
-          >
-            اطلب اقتباس
-          </Link>
-          <button
-            type="button"
-            className="text-primary md:hidden"
-            aria-label="فتح القائمة"
-          >
-            <span className="material-symbols-outlined" aria-hidden>
-              menu
-            </span>
-          </button>
-        </div>
-      )}
+        <SiteHeaderMobileNav activePage={activePage} />
+      </div>
     </>
   );
 
   if (variant === "services") {
     return (
-      <header className="fixed top-0 right-0 left-0 z-50 bg-surface/80 shadow-sm backdrop-blur-md">
+      <header className="fixed top-0 right-0 left-0 z-50 bg-surface/95 shadow-sm">
         <div className="mx-auto flex h-20 max-w-max-width items-center justify-between px-gutter rtl">
           {inner}
         </div>
@@ -117,13 +98,10 @@ export function SiteHeader({
   }
 
   return (
-    <nav
-      aria-label="شريط التنقل العلوي"
-      className="fixed top-0 left-0 z-50 flex h-20 w-full max-w-full items-center justify-between bg-surface/80 px-6 shadow-sm backdrop-blur-md md:px-gutter rtl"
-    >
+    <header className="fixed top-0 left-0 z-50 flex h-20 w-full max-w-full items-center justify-between bg-surface/95 px-6 shadow-sm md:px-gutter rtl">
       <div className="mx-auto flex h-full w-full max-w-max-width items-center justify-between">
         {inner}
       </div>
-    </nav>
+    </header>
   );
 }

@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { BlogMarkdown } from "@/components/blog/BlogMarkdown";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ServicePageCta } from "@/components/services/ServicePageCta";
+import { ServicePageHero } from "@/components/services/ServicePageHero";
+import { ServiceTrustBar } from "@/components/services/ServiceTrustBar";
+import { ServiceTableOfContents } from "@/components/services/ServiceTableOfContents";
+import { ServiceMarkdown } from "@/components/services/ServiceMarkdown";
+import { ServiceMidCta } from "@/components/services/ServiceMidCta";
+import { ServiceAreasSection } from "@/components/services/ServiceAreasSection";
 import { ServicesFooter } from "@/components/ServicesFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Icon } from "@/components/Icon";
@@ -13,7 +18,13 @@ import {
   getAllServicePages,
   getServicePageBySlug,
 } from "@/lib/services/load-pages";
+import {
+  extractServiceToc,
+  prepareServiceMarkdown,
+  stripAreasSectionFromBody,
+} from "@/lib/services/prepare-markdown";
 import { getServiceMetaBySlug } from "@/lib/services/service-pages-meta";
+import { getServicePageImages } from "@/lib/media/service-page-images";
 import { breadcrumbs } from "@/lib/seo/breadcrumbs";
 import { extractFaqFromMarkdown } from "@/lib/seo/extract-markdown-faq";
 import { getFaqsForPage } from "@/lib/seo/page-faqs";
@@ -56,18 +67,32 @@ export default async function ServiceLandingPage({ params }: PageProps) {
   if (!page) notFound();
 
   const pageUrl = `${siteConfig.url}/services/${page.slug}`;
-  const markdownFaqs = extractFaqFromMarkdown(page.content);
+  const cleanedContent = prepareServiceMarkdown(page.content);
+  const markdownFaqs = extractFaqFromMarkdown(cleanedContent);
   const faqs = getFaqsForPage({
     extras: markdownFaqs,
     serviceSlug: page.slug,
     max: 5,
   });
-  const bodyContent = stripFaqSection(page.content);
+  const bodyContent = stripFaqSection(cleanedContent);
+  const { body: articleBody, areasIntro } =
+    stripAreasSectionFromBody(bodyContent);
+  const toc = [
+    ...extractServiceToc(articleBody),
+    { id: "service-areas", title: "أحياء نغطيها في الرياض" },
+  ];
   const crumb = breadcrumbs.service(page.keyword, page.slug);
 
   const related = page.relatedSlugs
     .map((s) => getServiceMetaBySlug(s))
     .filter(Boolean);
+  const pageImages = getServicePageImages(page.slug);
+  const heroImage = pageImages?.hero ?? {
+    src: `/images/${page.coverImage}`,
+    alt: page.imageAlt,
+    width: 1200,
+    height: 675,
+  };
 
   return (
     <>
@@ -83,57 +108,97 @@ export default async function ServiceLandingPage({ params }: PageProps) {
         ]}
       />
       <SiteHeader activePage="services" />
-      <article className="mx-auto max-w-max-width px-gutter pt-32 pb-20">
+      <article className="mx-auto max-w-max-width overflow-x-hidden px-4 pb-16 pt-24 sm:px-gutter sm:pb-20 sm:pt-28 md:pt-32">
         <BreadcrumbNav items={crumb} />
 
-        <header className="mb-10">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-secondary/20 bg-secondary-container/10 px-4 py-1 text-label-sm text-secondary">
-            <Icon name={page.icon} size="sm" />
-            <span>خدمة معتمدة في الرياض</span>
-          </div>
-          <h1 className="mb-4 text-display-lg-mobile font-bold text-primary md:text-display-lg">
-            {page.keyword}
-          </h1>
-          <p className="max-w-3xl text-body-lg text-on-surface-variant">
-            {page.description}
-          </p>
-        </header>
-
-        <BlogMarkdown content={bodyContent} />
-
-        <StandardPageSections
-          faqs={faqs}
-          servicesIntro={`خدمات مكمّلة لـ${page.keyword} في الرياض:`}
+        <ServicePageHero
+          title={page.keyword}
+          description={page.description}
+          icon={page.icon}
+          image={{ src: heroImage.src, alt: heroImage.alt }}
         />
 
-        <ServicePageCta serviceName={page.keyword} />
+        <ServiceTrustBar />
 
-        {related.length > 0 && (
-          <section className="mt-16 border-t border-outline-variant/30 pt-12">
-            <h2 className="mb-6 text-headline-md font-semibold text-primary">
-              خدمات ذات صلة
-            </h2>
-            <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {related.map((r) =>
-                r ? (
-                  <li key={r.slug}>
-                    <Link
-                      href={`/services/${r.slug}`}
-                      className="block rounded-xl border border-outline-variant/30 bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
-                    >
-                      <span className="font-semibold text-primary">
-                        {r.keyword}
-                      </span>
-                      <p className="mt-2 text-label-sm text-on-surface-variant line-clamp-2">
-                        {r.description}
-                      </p>
-                    </Link>
-                  </li>
-                ) : null,
-              )}
-            </ul>
-          </section>
-        )}
+        <div className="grid gap-6 sm:gap-8 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-12 lg:hidden">
+            <ServiceTableOfContents
+              items={toc}
+              serviceName={page.keyword}
+              layout="mobile"
+            />
+          </div>
+
+          <aside className="hidden lg:col-span-3 lg:block">
+            <div className="sticky top-24 max-h-[calc(100vh-6.5rem)] xl:top-28">
+              <ServiceTableOfContents
+                items={toc}
+                serviceName={page.keyword}
+                layout="desktop"
+              />
+            </div>
+          </aside>
+
+          <div className="min-w-0 lg:col-span-9">
+            <ServiceMarkdown content={articleBody} />
+            <ServiceMidCta serviceName={page.keyword} />
+
+            <StandardPageSections
+              faqs={faqs}
+              servicesIntro={`خدمات مكمّلة لـ${page.keyword} في الرياض:`}
+            />
+
+            <ServicePageCta serviceName={page.keyword} />
+
+            {related.length > 0 && (
+              <section className="mt-12 border-t border-outline-variant/30 pt-8 sm:mt-16 sm:pt-12">
+                <h2 className="mb-2 text-xl font-bold text-primary sm:text-headline-md">
+                  خدمات ذات صلة
+                </h2>
+                <p className="mb-5 text-body-md text-on-surface-muted sm:mb-6">
+                  قد تحتاج أيضاً إلى هذه الخدمات في الرياض
+                </p>
+                <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
+                  {related.map((r) =>
+                    r ? (
+                      <li key={r.slug}>
+                        <Link
+                          href={`/services/${r.slug}`}
+                          className="group flex h-full flex-col rounded-2xl border border-outline-variant/25 bg-white p-5 shadow-soft transition-all hover:-translate-y-0.5 hover:border-secondary/30 hover:shadow-soft-md"
+                        >
+                          <span className="mb-3 flex size-10 items-center justify-center rounded-xl bg-secondary-container/15 text-secondary transition-colors group-hover:bg-secondary group-hover:text-on-secondary">
+                            <Icon name={r.icon} size="md" />
+                          </span>
+                          <span className="font-bold text-primary">
+                            {r.keyword}
+                          </span>
+                          <p className="mt-2 flex-1 text-label-sm leading-relaxed text-on-surface-muted line-clamp-3">
+                            {r.description}
+                          </p>
+                          <span className="mt-4 inline-flex items-center gap-1 text-label-sm font-semibold text-secondary">
+                            اقرأ المزيد
+                            <Icon
+                              name="arrow_back"
+                              size="sm"
+                              className="transition-transform group-hover:-translate-x-1"
+                            />
+                          </span>
+                        </Link>
+                      </li>
+                    ) : null,
+                  )}
+                </ul>
+              </section>
+            )}
+          </div>
+        </div>
+
+        <div className="mt-10 border-t border-outline-variant/20 pt-8 sm:mt-16 sm:pt-12">
+          <ServiceAreasSection
+            serviceSlug={page.slug}
+            intro={areasIntro || undefined}
+          />
+        </div>
       </article>
       <ServicesFooter />
     </>

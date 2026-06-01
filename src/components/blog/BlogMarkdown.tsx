@@ -30,7 +30,8 @@ const components: Components = {
             src={src}
             alt={alt ?? ""}
             fill
-            sizes="(max-width: 768px) 100vw, 720px"
+            loading="lazy"
+            sizes="(max-width: 640px) 100vw, (max-width: 1080px) 90vw, 720px"
             className="object-contain bg-surface-container-low"
           />
         </div>

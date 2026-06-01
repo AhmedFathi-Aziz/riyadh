@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { ContactInfoPanel } from "@/components/contact/ContactInfoPanel";
-import { FloatingContact } from "@/components/FloatingContact";
 import { Footer } from "@/components/Footer";
 import { SiteHeader } from "@/components/SiteHeader";
 import { BreadcrumbNav } from "@/components/seo/BreadcrumbNav";
@@ -60,7 +59,6 @@ export default function ContactPage() {
         </div>
       </main>
       <Footer />
-      <FloatingContact />
     </>
   );
 }

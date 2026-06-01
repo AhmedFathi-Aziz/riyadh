@@ -1,12 +1,12 @@
-import { IBM_Plex_Sans_Arabic } from "next/font/google";
+import { Cairo } from "next/font/google";
 
 /**
- * IBM Plex Sans Arabic — وضوح عالي للنصوص والعناوين في الواجهات العربية.
+ * Cairo — خط عربي هندسي حديث (sans-serif) للنصوص والعناوين.
  */
-export const arabicFont = IBM_Plex_Sans_Arabic({
-  subsets: ["arabic"],
+export const arabicFont = Cairo({
+  subsets: ["arabic", "latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-plex-arabic",
+  variable: "--font-cairo",
   display: "swap",
   preload: true,
 });

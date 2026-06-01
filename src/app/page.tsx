@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { ContactSection } from "@/components/ContactSection";
 import { FaqSection } from "@/components/FaqSection";
 import { Features } from "@/components/Features";
-import { FloatingContact } from "@/components/FloatingContact";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { PageStructuredData } from "@/components/seo/PageStructuredData";
@@ -39,7 +38,6 @@ export default function HomePage() {
         <ContactSection />
       </main>
       <Footer />
-      <FloatingContact />
     </>
   );
 }

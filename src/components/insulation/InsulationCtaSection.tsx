@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Icon } from "@/components/Icon";
 import { LeadForm } from "@/components/insulation/LeadForm";
 import { siteConfig } from "@/lib/site";
+import { primaryCtaOnDark } from "@/lib/ui/button-styles";
 
 export function InsulationCtaSection() {
   return (
@@ -26,9 +27,9 @@ export function InsulationCtaSection() {
           <div className="flex flex-col gap-4 sm:flex-row">
             <a
               href={`tel:${siteConfig.phoneE164}`}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-secondary-container px-8 py-4 text-headline-md font-semibold text-on-secondary-container transition-colors hover:bg-secondary"
+              className={`inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-headline-md font-semibold ${primaryCtaOnDark}`}
             >
-              <Icon name="call" size="md" />
+              <Icon name="call" size="md" className="text-primary" />
               اتصل الآن
             </a>
             <Link

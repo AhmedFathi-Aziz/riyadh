@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { FloatingContact } from "@/components/FloatingContact";
 import { JsonLd } from "@/components/JsonLd";
 import { bodyFont, fontVariables } from "@/lib/fonts";
 import { getBaseMetadata } from "@/lib/seo";
@@ -42,6 +43,7 @@ export default function RootLayout({
       >
         <JsonLd />
         {children}
+        <FloatingContact />
       </body>
     </html>
   );

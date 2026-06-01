@@ -23,12 +23,12 @@ export function StandardPageSections({
   showAdvantages = true,
 }: StandardPageSectionsProps) {
   return (
-    <div className="mt-16 space-y-16 border-t border-outline-variant/30 pt-16">
+    <div className="mt-12 space-y-12 border-t border-outline-variant/30 pt-10 sm:mt-16 sm:space-y-16 sm:pt-16">
       {showServices && (
         <section id="our-services" aria-labelledby="our-services-heading">
           <h2
             id="our-services-heading"
-            className="mb-6 text-headline-md font-semibold text-primary"
+            className="mb-4 text-xl font-semibold text-primary sm:mb-6 sm:text-headline-md"
           >
             خدماتنا
           </h2>
@@ -69,7 +69,7 @@ export function StandardPageSections({
       <section id="work-steps" aria-labelledby="work-steps-heading">
         <h2
           id="work-steps-heading"
-          className="mb-6 text-headline-md font-semibold text-primary"
+          className="mb-4 text-xl font-semibold text-primary sm:mb-6 sm:text-headline-md"
         >
           خطوات العمل
         </h2>
@@ -103,7 +103,7 @@ export function StandardPageSections({
       <section id="advantages" aria-labelledby="advantages-heading">
         <h2
           id="advantages-heading"
-          className="mb-6 text-headline-md font-semibold text-primary"
+          className="mb-4 text-xl font-semibold text-primary sm:mb-6 sm:text-headline-md"
         >
           المميزات
         </h2>
@@ -133,7 +133,7 @@ export function StandardPageSections({
       <section id="faq" aria-labelledby="faq-heading">
         <h2
           id="faq-heading"
-          className="mb-6 text-headline-md font-semibold text-primary"
+          className="mb-4 text-xl font-semibold text-primary sm:mb-6 sm:text-headline-md"
         >
           الأسئلة الشائعة
         </h2>

@@ -128,6 +128,10 @@ const manifest = {
   dir: "rtl",
   orientation: "portrait-primary",
   categories: ["business", "utilities"],
+  icons: [
+    { src: "/images/icon-192.png", sizes: "192x192", type: "image/png", purpose: "any" },
+    { src: "/images/icon-512.png", sizes: "512x512", type: "image/png", purpose: "any" },
+  ],
 };
 
 fs.writeFileSync(path.join(publicDir, "robots.txt"), robotsTxt, "utf8");
@@ -138,4 +142,10 @@ fs.writeFileSync(
   "utf8",
 );
 
+const totalUrls =
+  staticPaths.length + servicePages.length + neighborhoodPages.length + posts.length;
+
 console.log("Generated public/robots.txt, sitemap.xml, manifest.webmanifest");
+console.log(
+  `Sitemap: ${totalUrls} URLs — ${staticPaths.length} static, ${servicePages.length} services, ${neighborhoodPages.length} areas, ${posts.length} blog`,
+);

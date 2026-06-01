@@ -19,11 +19,11 @@ export const originalImageSources = {
     height: 581,
   },
   hero: {
-    file: "hero-roof-team-riyadh.png",
-    url: "/images/hero-roof-team-riyadh.png",
-    alt: "فريق عمل يطبق عزل أسطح في الرياض مع أفق برج المملكة والفيصلية",
+    file: "hero-leak-detection-riyadh.png",
+    url: "/images/hero-leak-detection-riyadh.png",
+    alt: "كشف تسربات المياه بالرياض — فني ManzilCare بأحدث أجهزة الكشف بدون تكسير",
     width: 1024,
-    height: 686,
+    height: 682,
   },
   services: {
     file: "services-roof-insulation-riyadh.png",
@@ -54,11 +54,11 @@ export const originalImageSources = {
     height: 682,
   },
   bathroom: {
-    file: "blog-bathroom-v2.jpg",
-    url: "/images/blog-bathroom-v2.jpg",
-    alt: "حمام حديث يحتاج عزل مائي احترافي قبل التشطيب في الرياض",
-    width: 1280,
-    height: 853,
+    file: "service-bathroom-kitchen-insulation.png",
+    url: "/images/service-bathroom-kitchen-insulation.png",
+    alt: "عزل الحمامات والمطابخ — حماية من تسربات المياه والرطوبة في الرياض",
+    width: 1024,
+    height: 682,
   },
   restoration: {
     file: "blog-detect-leaks-without-tiling.png",

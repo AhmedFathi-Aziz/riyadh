@@ -169,6 +169,13 @@ export const servicePagesMeta: ServicePageMeta[] = [
   },
 ];
 
+/** الصفحة التفصيلية المعروضة في سيكشن مميز على /services */
+export const SERVICES_PAGE_SPOTLIGHT_SLUG = "leak-detection-water-riyadh" as const;
+
 export function getServiceMetaBySlug(slug: string): ServicePageMeta | undefined {
   return servicePagesMeta.find((p) => p.slug === slug);
+}
+
+export function getServicesPageSpotlight(): ServicePageMeta | undefined {
+  return getServiceMetaBySlug(SERVICES_PAGE_SPOTLIGHT_SLUG);
 }

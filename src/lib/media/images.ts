@@ -1,6 +1,5 @@
 /**
- * صور الموقع الأصلية — نفس روابط التصميم (Google CDN).
- * Next/Image يُحسّنها تلقائياً (WebP/AVIF + المقاس المناسب).
+ * صور الموقع — ملفات ثابتة من public/images/ (تُنسخ كما هي عند output: export).
  */
 import { blogImageSources } from "./blog-images";
 import { originalImageSources, type ImageSourceEntry } from "./original-sources";

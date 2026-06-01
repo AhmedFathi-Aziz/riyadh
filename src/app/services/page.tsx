@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AreasPromo } from "@/components/areas/AreasPromo";
+import { FeaturedServiceGuideSection } from "@/components/services/FeaturedServiceGuideSection";
 import { ServicesBentoGrid } from "@/components/services/ServicesBentoGrid";
 import { ServicesLandingList } from "@/components/services/ServicesLandingList";
 import { ServicesPageHero } from "@/components/services/ServicesPageHero";
@@ -35,6 +36,7 @@ export default function ServicesPage() {
       <SiteHeader activePage="services" variant="services" />
       <main className="overflow-x-hidden pt-32 pb-20">
         <ServicesPageHero />
+        <FeaturedServiceGuideSection />
         <ServicesBentoGrid />
         <TrustStats />
         <ServicesLandingList />

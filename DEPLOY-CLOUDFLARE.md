@@ -64,6 +64,14 @@ npm run preview:static
 
 تأكد في Cloudflare أن **Build command** = `npm run build` وليس `npx next build` فقط.
 
+## الصور = نفس اللوكال
+
+كل الصور من مجلد `public/images/` فقط (لا روابط Google CDN في الكود). عند البناء يتحقق السكربت `verify-public-images.mjs` أن الملفات موجودة.
+
+1. أي صورة جديدة: ضعها في `public/images/` و**ارفعها مع Git**.
+2. بعد النشر إن ظهرت صور قديمة: **Deployments → Retry → Clear build cache** ثم Purge cache من Cloudflare للموقع.
+3. معاينة ما سيُنشر محلياً: `npm run build` ثم `npm run preview:static` — نفس مجلد `out/` الذي يرفع.
+
 ## ملاحظات
 
 - لا يوجد خادم Node بعد النشر؛ كل الصفحات مُولَّدة مسبقاً (بما فيها `/blog/[slug]`).

@@ -14,6 +14,20 @@ export const servicePageImages = {
       height: 853,
     },
   },
+  "leak-detection-no-damage-riyadh": {
+    hero: {
+      src: "/images/leak-detection-no-damage-riyadh-hero.webp",
+      alt: "كشف تسربات بدون تكسير في فيلا بالرياض — فريق ManzilCare يحدد موقع التسرب قبل أي فتح للبلاط",
+      width: 1536,
+      height: 1024,
+    },
+    field: {
+      src: "/images/leak-detection-no-damage-riyadh-field.webp",
+      alt: "فني يستخدم أجهزة كشف تسربات المياه دون تكسير في شقة سكنية بالرياض",
+      width: 1280,
+      height: 853,
+    },
+  },
 } as const;
 
 export function getServicePageImages(slug: string) {

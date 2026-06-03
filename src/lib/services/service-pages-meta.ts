@@ -154,12 +154,12 @@ export const servicePagesMeta: ServicePageMeta[] = [
   {
     slug: "leak-detection-no-damage-riyadh",
     keyword: "كشف تسربات بدون تكسير بالرياض",
-    title: "كشف تسربات بدون تكسير بالرياض",
+    title: "كشف تسربات بدون تكسير بالرياض | ManzilCare",
     description:
-      "كشف تسربات بدون تكسير في الرياض: موجات صوتية، غاز تتبع، كاميرا حرارية. تحديد الموقع بدقة ملليمترية.",
-    coverImage: "blog-detect-leaks-collage.png",
+      "كشف تسربات بدون تكسير في الرياض: صوتي، حراري، وغاز تتبع. تحديد موقع التسرب بدقة قبل أي تكسير. معاينة مجانية في كل الأحياء.",
+    coverImage: "leak-detection-no-damage-riyadh-hero.webp",
     imageAlt:
-      "طرق كشف التسربات بدون تكسير: صوتي، حراري، كاميرا، وغاز تتبع في الرياض",
+      "كشف تسربات بدون تكسير في فيلا بالرياض — فريق ManzilCare يحدد موقع التسرب قبل فتح البلاط",
     icon: "hearing",
     relatedSlugs: [
       "leak-detection-water-riyadh",
@@ -169,13 +169,46 @@ export const servicePagesMeta: ServicePageMeta[] = [
   },
 ];
 
-/** الصفحة التفصيلية المعروضة في سيكشن مميز على /services */
-export const SERVICES_PAGE_SPOTLIGHT_SLUG = "leak-detection-water-riyadh" as const;
+/** الصفحات التفصيلية المعروضة في سيكشن مميز على /services */
+export const SERVICES_PAGE_SPOTLIGHT_SLUGS = [
+  "leak-detection-water-riyadh",
+  "leak-detection-no-damage-riyadh",
+] as const;
+
+export type ServicesPageSpotlightSlug =
+  (typeof SERVICES_PAGE_SPOTLIGHT_SLUGS)[number];
+
+/** @deprecated استخدم SERVICES_PAGE_SPOTLIGHT_SLUGS */
+export const SERVICES_PAGE_SPOTLIGHT_SLUG =
+  SERVICES_PAGE_SPOTLIGHT_SLUGS[0];
+
+export const SERVICES_PAGE_SPOTLIGHT_HIGHLIGHTS: Record<
+  ServicesPageSpotlightSlug,
+  readonly string[]
+> = {
+  "leak-detection-water-riyadh": [
+    "كشف شامل للتغذية والصرف والخزانات والأسطح",
+    "تقرير مصور، تقدير تكلفة، وخطة إصلاح واضحة",
+    "معاينة مجانية وتغطية لأحياء الرياض",
+  ],
+  "leak-detection-no-damage-riyadh": [
+    "تحديد موقع التسرب بالصوتيات والحرارة وغاز التتبع",
+    "تقليل التكسير — فتح موضعي فقط عند الضرورة",
+    "مناسب للفلل والشقق والمباني التجارية والمستودعات",
+  ],
+};
 
 export function getServiceMetaBySlug(slug: string): ServicePageMeta | undefined {
   return servicePagesMeta.find((p) => p.slug === slug);
 }
 
+export function getServicesPageSpotlights(): ServicePageMeta[] {
+  return SERVICES_PAGE_SPOTLIGHT_SLUGS.map((slug) =>
+    getServiceMetaBySlug(slug),
+  ).filter((meta): meta is ServicePageMeta => Boolean(meta));
+}
+
+/** @deprecated استخدم getServicesPageSpotlights */
 export function getServicesPageSpotlight(): ServicePageMeta | undefined {
   return getServiceMetaBySlug(SERVICES_PAGE_SPOTLIGHT_SLUG);
 }

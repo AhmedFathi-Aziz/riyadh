@@ -76,12 +76,13 @@ export const servicePagesMeta: ServicePageMeta[] = [
   },
   {
     slug: "roof-insulation-riyadh",
-    keyword: "عزل الأسطح بالرياض",
-    title: "عزل الأسطح بالرياض",
+    keyword: "عزل أسطح بالرياض",
+    title: "عزل أسطح بالرياض",
     description:
-      "عزل أسطح مائي وحراري في الرياض: بيتومين، فوم، بولي يوريثان. تقليل الحرارة وفواتير الكهرباء مع ضمان يصل 10 سنوات.",
-    coverImage: "blog-bitumen-roof.png",
-    imageAlt: "عمال يطبقون عزل بيتوميني على سطح مبنى في الرياض",
+      "عزل أسطح بالرياض مائي وحراري للفلل والعمائر والمستودعات: بيتومين، فوم، وأغشية معتمدة. معاينة مجانية وضمان حتى 10 سنوات.",
+    coverImage: "roof-insulation-riyadh-hero.webp",
+    imageAlt:
+      "شعار ManzilCare — عزل أسطح بالرياض: عزل مائي وحراري للفلل والمباني التجارية",
     icon: "wb_sunny",
     relatedSlugs: [
       "foam-insulation-riyadh",
@@ -110,8 +111,9 @@ export const servicePagesMeta: ServicePageMeta[] = [
     title: "عزل الخزانات بالرياض",
     description:
       "عزل خزانات علوية وأرضية في الرياض بإيبوكسي وأسمنتي مرن. حماية المياه، منع التسرب، وضمان طويل للفلل والعمائر.",
-    coverImage: "blog-epoxy-coating.png",
-    imageAlt: "تطبيق طلاء إيبوكسي عازل لعزل خزان مياه من الداخل في الرياض",
+    coverImage: "service-tank.jpg",
+    imageAlt:
+      "عزل خزانات بالرياض — خزان مياه معزول من الداخل بطلاء إيبوكسي أزرق احترافي",
     icon: "water_drop",
     relatedSlugs: [
       "leak-detection-tanks-riyadh",
@@ -173,6 +175,7 @@ export const servicePagesMeta: ServicePageMeta[] = [
 export const SERVICES_PAGE_SPOTLIGHT_SLUGS = [
   "leak-detection-water-riyadh",
   "leak-detection-no-damage-riyadh",
+  "roof-insulation-riyadh",
 ] as const;
 
 export type ServicesPageSpotlightSlug =
@@ -195,6 +198,11 @@ export const SERVICES_PAGE_SPOTLIGHT_HIGHLIGHTS: Record<
     "تحديد موقع التسرب بالصوتيات والحرارة وغاز التتبع",
     "تقليل التكسير — فتح موضعي فقط عند الضرورة",
     "مناسب للفلل والشقق والمباني التجارية والمستودعات",
+  ],
+  "roof-insulation-riyadh": [
+    "عزل مائي وحراري للفلل والعمائر والمستودعات",
+    "مقارنة أنظمة العزل: بيتومين، فوم، أغشية، وXPS",
+    "معاينة مجانية، عرض سعر شفاف، وضمان مكتوب",
   ],
 };
 

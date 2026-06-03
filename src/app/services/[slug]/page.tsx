@@ -112,7 +112,7 @@ export default async function ServiceLandingPage({ params }: PageProps) {
         ]}
       />
       <SiteHeader activePage="services" />
-      <article className="mx-auto max-w-max-width overflow-x-hidden px-4 pb-16 pt-24 sm:px-gutter sm:pb-20 sm:pt-28 md:pt-32">
+      <article className="mx-auto max-w-max-width px-4 pb-16 pt-24 sm:px-gutter sm:pb-20 sm:pt-28 md:pt-32">
         <BreadcrumbNav items={crumb} />
 
         <ServicePageHero
@@ -144,7 +144,7 @@ export default async function ServiceLandingPage({ params }: PageProps) {
           </aside>
 
           <div className="min-w-0 lg:col-span-9">
-            <ServiceMarkdown content={articleBody} />
+            <ServiceMarkdown content={articleBody} serviceSlug={page.slug} />
             <ServiceMidCta serviceName={page.keyword} />
 
             <StandardPageSections

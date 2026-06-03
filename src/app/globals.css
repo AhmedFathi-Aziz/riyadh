@@ -236,6 +236,24 @@ body {
   margin-top: 0;
 }
 
+/* جداول مقارنة الخدمات — RTL، تمرير أفقي على الجوال، عمود المعيار ثابت */
+.service-table-wrap {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.service-comparison-table thead th {
+  background: var(--color-primary);
+}
+
+.service-comparison-table tbody th[scope="row"] {
+  background: white;
+}
+
+.service-comparison-table tbody tr:nth-child(even) th[scope="row"] {
+  background: color-mix(in srgb, var(--color-surface-container-low) 50%, white);
+}
+
 /* قوائم الخدمات — عمودية (لا flex على li حتى لا ينقسم العنوان عن الوصف) */
 .service-list-unordered > li {
   position: relative;

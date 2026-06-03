@@ -12,11 +12,13 @@
     "favicons": "python scripts/generate-favicons.py",
     "prebuild": "node scripts/verify-no-metadata-routes.mjs && node scripts/verify-public-images.mjs && node scripts/generate-static-seo.mjs",
     "build": "next build",
+    "deploy:cloudflare": "npm run build && npx wrangler pages deploy out --project-name=manzilcare",
     "preview:static": "npx serve out",
     "start": "next start",
     "lint": "eslint",
     "images": "powershell -ExecutionPolicy Bypass -File scripts/download-original-images.ps1",
     "images:optimize-page": "node scripts/optimize-page-images.mjs",
+    "images:logo-hero": "node scripts/generate-logo-hero-cover.mjs",
     "areas:data": "node scripts/build-neighborhoods-registry.mjs"
   },
   "dependencies": {

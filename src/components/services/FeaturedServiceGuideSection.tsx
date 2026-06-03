@@ -112,15 +112,21 @@ export function FeaturedServiceGuideSection() {
           id="service-guide-spotlight-heading"
           className="mb-3 text-xl font-bold text-primary sm:text-headline-md"
         >
-          دلائل كشف التسربات في الرياض
+          دلائل الخدمات التفصيلية في الرياض
         </h2>
         <p className="mx-auto max-w-2xl text-body-md leading-relaxed text-on-surface-muted sm:text-body-lg">
-          محتوى تفصيلي لكل خدمة — خطوات العمل، الأجهزة المستخدمة، الأسئلة
-          الشائعة، وتغطية الأحياء. اختر الدليل المناسب لحالتك.
+          محتوى تفصيلي لكل خدمة — كشف التسربات، عزل الأسطح، خطوات العمل،
+          الأسئلة الشائعة، وتغطية الأحياء. اختر الدليل المناسب لحالتك.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
+      <div
+        className={`grid grid-cols-1 gap-6 lg:gap-8 ${
+          spotlights.length >= 3
+            ? "md:grid-cols-2 xl:grid-cols-3"
+            : "lg:grid-cols-2"
+        }`}
+      >
         {spotlights.map((meta, index) => (
           <GuideCard
             key={meta.slug}

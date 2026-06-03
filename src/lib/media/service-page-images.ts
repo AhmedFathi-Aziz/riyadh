@@ -1,5 +1,19 @@
 /** أبعاد صور صفحات الخدمات المحسّنة (WebP) — تمنع CLS مع next/image */
 export const servicePageImages = {
+  "roof-insulation-riyadh": {
+    hero: {
+      src: "/images/roof-insulation-riyadh-hero.webp",
+      alt: "ManzilCare — عزل أسطح بالرياض: عزل مائي وحراري احترافي للفلل والعمائر",
+      width: 1920,
+      height: 1080,
+    },
+    field: {
+      src: "/images/roof-insulation-riyadh-field.webp",
+      alt: "فريق ManzilCare يطبق عزل أسطح مائي وحراري على سطح مبنى سكني في الرياض",
+      width: 1024,
+      height: 1536,
+    },
+  },
   "leak-detection-water-riyadh": {
     hero: {
       src: "/images/leak-detection-water-riyadh-hero.webp",
@@ -32,4 +46,23 @@ export const servicePageImages = {
 
 export function getServicePageImages(slug: string) {
   return servicePageImages[slug as keyof typeof servicePageImages];
+}
+
+/** أبعاد صور Markdown في مقالات الخدمات — عرض كامل بلا قص (يمنع CLS) */
+const markdownImageDimensions: Record<string, { width: number; height: number }> =
+  {};
+
+for (const page of Object.values(servicePageImages)) {
+  for (const img of [page.hero, page.field]) {
+    if (img) {
+      markdownImageDimensions[img.src] = {
+        width: img.width,
+        height: img.height,
+      };
+    }
+  }
+}
+
+export function getMarkdownImageDimensions(src: string) {
+  return markdownImageDimensions[src];
 }

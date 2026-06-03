@@ -45,10 +45,10 @@ export const originalImageSources = {
     768,
   ),
   tank: localImage(
-    "blog-tank-leak.png",
-    "داخل خزان مياه معزول بطلاء إيبوكسي أزرق احترافي في الرياض",
-    1536,
-    1024,
+    "service-tank.jpg",
+    "عزل خزانات بالرياض — طلاء إيبوكسي أزرق داخل خزان مياه بعد التنفيذ الاحترافي",
+    1200,
+    800,
   ),
   roof: localImage(
     "blog-bitumen-roof.png",

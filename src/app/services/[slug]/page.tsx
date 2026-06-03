@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { preload } from "react-dom";
 import { ServicePageCta } from "@/components/services/ServicePageCta";
 import { ServicePageHero } from "@/components/services/ServicePageHero";
 import { ServiceTrustBar } from "@/components/services/ServiceTrustBar";
@@ -25,6 +26,7 @@ import {
 } from "@/lib/services/prepare-markdown";
 import { getServiceMetaBySlug } from "@/lib/services/service-pages-meta";
 import { getServicePageImages } from "@/lib/media/service-page-images";
+import { getResponsiveImageSources } from "@/lib/media/responsive-image";
 import { breadcrumbs } from "@/lib/seo/breadcrumbs";
 import { extractFaqFromMarkdown } from "@/lib/seo/extract-markdown-faq";
 import { getFaqsForPage } from "@/lib/seo/page-faqs";
@@ -93,6 +95,8 @@ export default async function ServiceLandingPage({ params }: PageProps) {
     width: 1200,
     height: 675,
   };
+  const lcpHero = getResponsiveImageSources(heroImage.src, { lcp: true });
+  preload(lcpHero.src, { as: "image", fetchPriority: "high" });
 
   return (
     <>

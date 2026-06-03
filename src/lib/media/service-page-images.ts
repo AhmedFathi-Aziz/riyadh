@@ -18,8 +18,8 @@ export const servicePageImages = {
     hero: {
       src: "/images/leak-detection-no-damage-riyadh-hero.webp",
       alt: "كشف تسربات بدون تكسير في فيلا بالرياض — فريق ManzilCare يحدد موقع التسرب قبل أي فتح للبلاط",
-      width: 1536,
-      height: 1024,
+      width: 1080,
+      height: 720,
     },
     field: {
       src: "/images/leak-detection-no-damage-riyadh-field.webp",

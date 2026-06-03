@@ -40,7 +40,7 @@ export function SiteHeader({
           height={siteConfig.logo.height}
           sizes="(max-width: 768px) 152px, 192px"
           className={logoClass}
-          priority
+          responsive={false}
         />
       </Link>
 

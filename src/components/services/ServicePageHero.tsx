@@ -30,6 +30,8 @@ export function ServicePageHero({
           alt={image.alt}
           fill
           priority
+          lcp
+          fetchPriority="high"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1280px"
           className="object-cover object-[center_30%] sm:object-center"
         />

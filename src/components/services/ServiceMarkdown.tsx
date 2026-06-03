@@ -1,5 +1,3 @@
-"use client";
-
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { Icon } from "@/components/Icon";
 import ReactMarkdown from "react-markdown";

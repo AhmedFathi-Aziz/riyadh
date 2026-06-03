@@ -72,6 +72,33 @@ npm run preview:static
 2. بعد النشر إن ظهرت صور قديمة: **Deployments → Retry → Clear build cache** ثم Purge cache من Cloudflare للموقع.
 3. معاينة ما سيُنشر محلياً: `npm run build` ثم `npm run preview:static` — نفس مجلد `out/` الذي يرفع.
 
+## الموقع المنشور لا يطابق اللوكال؟
+
+السبب الأشهر: **Cloudflare يبني من GitHub** وليس من ملفات جهازك. إن عدّلت محلياً دون `git push`، الموقع الحي يبقى على آخر commit قديم.
+
+**تحقق سريع:**
+
+```bash
+git status          # يجب أن يكون نظيفاً بعد الرفع
+npm run build
+npm run preview:static   # افتح http://localhost:3000 — هذا نفس مجلد out/ الذي يُنشر
+```
+
+**بعد كل مجموعة تعديلات:**
+
+1. `git add` لكل الملفات الجديدة (خصوصاً `public/images/*.webp` و `content/services/*.md`)
+2. `git commit` ثم `git push origin main`
+3. في Cloudflare → **Deployments** → انتظر البناء الأخضر
+4. إن بقيت صور أو CSS قديم: **Retry deployment** + **Clear build cache**
+5. من **Caching** → **Purge Everything** للنطاق (اختياري)
+
+**رفع مباشر من اللوكال (بدون Git):**
+
+```bash
+npx wrangler login
+npm run deploy:cloudflare
+```
+
 ## ملاحظات
 
 - لا يوجد خادم Node بعد النشر؛ كل الصفحات مُولَّدة مسبقاً (بما فيها `/blog/[slug]`).

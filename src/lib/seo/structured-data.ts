@@ -198,6 +198,25 @@ export function buildWebSiteSchema() {
     name,
     description,
     inLanguage: "ar-SA",
-    publisher: { "@id": `${url}/${ORGANIZATION_ID}` },
+    publisher: { "@id": `${url}${ORGANIZATION_ID}` },
+  };
+}
+
+export function buildWebPageSchema(options: {
+  pageUrl: string;
+  name: string;
+  description: string;
+}) {
+  const { url } = siteConfig;
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${options.pageUrl}#webpage`,
+    url: options.pageUrl,
+    name: options.name,
+    description: options.description,
+    isPartOf: { "@id": `${url}/#website` },
+    about: { "@id": `${url}${ORGANIZATION_ID}` },
+    inLanguage: "ar-SA",
   };
 }

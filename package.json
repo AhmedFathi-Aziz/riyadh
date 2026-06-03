@@ -12,6 +12,7 @@
     "favicons": "python scripts/generate-favicons.py",
     "prebuild": "node scripts/verify-no-metadata-routes.mjs && node scripts/verify-public-images.mjs && node scripts/generate-static-seo.mjs && npx tsx scripts/generate-jsonld-graphs.ts",
     "build": "next build",
+    "postbuild": "node scripts/verify-jsonld-html.mjs",
     "deploy:cloudflare": "npm run build && npx wrangler pages deploy out --project-name=manzilcare",
     "preview:static": "npx serve out",
     "start": "next start",

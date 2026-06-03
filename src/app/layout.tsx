@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { FloatingContact } from "@/components/FloatingContact";
-import { JsonLd } from "@/components/JsonLd";
+import { PageStructuredData } from "@/components/seo/PageStructuredData";
+import { jsonLdGraphPath } from "@/lib/seo/jsonld-graph-path";
 import { bodyFont, fontVariables } from "@/lib/fonts";
 import { getBaseMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
@@ -46,7 +47,7 @@ export default function RootLayout({
       <body
         className={`${bodyFont.className} min-h-screen bg-background font-sans text-on-surface antialiased`}
       >
-        <JsonLd />
+        <PageStructuredData graphPath={jsonLdGraphPath.site()} />
         {children}
         <FloatingContact />
       </body>

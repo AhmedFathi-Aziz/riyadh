@@ -10,6 +10,7 @@ import { StandardPageSections } from "@/components/seo/StandardPageSections";
 import { blogMeta } from "@/lib/blog";
 import { breadcrumbs } from "@/lib/seo/breadcrumbs";
 import { getFaqsForPage } from "@/lib/seo/page-faqs";
+import { jsonLdGraphPath } from "@/lib/seo/jsonld-graph-path";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -30,7 +31,7 @@ export default function BlogPage() {
 
   return (
     <>
-      <PageStructuredData breadcrumbs={breadcrumbs.blog()} faqs={faqs} />
+      <PageStructuredData graphPath={jsonLdGraphPath.blog()} />
       <SiteHeader activePage="blog" />
       <BlogHero />
       <main className="mx-auto max-w-max-width px-6 py-12">

@@ -9,8 +9,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { Services } from "@/components/Services";
 import { Testimonials } from "@/components/Testimonials";
 import { WorkStepsSection } from "@/components/WorkStepsSection";
-import { breadcrumbs } from "@/lib/seo/breadcrumbs";
-import { GLOBAL_FAQS } from "@/lib/seo/page-faqs";
+import { jsonLdGraphPath } from "@/lib/seo/jsonld-graph-path";
 import { createPageMetadata } from "@/lib/seo";
 import { DEFAULT_META_DESCRIPTION } from "@/lib/seo/constants";
 
@@ -23,10 +22,7 @@ export const metadata: Metadata = createPageMetadata({
 export default function HomePage() {
   return (
     <>
-      <PageStructuredData
-        breadcrumbs={breadcrumbs.home()}
-        faqs={GLOBAL_FAQS}
-      />
+      <PageStructuredData graphPath={jsonLdGraphPath.home()} />
       <SiteHeader activePage="home" />
       <main>
         <Hero />

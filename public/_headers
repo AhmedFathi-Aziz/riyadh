@@ -5,6 +5,9 @@
 /images/*
   Cache-Control: public, max-age=2592000
 
+/seo/graphs/*
+  Cache-Control: public, max-age=86400
+
 /*.jpg
   Cache-Control: public, max-age=2592000
 

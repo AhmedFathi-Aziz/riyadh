@@ -1,33 +1,17 @@
-import {
-  buildBreadcrumbSchema,
-  buildFaqSchema,
-  type BreadcrumbItem,
-  type FaqItem,
-} from "@/lib/seo/structured-data";
-
+/**
+ * JSON-LD عبر ملف خارجي (public/seo/graphs) — يمنع تكرار FAQPage في حمولة RSC لـ Next.js.
+ * الملفات تُولَّد في prebuild: scripts/generate-jsonld-graphs.ts
+ */
 type PageStructuredDataProps = {
-  breadcrumbs: BreadcrumbItem[];
-  faqs: FaqItem[];
-  /** مخططات إضافية (Service، Article، …) */
-  extra?: object[];
+  graphPath: string;
 };
 
-export function PageStructuredData({
-  breadcrumbs,
-  faqs,
-  extra = [],
-}: PageStructuredDataProps) {
-  const graphs: object[] = [
-    buildBreadcrumbSchema(breadcrumbs),
-    ...extra,
-  ];
-  const faqSchema = buildFaqSchema(faqs);
-  if (faqSchema) graphs.push(faqSchema);
-
+export function PageStructuredData({ graphPath }: PageStructuredDataProps) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(graphs) }}
+      src={graphPath}
+      suppressHydrationWarning
     />
   );
 }

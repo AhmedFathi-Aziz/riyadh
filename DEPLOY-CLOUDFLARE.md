@@ -64,6 +64,12 @@ npm run preview:static
 
 تأكد في Cloudflare أن **Build command** = `npm run build` وليس `npx next build` فقط.
 
+`prebuild` يشغّل أيضاً `scripts/generate-jsonld-graphs.ts` لتوليد `public/seo/graphs/*.json` (بيانات FAQ/Breadcrumb بدون تكرار في HTML).
+
+## FAQPage مكرر في Google Search Console؟
+
+إذا ظهر **Duplicate field "FAQPage"**: كان السبب تضمين JSON-LD داخل HTML مرتين (سكربت + حمولة RSC). الحل الحالي: ربط `<script src="/seo/graphs/...json">` بدل تضمين JSON داخل الصفحة. بعد النشر أعد **Live Test** في Search Console.
+
 ## الصور = نفس اللوكال
 
 كل الصور من مجلد `public/images/` فقط (لا روابط Google CDN في الكود). عند البناء يتحقق السكربت `verify-public-images.mjs` أن الملفات موجودة.

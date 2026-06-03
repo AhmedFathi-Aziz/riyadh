@@ -18,10 +18,8 @@ import { breadcrumbs } from "@/lib/seo/breadcrumbs";
 import { extractFaqFromMarkdown } from "@/lib/seo/extract-markdown-faq";
 import { getFaqsForPage } from "@/lib/seo/page-faqs";
 import { createPageMetadata } from "@/lib/seo";
-import { buildServiceSchema } from "@/lib/seo/structured-data";
+import { jsonLdGraphPath } from "@/lib/seo/jsonld-graph-path";
 import { stripFaqSection } from "@/lib/seo/strip-markdown-faq";
-import { siteConfig } from "@/lib/site";
-
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
@@ -56,7 +54,6 @@ export default async function NeighborhoodPage({ params }: PageProps) {
   const page = getNeighborhoodBySlug(slug);
   if (!page) notFound();
 
-  const pageUrl = `${siteConfig.url}/areas/${page.slug}`;
   const markdownFaqs = extractFaqFromMarkdown(page.content);
   const faqs = getFaqsForPage({ extras: markdownFaqs, max: 5 });
   const bodyContent = stripFaqSection(page.content);
@@ -68,17 +65,7 @@ export default async function NeighborhoodPage({ params }: PageProps) {
 
   return (
     <>
-      <PageStructuredData
-        breadcrumbs={crumb}
-        faqs={faqs}
-        extra={[
-          buildServiceSchema({
-            name: page.keyword,
-            description: page.description,
-            pageUrl,
-          }),
-        ]}
-      />
+      <PageStructuredData graphPath={jsonLdGraphPath.area(page.slug)} />
       <SiteHeader activePage="services" />
       <article className="mx-auto max-w-max-width px-gutter pt-32 pb-20">
         <BreadcrumbNav items={crumb} />

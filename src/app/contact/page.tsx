@@ -9,6 +9,7 @@ import { StandardPageSections } from "@/components/seo/StandardPageSections";
 import { contactPageMeta } from "@/lib/contact-page";
 import { breadcrumbs } from "@/lib/seo/breadcrumbs";
 import { getFaqsForPage } from "@/lib/seo/page-faqs";
+import { jsonLdGraphPath } from "@/lib/seo/jsonld-graph-path";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -31,7 +32,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <PageStructuredData breadcrumbs={crumb} faqs={faqs} />
+      <PageStructuredData graphPath={jsonLdGraphPath.contact()} />
       <SiteHeader activePage="contact" />
       <main className="pt-28 pb-20">
         <div className="mx-auto max-w-max-width px-gutter">

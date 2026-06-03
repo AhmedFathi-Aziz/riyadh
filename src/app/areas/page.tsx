@@ -9,6 +9,7 @@ import { REGION_LABELS } from "@/lib/neighborhoods/content-profiles";
 import { getAllNeighborhoodPages } from "@/lib/neighborhoods/load-neighborhoods";
 import { breadcrumbs } from "@/lib/seo/breadcrumbs";
 import { getFaqsForPage } from "@/lib/seo/page-faqs";
+import { jsonLdGraphPath } from "@/lib/seo/jsonld-graph-path";
 import { createPageMetadata } from "@/lib/seo";
 import type { NeighborhoodRegion } from "@/lib/neighborhoods/types";
 
@@ -39,7 +40,7 @@ export default function AreasIndexPage() {
 
   return (
     <>
-      <PageStructuredData breadcrumbs={breadcrumbs.areas()} faqs={faqs} />
+      <PageStructuredData graphPath={jsonLdGraphPath.areas()} />
       <SiteHeader activePage="services" />
       <main className="mx-auto max-w-max-width px-gutter pt-32 pb-20">
         <header className="mb-12 max-w-3xl">

@@ -11,6 +11,7 @@ import { StandardPageSections } from "@/components/seo/StandardPageSections";
 import { insulationPage } from "@/lib/insulation-page";
 import { breadcrumbs } from "@/lib/seo/breadcrumbs";
 import { getFaqsForPage } from "@/lib/seo/page-faqs";
+import { jsonLdGraphPath } from "@/lib/seo/jsonld-graph-path";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -32,7 +33,7 @@ export default function InsulationPage() {
 
   return (
     <>
-      <PageStructuredData breadcrumbs={breadcrumbs.insulation()} faqs={faqs} />
+      <PageStructuredData graphPath={jsonLdGraphPath.insulation()} />
       <SiteHeader activePage="insulation" variant="glass" />
       <main className="overflow-x-hidden pt-20">
         <InsulationHero />

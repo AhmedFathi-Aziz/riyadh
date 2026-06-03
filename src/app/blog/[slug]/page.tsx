@@ -13,7 +13,7 @@ import { blogPosts, getPostBySlug } from "@/lib/blog";
 import { breadcrumbs } from "@/lib/seo/breadcrumbs";
 import { getFaqsForPage } from "@/lib/seo/page-faqs";
 import { createPageMetadata } from "@/lib/seo";
-import { buildArticleSchema } from "@/lib/seo/structured-data";
+import { jsonLdGraphPath } from "@/lib/seo/jsonld-graph-path";
 import { siteConfig } from "@/lib/site";
 
 type PageProps = {
@@ -51,21 +51,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
 
   return (
     <>
-      <PageStructuredData
-        breadcrumbs={crumb}
-        faqs={faqs}
-        extra={[
-          buildArticleSchema({
-            title: post.title,
-            excerpt: post.excerpt,
-            slug: post.slug,
-            publishedAt: post.publishedAt,
-            category: post.category,
-            readTime: post.readTime,
-            imageSrc: post.image.src,
-          }),
-        ]}
-      />
+      <PageStructuredData graphPath={jsonLdGraphPath.post(post.slug)} />
       <SiteHeader activePage="blog" />
       <article className="mx-auto max-w-max-width px-6 pt-32 pb-16">
         <BreadcrumbNav items={crumb} />

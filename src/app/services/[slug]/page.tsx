@@ -31,10 +31,8 @@ import { breadcrumbs } from "@/lib/seo/breadcrumbs";
 import { extractFaqFromMarkdown } from "@/lib/seo/extract-markdown-faq";
 import { getFaqsForPage } from "@/lib/seo/page-faqs";
 import { createPageMetadata } from "@/lib/seo";
-import { buildServiceSchema } from "@/lib/seo/structured-data";
+import { jsonLdGraphPath } from "@/lib/seo/jsonld-graph-path";
 import { stripFaqSection } from "@/lib/seo/strip-markdown-faq";
-import { siteConfig } from "@/lib/site";
-
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
@@ -68,7 +66,6 @@ export default async function ServiceLandingPage({ params }: PageProps) {
   const page = getServicePageBySlug(slug);
   if (!page) notFound();
 
-  const pageUrl = `${siteConfig.url}/services/${page.slug}`;
   const cleanedContent = prepareServiceMarkdown(page.content);
   const markdownFaqs = extractFaqFromMarkdown(cleanedContent);
   const faqs = getFaqsForPage({
@@ -100,17 +97,7 @@ export default async function ServiceLandingPage({ params }: PageProps) {
 
   return (
     <>
-      <PageStructuredData
-        breadcrumbs={crumb}
-        faqs={faqs}
-        extra={[
-          buildServiceSchema({
-            name: page.keyword,
-            description: page.description,
-            pageUrl,
-          }),
-        ]}
-      />
+      <PageStructuredData graphPath={jsonLdGraphPath.service(page.slug)} />
       <SiteHeader activePage="services" />
       <article className="mx-auto max-w-max-width px-4 pb-16 pt-24 sm:px-gutter sm:pb-20 sm:pt-28 md:pt-32">
         <BreadcrumbNav items={crumb} />

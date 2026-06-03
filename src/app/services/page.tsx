@@ -12,6 +12,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { servicesCatalog } from "@/lib/services-catalog";
 import { breadcrumbs } from "@/lib/seo/breadcrumbs";
 import { getFaqsForPage } from "@/lib/seo/page-faqs";
+import { jsonLdGraphPath } from "@/lib/seo/jsonld-graph-path";
 import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "كشف تسربات المياه وعزل الأسطح بالرياض",
@@ -32,7 +33,7 @@ export default function ServicesPage() {
 
   return (
     <>
-      <PageStructuredData breadcrumbs={breadcrumbs.services()} faqs={faqs} />
+      <PageStructuredData graphPath={jsonLdGraphPath.services()} />
       <SiteHeader activePage="services" variant="services" />
       <main className="overflow-x-hidden pt-32 pb-20">
         <ServicesPageHero />

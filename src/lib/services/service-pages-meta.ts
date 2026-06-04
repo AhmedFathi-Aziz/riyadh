@@ -92,12 +92,13 @@ export const servicePagesMeta: ServicePageMeta[] = [
   },
   {
     slug: "foam-insulation-riyadh",
-    keyword: "عزل الفوم بالرياض",
-    title: "عزل الفوم بالرياض",
+    keyword: "عزل فوم بالرياض",
+    title: "عزل فوم بالرياض",
     description:
-      "عزل فوم بولي يوريثان مرشوش في الرياض للأسطح والمستودعات. عزل حراري ومائي متكامل، سرعة تنفيذ، وكفاءة طاقة.",
-    coverImage: "blog-foam-warehouse.png",
-    imageAlt: "عامل يرش عزل فوم على سطح مستودع تجاري في الرياض",
+      "عزل فوم بولي يوريثان بالرياض للفلل والعمائر والمستودعات: فوم مغلق، حماية UV، معاينة مجانية، وضمان مكتوب في كل الأحياء.",
+    coverImage: "foam-insulation-riyadh-hero.webp",
+    imageAlt:
+      "شعار ManzilCare — عزل فوم بالرياض: عزل حراري ومائي للفلل والمباني التجارية",
     icon: "texture",
     relatedSlugs: [
       "roof-insulation-riyadh",

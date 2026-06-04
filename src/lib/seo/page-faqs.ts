@@ -50,6 +50,13 @@ const SERVICE_FAQ_EXTRAS: Record<string, FaqItem[]> = {
         "نعم في أغلب الحالات؛ عزل سطح فيه تسرب نشط يخفي المشكلة ويزيد تكلفة الإصلاح لاحقاً.",
     },
   ],
+  "foam-insulation-riyadh": [
+    {
+      question: "هل يجب حماية UV بعد رش الفوم على السطح؟",
+      answer:
+        "نعم إلزامياً في الرياض؛ الفوم المعرّض للشمس دون طلاء عاكس يتدهور خلال مواسم قليلة.",
+    },
+  ],
 };
 
 export function getFaqsForPage(options?: {

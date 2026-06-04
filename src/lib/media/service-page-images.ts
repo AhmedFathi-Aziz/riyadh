@@ -28,6 +28,20 @@ export const servicePageImages = {
       height: 853,
     },
   },
+  "foam-insulation-riyadh": {
+    hero: {
+      src: "/images/foam-insulation-riyadh-hero.webp",
+      alt: "ManzilCare — عزل فوم بالرياض: عزل حراري ومائي للفلل والعمائر والمستودعات",
+      width: 1920,
+      height: 1080,
+    },
+    field: {
+      src: "/images/foam-insulation-riyadh-field.webp",
+      alt: "فريق ManzilCare يرش عزل فوم بولي يوريثان على سطح مستودع تجاري في الرياض",
+      width: 1280,
+      height: 853,
+    },
+  },
   "leak-detection-no-damage-riyadh": {
     hero: {
       src: "/images/leak-detection-no-damage-riyadh-hero.webp",

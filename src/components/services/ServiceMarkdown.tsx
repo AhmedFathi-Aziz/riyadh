@@ -29,6 +29,26 @@ function flattenMarkdownChildren(children: ReactNode): string {
     .trim();
 }
 
+/** react-markdown يضع الصور داخل <p> — <figure> داخل <p> HTML غير صالح ويسبب hydration error */
+function isBlockElementChild(child: ReactNode): boolean {
+  if (!isValidElement(child)) return false;
+  if (typeof child.type === "string") {
+    return !["a", "strong", "em", "code", "span", "br"].includes(child.type);
+  }
+  return true;
+}
+
+function paragraphWrapTag(children: ReactNode): "div" | "p" {
+  const items = Children.toArray(children);
+  if (items.length === 0) return "p";
+  if (items.every(isBlockElementChild)) return "div";
+  if (items.some(isBlockElementChild)) return "div";
+  return "p";
+}
+
+const paragraphClassName =
+  "text-body-md leading-[1.8] text-on-surface-variant sm:text-body-lg sm:leading-[1.85]";
+
 export function ServiceMarkdown({ content, serviceSlug }: ServiceMarkdownProps) {
   let h2Counter = 0;
 
@@ -80,11 +100,20 @@ export function ServiceMarkdown({ content, serviceSlug }: ServiceMarkdownProps) 
         </>
       );
     },
-    p: ({ children }) => (
-      <p className="text-body-md leading-[1.8] text-on-surface-variant sm:text-body-lg sm:leading-[1.85]">
-        {children}
-      </p>
-    ),
+    p: ({ children }) => {
+      const items = Children.toArray(children);
+      const isFigureOnly =
+        items.length === 1 &&
+        isValidElement(items[0]) &&
+        items[0].type === "figure";
+
+      if (isFigureOnly) {
+        return <div>{children}</div>;
+      }
+
+      const Tag = paragraphWrapTag(children);
+      return <Tag className={paragraphClassName}>{children}</Tag>;
+    },
     ul: ({ children }) => (
       <ul className="service-list-unordered my-4 space-y-3 rounded-xl border border-outline-variant/20 bg-surface-container-low/40 p-4 sm:my-5 sm:space-y-3.5 sm:rounded-2xl sm:p-5 md:p-6">
         {children}

@@ -177,6 +177,7 @@ export const SERVICES_PAGE_SPOTLIGHT_SLUGS = [
   "leak-detection-water-riyadh",
   "leak-detection-no-damage-riyadh",
   "roof-insulation-riyadh",
+  "foam-insulation-riyadh",
 ] as const;
 
 export type ServicesPageSpotlightSlug =
@@ -204,6 +205,11 @@ export const SERVICES_PAGE_SPOTLIGHT_HIGHLIGHTS: Record<
     "عزل مائي وحراري للفلل والعمائر والمستودعات",
     "مقارنة أنظمة العزل: بيتومين، فوم، أغشية، وXPS",
     "معاينة مجانية، عرض سعر شفاف، وضمان مكتوب",
+  ],
+  "foam-insulation-riyadh": [
+    "فوم بولي يوريثان مغلق ومحمي من أشعة الشمس",
+    "عزل حراري ومائي للفلل والمستودعات والمباني التجارية",
+    "معاينة مجانية، مواصفات كثافة وسماكة، وضمان مكتوب",
   ],
 };
 

@@ -75,7 +75,11 @@ const markdownImageDimensions: Record<string, { width: number; height: number }>
   {};
 
 for (const page of Object.values(servicePageImages)) {
-  for (const img of [page.hero, page.field]) {
+  const images = [
+    page.hero,
+    "field" in page ? page.field : undefined,
+  ];
+  for (const img of images) {
     if (img) {
       markdownImageDimensions[img.src] = {
         width: img.width,

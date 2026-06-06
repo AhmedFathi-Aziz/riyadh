@@ -107,13 +107,7 @@ export function getBaseMetadata(): Metadata {
       description: description || DEFAULT_META_DESCRIPTION,
       images: [ogImage],
     },
-    icons: {
-      icon: [
-        { url: "/icon.png", type: "image/png", sizes: "128x128" },
-        { url: "/favicon.ico", sizes: "any" },
-      ],
-      apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
-    },
+    // Icons come from src/app/favicon.ico, icon.png, apple-icon.png (file-based metadata).
     robots: {
       index: true,
       follow: true,

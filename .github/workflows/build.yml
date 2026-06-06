@@ -19,6 +19,8 @@ jobs:
 
       - run: npm ci
 
+      - run: npm run check
+
       - run: npm run build
         env:
           NEXT_PUBLIC_SITE_URL: https://manzilcare.com

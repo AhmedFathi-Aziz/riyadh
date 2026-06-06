@@ -1,79 +1,51 @@
-"""Generate circular favicon / PWA icons — رمز كبير وواضح داخل الدائرة."""
+"""Generate favicon / PWA icons from the full ManzilCare logo (no crop, no circle)."""
 from __future__ import annotations
 
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFilter
+from PIL import Image, ImageFilter
 
 ROOT = Path(__file__).resolve().parents[1]
 LOGO = ROOT / "public" / "images" / "manzilcare-logo.png"
-TAB_SOURCE = ROOT / "public" / "images" / "manzilcare-tab-icon-source.png"
 
-TAB_BG = (248, 249, 255, 255)
-GRAPHIC_HEIGHT_RATIO = 0.54
-# نسبة ملء الدائرة بالرمز (أعلى = أكبر وأوضح في التبويب)
-FILL_RATIO = 0.94
+# Matches site background / theme (#f8f9ff)
+ICON_BG = (248, 249, 255, 255)
+PADDING_RATIO = 0.06
 
 
-def extract_graphic_mark(logo: Image.Image) -> Image.Image:
-    """قصّ الرمز فقط ثم مربّع بملء كامل (بدون فراغات جانبية)."""
-    w, h = logo.size
-    top = logo.crop((0, 0, w, int(h * GRAPHIC_HEIGHT_RATIO)))
-    bbox = top.getbbox()
+def load_full_logo() -> Image.Image:
+    logo = Image.open(LOGO).convert("RGBA")
+    bbox = logo.getbbox()
     if bbox:
-        top = top.crop(bbox)
-
-    tw, th = top.size
-    side = max(tw, th)
-    scale = side / min(tw, th)
-    new_w = round(tw * scale)
-    new_h = round(th * scale)
-    resized = top.resize((new_w, new_h), Image.Resampling.LANCZOS)
-    left = (new_w - side) // 2
-    upper = (new_h - side) // 2
-    return resized.crop((left, upper, left + side, upper + side))
+        logo = logo.crop(bbox)
+    return logo
 
 
-def fit_cover(mark: Image.Image, size: int) -> Image.Image:
-    """تكبير الرمز ليملأ المربع بالكامل (مثل object-fit: cover)."""
-    tw, th = mark.size
-    scale = size / min(tw, th)
-    new_w = round(tw * scale)
-    new_h = round(th * scale)
-    resized = mark.resize((new_w, new_h), Image.Resampling.LANCZOS)
-    left = (new_w - size) // 2
-    upper = (new_h - size) // 2
-    return resized.crop((left, upper, left + size, upper + size))
+def square_icon(logo: Image.Image, px: int) -> Image.Image:
+    """Fit the entire logo inside a square canvas (object-fit: contain)."""
+    padding = max(1, round(px * PADDING_RATIO))
+    inner = px - 2 * padding
 
+    lw, lh = logo.size
+    scale = min(inner / lw, inner / lh)
+    new_w = max(1, round(lw * scale))
+    new_h = max(1, round(lh * scale))
+    resized = logo.resize((new_w, new_h), Image.Resampling.LANCZOS)
 
-def circular_icon(mark: Image.Image, px: int) -> Image.Image:
-    inner = max(16, round(px * FILL_RATIO))
-    graphic = fit_cover(mark, inner)
-    if px >= 32:
-        graphic = graphic.filter(
-            ImageFilter.UnsharpMask(radius=0.8, percent=110, threshold=1),
+    if px >= 48:
+        resized = resized.filter(
+            ImageFilter.UnsharpMask(radius=0.5, percent=90, threshold=2),
         )
 
-    bg = Image.new("RGBA", (px, px), TAB_BG)
-    offset = (px - inner) // 2
-    bg.paste(graphic, (offset, offset), graphic)
-
-    mask = Image.new("L", (px, px), 0)
-    draw = ImageDraw.Draw(mask)
-    draw.ellipse((0, 0, px - 1, px - 1), fill=255)
-
-    out = Image.new("RGBA", (px, px), (0, 0, 0, 0))
-    out.paste(bg, (0, 0), mask)
-    return out
-
-
-def load_mark() -> Image.Image:
-    source = TAB_SOURCE if TAB_SOURCE.exists() else LOGO
-    return extract_graphic_mark(Image.open(source).convert("RGBA"))
+    canvas = Image.new("RGBA", (px, px), ICON_BG)
+    offset_x = (px - new_w) // 2
+    offset_y = (px - new_h) // 2
+    canvas.paste(resized, (offset_x, offset_y), resized)
+    return canvas
 
 
 def main() -> None:
-    mark = load_mark()
+    logo = load_full_logo()
 
     outputs = [
         (128, ROOT / "src" / "app" / "icon.png"),
@@ -82,22 +54,20 @@ def main() -> None:
         (512, ROOT / "public" / "images" / "icon-512.png"),
     ]
     for px, path in outputs:
-        circular_icon(mark, px).save(path, optimize=True)
+        square_icon(logo, px).save(path, optimize=True)
         print(f"Wrote {path}")
 
     ico_sizes = [16, 32, 48]
-    ico_images = [circular_icon(mark, s) for s in ico_sizes]
-    for dest in (
-        ROOT / "src" / "app" / "favicon.ico",
-        ROOT / "public" / "favicon.ico",
-    ):
-        ico_images[0].save(
-            dest,
-            format="ICO",
-            sizes=[(s, s) for s in ico_sizes],
-            append_images=ico_images[1:],
-        )
-        print(f"Wrote {dest}")
+    ico_images = [square_icon(logo, s) for s in ico_sizes]
+    # App Router only — public/favicon.ico conflicts with app/favicon.ico (Next.js 500).
+    dest = ROOT / "src" / "app" / "favicon.ico"
+    ico_images[0].save(
+        dest,
+        format="ICO",
+        sizes=[(s, s) for s in ico_sizes],
+        append_images=ico_images[1:],
+    )
+    print(f"Wrote {dest}")
 
 
 if __name__ == "__main__":

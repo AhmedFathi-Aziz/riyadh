@@ -42,6 +42,14 @@ export const servicePageImages = {
       height: 853,
     },
   },
+  "عزل-مائي-بالرياض": {
+    hero: {
+      src: "/images/waterproofing-riyadh-hero.webp",
+      alt: "ManzilCare — عزل مائي بالرياض: حماية الأسطح والخزانات والحمامات",
+      width: 1920,
+      height: 1080,
+    },
+  },
   "leak-detection-no-damage-riyadh": {
     hero: {
       src: "/images/leak-detection-no-damage-riyadh-hero.webp",

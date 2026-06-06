@@ -115,18 +115,21 @@ export function FeaturedServiceGuideSection() {
           دلائل الخدمات التفصيلية في الرياض
         </h2>
         <p className="mx-auto max-w-2xl text-body-md leading-relaxed text-on-surface-muted sm:text-body-lg">
-          محتوى تفصيلي لكل خدمة — كشف التسربات، عزل الأسطح، عزل الفوم، خطوات
-          العمل، الأسئلة الشائعة، وتغطية الأحياء. اختر الدليل المناسب لحالتك.
+          محتوى تفصيلي لكل خدمة — كشف التسربات، عزل الأسطح، عزل الفوم، عزل
+          مائي، خطوات العمل، الأسئلة الشائعة، وتغطية الأحياء. اختر الدليل
+          المناسب لحالتك.
         </p>
       </div>
 
       <div
         className={`grid grid-cols-1 gap-6 lg:gap-8 ${
-          spotlights.length >= 4
-            ? "md:grid-cols-2"
-            : spotlights.length >= 3
-              ? "md:grid-cols-2 xl:grid-cols-3"
-              : "lg:grid-cols-2"
+          spotlights.length >= 5
+            ? "md:grid-cols-2 xl:grid-cols-3"
+            : spotlights.length >= 4
+              ? "md:grid-cols-2"
+              : spotlights.length >= 3
+                ? "md:grid-cols-2 xl:grid-cols-3"
+                : "lg:grid-cols-2"
         }`}
       >
         {spotlights.map((meta, index) => (

@@ -29,6 +29,16 @@ import { siteConfig } from "../src/lib/site";
 
 const graphsDir = path.join(process.cwd(), "public", "seo", "graphs");
 
+/** slugs عربية → اسم ملف ASCII (متزامن مع jsonld-graph-path.ts) */
+const JSONLD_GRAPH_FILE_SLUGS: Record<string, string> = {
+  "عزل-مائي-بالرياض": "waterproofing-riyadh",
+};
+
+function serviceGraphRelPath(slug: string): string {
+  const fileSlug = JSONLD_GRAPH_FILE_SLUGS[slug] ?? slug;
+  return `services/${fileSlug}.json`;
+}
+
 function writeGraph(relPath: string, graphs: object[]) {
   const outPath = path.join(graphsDir, relPath);
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
@@ -153,7 +163,7 @@ for (const page of getAllServicePages()) {
   });
   const pageUrl = `${siteConfig.url}/services/${page.slug}`;
   writeGraph(
-    `services/${page.slug}.json`,
+    serviceGraphRelPath(page.slug),
     pageGraph(pageUrl, page.keyword, page.description, undefined, [
       buildBreadcrumbSchema(breadcrumbs.service(page.keyword, page.slug)),
       buildServiceSchema({

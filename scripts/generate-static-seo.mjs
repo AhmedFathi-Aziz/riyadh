@@ -67,18 +67,19 @@ if (fs.existsSync(neighborhoodsFile)) {
 }
 
 const servicePages = [];
-if (fs.existsSync(servicesDir)) {
-  for (const file of fs.readdirSync(servicesDir)) {
-    if (
-      !file.endsWith(".md") ||
-      file.startsWith("_") ||
-      !/^[a-z0-9]+(?:-[a-z0-9]+)*\.md$/.test(file)
-    ) {
-      continue;
-    }
-    servicePages.push({
-      slug: file.replace(/\.md$/, ""),
-    });
+const serviceMetaPath = path.join(
+  root,
+  "src",
+  "lib",
+  "services",
+  "service-pages-meta.ts",
+);
+if (fs.existsSync(serviceMetaPath)) {
+  const metaRaw = fs.readFileSync(serviceMetaPath, "utf8");
+  const slugRe = /slug:\s*"([^"]+)"/g;
+  let match;
+  while ((match = slugRe.exec(metaRaw)) !== null) {
+    servicePages.push({ slug: match[1] });
   }
 }
 
@@ -87,7 +88,12 @@ const sitemapUrls = [
     urlEntry(`${baseUrl}${p.path}`, now, p.changefreq, p.priority),
   ),
   ...servicePages.map((p) =>
-    urlEntry(`${baseUrl}/services/${p.slug}`, now, "monthly", "0.88"),
+    urlEntry(
+      `${baseUrl}/services/${encodeURIComponent(p.slug)}`,
+      now,
+      "monthly",
+      "0.88",
+    ),
   ),
   ...neighborhoodPages.map((p) =>
     urlEntry(`${baseUrl}/areas/${p.slug}`, now, "monthly", "0.87"),

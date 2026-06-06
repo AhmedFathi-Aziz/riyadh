@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
-/** Static export for Cloudflare Pages (output in /out). */
+/** Static export for Cloudflare Pages (output in /out) — production build only. */
 const nextConfig: NextConfig = {
-  output: "export",
+  ...(process.env.NODE_ENV === "production" ? { output: "export" as const } : {}),
   trailingSlash: false,
   images: {
     unoptimized: true,

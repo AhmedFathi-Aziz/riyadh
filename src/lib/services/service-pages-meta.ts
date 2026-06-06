@@ -85,9 +85,27 @@ export const servicePagesMeta: ServicePageMeta[] = [
       "شعار ManzilCare — عزل أسطح بالرياض: عزل مائي وحراري للفلل والمباني التجارية",
     icon: "wb_sunny",
     relatedSlugs: [
+      "عزل-مائي-بالرياض",
       "foam-insulation-riyadh",
       "leak-detection-water-riyadh",
       "tank-insulation-riyadh",
+    ],
+  },
+  {
+    slug: "عزل-مائي-بالرياض",
+    keyword: "عزل مائي بالرياض",
+    title: "عزل مائي بالرياض",
+    description:
+      "عزل مائي بالرياض للفلل والعمائر والمستودعات: بيتومين، أغشية، إيبوكسي. معاينة مجانية، ضمان مكتوب، وتغطية كل أحياء الرياض.",
+    coverImage: "waterproofing-riyadh-hero.webp",
+    imageAlt:
+      "شعار ManzilCare — عزل مائي بالرياض: حماية الأسطح والخزانات والحمامات",
+    icon: "water_drop",
+    relatedSlugs: [
+      "roof-insulation-riyadh",
+      "bathroom-insulation-riyadh",
+      "tank-insulation-riyadh",
+      "leak-detection-water-riyadh",
     ],
   },
   {
@@ -178,6 +196,7 @@ export const SERVICES_PAGE_SPOTLIGHT_SLUGS = [
   "leak-detection-no-damage-riyadh",
   "roof-insulation-riyadh",
   "foam-insulation-riyadh",
+  "عزل-مائي-بالرياض",
 ] as const;
 
 export type ServicesPageSpotlightSlug =
@@ -210,6 +229,11 @@ export const SERVICES_PAGE_SPOTLIGHT_HIGHLIGHTS: Record<
     "فوم بولي يوريثان مغلق ومحمي من أشعة الشمس",
     "عزل حراري ومائي للفلل والمستودعات والمباني التجارية",
     "معاينة مجانية، مواصفات كثافة وسماكة، وضمان مكتوب",
+  ],
+  "عزل-مائي-بالرياض": [
+    "بيتومين، أغشية سائلة، وإيبوكسي للأسطح والخزانات",
+    "حماية من تسربات الأمطار والرطوبة في الفلل والعمائر",
+    "معاينة مجانية، ضمان مكتوب، وتغطية كل أحياء الرياض",
   ],
 };
 

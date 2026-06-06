@@ -17,8 +17,8 @@ import { PageStructuredData } from "@/components/seo/PageStructuredData";
 import { StandardPageSections } from "@/components/seo/StandardPageSections";
 import {
   getAllServicePages,
-  getServicePageBySlug,
 } from "@/lib/services/load-pages";
+import { findServicePageByParam } from "@/lib/services/resolve-service-slug";
 import {
   extractServiceToc,
   prepareServiceMarkdown,
@@ -44,8 +44,8 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const page = getServicePageBySlug(slug);
+  const { slug: rawSlug } = await params;
+  const page = findServicePageByParam(rawSlug);
   if (!page) return {};
 
   return createPageMetadata({
@@ -62,8 +62,8 @@ export async function generateMetadata({
 }
 
 export default async function ServiceLandingPage({ params }: PageProps) {
-  const { slug } = await params;
-  const page = getServicePageBySlug(slug);
+  const { slug: rawSlug } = await params;
+  const page = findServicePageByParam(rawSlug);
   if (!page) notFound();
 
   const cleanedContent = prepareServiceMarkdown(page.content);

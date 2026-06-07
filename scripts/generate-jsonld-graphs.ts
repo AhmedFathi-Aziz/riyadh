@@ -32,6 +32,7 @@ const graphsDir = path.join(process.cwd(), "public", "seo", "graphs");
 /** slugs عربية → اسم ملف ASCII (متزامن مع jsonld-graph-path.ts) */
 const JSONLD_GRAPH_FILE_SLUGS: Record<string, string> = {
   "عزل-مائي-بالرياض": "waterproofing-riyadh",
+  "عزل-حراري-بالرياض": "thermal-insulation-riyadh",
 };
 
 function serviceGraphRelPath(slug: string): string {

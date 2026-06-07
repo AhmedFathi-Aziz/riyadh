@@ -85,10 +85,28 @@ export const servicePagesMeta: ServicePageMeta[] = [
       "شعار ManzilCare — عزل أسطح بالرياض: عزل مائي وحراري للفلل والمباني التجارية",
     icon: "wb_sunny",
     relatedSlugs: [
+      "عزل-حراري-بالرياض",
       "عزل-مائي-بالرياض",
       "foam-insulation-riyadh",
       "leak-detection-water-riyadh",
       "tank-insulation-riyadh",
+    ],
+  },
+  {
+    slug: "عزل-حراري-بالرياض",
+    keyword: "عزل حراري بالرياض",
+    title: "عزل حراري بالرياض",
+    description:
+      "عزل حراري بالرياض للفلل والعمائر والمستودعات: XPS، EPS، صوف صخري. خفض فاتورة التكييف، معاينة مجانية، وضمان مكتوب في كل الأحياء.",
+    coverImage: "thermal-insulation-riyadh-hero.webp",
+    imageAlt:
+      "شعار ManzilCare — عزل حراري بالرياض: تقليل حرارة الأسطح وفواتير التكييف",
+    icon: "device_thermostat",
+    relatedSlugs: [
+      "roof-insulation-riyadh",
+      "foam-insulation-riyadh",
+      "عزل-مائي-بالرياض",
+      "leak-detection-water-riyadh",
     ],
   },
   {
@@ -102,6 +120,7 @@ export const servicePagesMeta: ServicePageMeta[] = [
       "شعار ManzilCare — عزل مائي بالرياض: حماية الأسطح والخزانات والحمامات",
     icon: "water_drop",
     relatedSlugs: [
+      "عزل-حراري-بالرياض",
       "roof-insulation-riyadh",
       "bathroom-insulation-riyadh",
       "tank-insulation-riyadh",
@@ -119,6 +138,7 @@ export const servicePagesMeta: ServicePageMeta[] = [
       "شعار ManzilCare — عزل فوم بالرياض: عزل حراري ومائي للفلل والمباني التجارية",
     icon: "texture",
     relatedSlugs: [
+      "عزل-حراري-بالرياض",
       "roof-insulation-riyadh",
       "tank-insulation-riyadh",
       "leak-detection-water-riyadh",
@@ -197,6 +217,7 @@ export const SERVICES_PAGE_SPOTLIGHT_SLUGS = [
   "roof-insulation-riyadh",
   "foam-insulation-riyadh",
   "عزل-مائي-بالرياض",
+  "عزل-حراري-بالرياض",
 ] as const;
 
 export type ServicesPageSpotlightSlug =
@@ -234,6 +255,11 @@ export const SERVICES_PAGE_SPOTLIGHT_HIGHLIGHTS: Record<
     "بيتومين، أغشية سائلة، وإيبوكسي للأسطح والخزانات",
     "حماية من تسربات الأمطار والرطوبة في الفلل والعمائر",
     "معاينة مجانية، ضمان مكتوب، وتغطية كل أحياء الرياض",
+  ],
+  "عزل-حراري-بالرياض": [
+    "XPS و EPS وصوف صخري للفلل والمستودعات والمباني التجارية",
+    "تقليل حرارة الغرف العلوية وفاتورة التكييف في صيف الرياض",
+    "معاينة مجانية، مواصفات سماكة وكثافة، وضمان مكتوب",
   ],
 };
 

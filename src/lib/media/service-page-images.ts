@@ -50,6 +50,14 @@ export const servicePageImages = {
       height: 1080,
     },
   },
+  "عزل-حراري-بالرياض": {
+    hero: {
+      src: "/images/thermal-insulation-riyadh-hero.webp",
+      alt: "ManzilCare — عزل حراري بالرياض: تقليل حرارة الأسطح وفواتير التكييف",
+      width: 1920,
+      height: 1080,
+    },
+  },
   "leak-detection-no-damage-riyadh": {
     hero: {
       src: "/images/leak-detection-no-damage-riyadh-hero.webp",

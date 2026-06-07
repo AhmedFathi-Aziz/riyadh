@@ -2,6 +2,7 @@
 /** slugs عربية → اسم ملف ASCII لتفادي مشاكل Windows/dev */
 const JSONLD_GRAPH_FILE_SLUGS: Record<string, string> = {
   "عزل-مائي-بالرياض": "waterproofing-riyadh",
+  "عزل-حراري-بالرياض": "thermal-insulation-riyadh",
 };
 
 function graphFileSlug(slug: string): string {

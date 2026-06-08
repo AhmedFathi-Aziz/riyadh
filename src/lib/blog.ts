@@ -3,9 +3,9 @@ import { getAllPosts, type BlogPost } from "./blog/load-posts";
 export type { BlogPost };
 
 export const blogMeta = {
-  title: "المدونة",
+  title: "مدونة عزل وكشف التسربات بالرياض",
   description:
-    "تعرف على أفضل نصائح عزل الأسطح، الكشف عن تسربات المياه، وأحدث تقنيات العزل المناسبة لمناخ الرياض في مدونتنا المتخصصة.",
+    "نصائح عزل الأسطح وكشف تسربات المياه في الرياض — فوم بولي يوريثان، بيتومين، وصيانة دورية. مقالات من خبراء ManzilCare. اقرأ الآن.",
   path: "/blog",
 };
 

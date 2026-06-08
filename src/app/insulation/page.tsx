@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { InsulationCtaSection } from "@/components/insulation/InsulationCtaSection";
+import { InsulationSeoContent } from "@/components/insulation/InsulationSeoContent";
 import { InsulationFooter } from "@/components/insulation/InsulationFooter";
 import { InsulationHero } from "@/components/insulation/InsulationHero";
 import { InsulationPortfolio } from "@/components/insulation/InsulationPortfolio";
@@ -15,7 +16,7 @@ import { jsonLdGraphPath } from "@/lib/seo/jsonld-graph-path";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "عزل أسطح وخزانات بالرياض",
+  title: insulationPage.meta.title,
   description: insulationPage.meta.description,
   path: insulationPage.meta.path,
   keywords: [
@@ -39,6 +40,7 @@ export default function InsulationPage() {
         <InsulationHero />
         <InsulationTypesGrid />
         <InsulationProcessSteps />
+        <InsulationSeoContent />
         <InsulationPortfolio />
         <div className="mx-auto max-w-max-width px-gutter">
           <StandardPageSections

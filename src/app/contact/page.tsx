@@ -6,15 +6,14 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { BreadcrumbNav } from "@/components/seo/BreadcrumbNav";
 import { PageStructuredData } from "@/components/seo/PageStructuredData";
 import { StandardPageSections } from "@/components/seo/StandardPageSections";
-import { contactPageMeta } from "@/lib/contact-page";
+import { contactPageIntro, contactPageMeta } from "@/lib/contact-page";
 import { breadcrumbs } from "@/lib/seo/breadcrumbs";
 import { getFaqsForPage } from "@/lib/seo/page-faqs";
 import { jsonLdGraphPath } from "@/lib/seo/jsonld-graph-path";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "اتصل بنا — كشف تسربات وعزل بالرياض",
-  titleSuffix: "معاينة مجانية 24/7",
+  title: contactPageMeta.title,
   description: contactPageMeta.description,
   path: contactPageMeta.path,
   keywords: [
@@ -43,12 +42,26 @@ export default function ContactPage() {
               <span>نرد خلال دقائق</span>
             </div>
             <h1 className="mb-4 text-display-lg-mobile font-bold text-primary md:text-display-lg">
-              اتصل بنا
+              اتصل بنا — كشف تسربات بالرياض
             </h1>
-            <p className="mx-auto max-w-2xl text-body-lg text-on-surface-variant">
-              فريقنا في الرياض جاهز لاستقبال طلبات المعاينة المجانية، كشف
-              التسربات، وعزل الأسطح والخزانات. تواصل بالطريقة الأنسب لك.
-            </p>
+            {contactPageIntro.paragraphs.map((p) => (
+              <p
+                key={p.slice(0, 40)}
+                className="mx-auto mb-4 max-w-2xl text-body-lg text-on-surface-variant"
+              >
+                {p.split(/(\*\*[^*]+\*\*)/g).map((part, i) => {
+                  const match = part.match(/^\*\*([^*]+)\*\*$/);
+                  if (match) {
+                    return (
+                      <strong key={i} className="font-semibold text-primary">
+                        {match[1]}
+                      </strong>
+                    );
+                  }
+                  return <span key={i}>{part}</span>;
+                })}
+              </p>
+            ))}
           </header>
 
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">

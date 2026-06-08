@@ -9,16 +9,17 @@ import { PageStructuredData } from "@/components/seo/PageStructuredData";
 import { StandardPageSections } from "@/components/seo/StandardPageSections";
 import { ServicesFooter } from "@/components/ServicesFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { ServicesSeoIntro } from "@/components/services/ServicesSeoIntro";
 import { servicesCatalog } from "@/lib/services-catalog";
+import { servicesPageMeta } from "@/lib/services-page";
 import { breadcrumbs } from "@/lib/seo/breadcrumbs";
 import { getFaqsForPage } from "@/lib/seo/page-faqs";
 import { jsonLdGraphPath } from "@/lib/seo/jsonld-graph-path";
 import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
-  title: "كشف تسربات المياه وعزل الأسطح بالرياض",
-  description:
-    "خدمات هندسية متكاملة في الرياض: كشف تسربات المياه بدون تكسير، عزل الخزانات والأسطح والحمامات. ضمان معتمد ودعم 24/7 في جميع الأحياء.",
-  path: "/services",
+  title: servicesPageMeta.title,
+  description: servicesPageMeta.description,
+  path: servicesPageMeta.path,
   keywords: [
     "خدمات ManzilCare",
     "كشف تسربات بدون تكسير",
@@ -37,6 +38,7 @@ export default function ServicesPage() {
       <SiteHeader activePage="services" variant="services" />
       <main className="overflow-x-hidden pt-32 pb-20">
         <ServicesPageHero />
+        <ServicesSeoIntro />
         <FeaturedServiceGuideSection />
         <ServicesBentoGrid />
         <TrustStats />

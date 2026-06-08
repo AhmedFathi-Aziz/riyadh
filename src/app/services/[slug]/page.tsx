@@ -71,7 +71,7 @@ export default async function ServiceLandingPage({ params }: PageProps) {
   const faqs = getFaqsForPage({
     extras: markdownFaqs,
     serviceSlug: page.slug,
-    max: 5,
+    max: 8,
   });
   const bodyContent = stripFaqSection(cleanedContent);
   const { body: articleBody, areasIntro } =

@@ -5,6 +5,8 @@ import { PageStructuredData } from "@/components/seo/PageStructuredData";
 import { StandardPageSections } from "@/components/seo/StandardPageSections";
 import { ServicesFooter } from "@/components/ServicesFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { AreasSeoIntro } from "@/components/areas/AreasSeoIntro";
+import { areasPageMeta } from "@/lib/areas-page";
 import { REGION_LABELS } from "@/lib/neighborhoods/content-profiles";
 import { getAllNeighborhoodPages } from "@/lib/neighborhoods/load-neighborhoods";
 import { breadcrumbs } from "@/lib/seo/breadcrumbs";
@@ -14,10 +16,9 @@ import { createPageMetadata } from "@/lib/seo";
 import type { NeighborhoodRegion } from "@/lib/neighborhoods/types";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "كشف تسربات المياه في أحياء الرياض",
-  description:
-    "صفحة مخصصة لكل حي في الرياض: وصف المنطقة، مشاكل التسرب، أنواع المباني، والخدمات المناسبة. معاينة مجانية من ManzilCare.",
-  path: "/areas",
+  title: areasPageMeta.title,
+  description: areasPageMeta.description,
+  path: areasPageMeta.path,
   keywords: [
     "كشف تسربات أحياء الرياض",
     "كشف تسربات حي النرجس",
@@ -50,10 +51,11 @@ export default function AreasIndexPage() {
           <h1 className="mb-4 text-display-lg-mobile font-bold text-primary md:text-display-lg">
             كشف تسربات المياه في أحياء الرياض
           </h1>
-          <p className="text-body-lg text-on-surface-variant">
+          <p className="mb-4 text-body-lg text-on-surface-variant">
             {pages.length} حيّاً بمحتوى مخصّص — وصف المنطقة، مشاكل التسرب، أنواع
             المباني، خدمات مناسبة، وأسئلة شائعة. اختر حيّك للتفاصيل.
           </p>
+          <AreasSeoIntro />
         </header>
 
         {regionOrder.map((region) => {

@@ -1,6 +1,7 @@
 import { GLOBAL_FAQS } from "@/lib/seo/page-faqs";
 
 export function FaqSection() {
+  const faqs = GLOBAL_FAQS;
   return (
     <section
       id="faq"
@@ -15,7 +16,7 @@ export function FaqSection() {
           الأسئلة الشائعة
         </h2>
         <div className="mx-auto max-w-3xl space-y-3">
-          {GLOBAL_FAQS.map((faq) => (
+          {faqs.map((faq) => (
             <details key={faq.question} className="faq-card group">
               <summary className="faq-question cursor-pointer list-none marker:content-none [&::-webkit-details-marker]:hidden">
                 {faq.question}

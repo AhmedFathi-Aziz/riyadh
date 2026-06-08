@@ -6,11 +6,14 @@ import fs from "node:fs";
 import path from "node:path";
 import { blogMeta } from "../src/lib/blog";
 import { contactPageMeta } from "../src/lib/contact-page";
+import { homePageMeta } from "../src/lib/home-page";
+import { areasPageMeta } from "../src/lib/areas-page";
+import { servicesPageMeta } from "../src/lib/services-page";
+import { insulationPage } from "../src/lib/insulation-page";
 import { getAllPosts } from "../src/lib/blog/load-posts";
 import { getAllNeighborhoodPages } from "../src/lib/neighborhoods/load-neighborhoods";
 import { getAllServicePages } from "../src/lib/services/load-pages";
 import { breadcrumbs } from "../src/lib/seo/breadcrumbs";
-import { DEFAULT_META_DESCRIPTION } from "../src/lib/seo/constants";
 import { extractFaqFromMarkdown } from "../src/lib/seo/extract-markdown-faq";
 import { getFaqsForPage, GLOBAL_FAQS } from "../src/lib/seo/page-faqs";
 import { prepareServiceMarkdown } from "../src/lib/services/prepare-markdown";
@@ -75,8 +78,8 @@ const homeUrl = `${siteConfig.url}/`;
 writeGraph("home.json", [
   ...pageGraph(
     homeUrl,
-    "كشف تسربات المياه بالرياض",
-    DEFAULT_META_DESCRIPTION,
+    homePageMeta.title,
+    homePageMeta.description,
     undefined,
     [
       buildBreadcrumbSchema(breadcrumbs.home()),
@@ -89,8 +92,8 @@ writeGraph(
   "services.json",
   pageGraph(
     `${siteConfig.url}/services`,
-    "كشف تسربات المياه وعزل الأسطح بالرياض",
-    "خدمات هندسية متكاملة في الرياض: كشف تسربات المياه بدون تكسير، عزل الخزانات والأسطح والحمامات. ضمان معتمد ودعم 24/7 في جميع الأحياء.",
+    servicesPageMeta.title,
+    servicesPageMeta.description,
     undefined,
     [
       buildBreadcrumbSchema(breadcrumbs.services()),
@@ -103,8 +106,8 @@ writeGraph(
   "areas.json",
   pageGraph(
     `${siteConfig.url}/areas`,
-    "كشف تسربات المياه في أحياء الرياض",
-    "صفحة مخصصة لكل حي في الرياض: وصف المنطقة، مشاكل التسرب، أنواع المباني، والخدمات المناسبة. معاينة مجانية من ManzilCare.",
+    areasPageMeta.title,
+    areasPageMeta.description,
     undefined,
     [
       buildBreadcrumbSchema(breadcrumbs.areas()),
@@ -131,8 +134,8 @@ writeGraph(
   "insulation.json",
   pageGraph(
     `${siteConfig.url}/insulation`,
-    "عزل أسطح وخزانات بالرياض",
-    "خدمات عزل مائي وحراري وفوم بولي يوريثان للأسطح والخزانات في الرياض. فحص مجاني، منهجية احترافية، وضمان يصل إلى 15 عاماً.",
+    insulationPage.meta.title,
+    insulationPage.meta.description,
     undefined,
     [
       buildBreadcrumbSchema(breadcrumbs.insulation()),
@@ -145,9 +148,9 @@ writeGraph(
   "contact.json",
   pageGraph(
     `${siteConfig.url}${contactPageMeta.path}`,
-    "اتصل بنا — كشف تسربات وعزل بالرياض",
+    contactPageMeta.title,
     contactPageMeta.description,
-    "معاينة مجانية 24/7",
+    undefined,
     [
       buildBreadcrumbSchema(breadcrumbs.contact()),
       ...faqGraphs(getFaqsForPage()),
@@ -161,7 +164,7 @@ for (const page of getAllServicePages()) {
   const faqs = getFaqsForPage({
     extras: markdownFaqs,
     serviceSlug: page.slug,
-    max: 5,
+    max: 8,
   });
   const pageUrl = `${siteConfig.url}/services/${page.slug}`;
   writeGraph(
@@ -180,7 +183,7 @@ for (const page of getAllServicePages()) {
 
 for (const page of getAllNeighborhoodPages()) {
   const markdownFaqs = extractFaqFromMarkdown(page.content);
-  const faqs = getFaqsForPage({ extras: markdownFaqs, max: 5 });
+  const faqs = getFaqsForPage({ extras: markdownFaqs, max: 8 });
   const pageUrl = `${siteConfig.url}/areas/${page.slug}`;
   writeGraph(
     `areas/${page.slug}.json`,
@@ -211,7 +214,7 @@ for (const post of getAllPosts()) {
         readTime: post.readTime,
         imageSrc: post.image.src,
       }),
-      ...faqGraphs(getFaqsForPage({ max: 5 })),
+      ...faqGraphs(getFaqsForPage({ max: 8 })),
     ]),
   );
 }

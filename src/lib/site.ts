@@ -6,7 +6,7 @@ export const siteConfig = {
   legalName: "ManzilCare",
   tagline: "متخصصون في العزل وكشف تسربات المياه",
   description:
-    "ManzilCare — شركة متخصصة في كشف تسربات المياه وعزل الأسطح والخزانات بالرياض. دقة، سرعة، وضمان معتمد يصل إلى 10 سنوات.",
+    "ManzilCare — شركة متخصصة في كشف تسربات المياه وعزل الأسطح والخزانات بالرياض. معاينة مجانية، فحص بدون تكسير، وضمان يصل إلى 10 سنوات.",
   url:
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
     "https://manzilcare.com",

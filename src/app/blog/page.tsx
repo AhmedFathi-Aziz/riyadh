@@ -14,7 +14,7 @@ import { jsonLdGraphPath } from "@/lib/seo/jsonld-graph-path";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "مدونة عزل وكشف التسربات بالرياض",
+  title: blogMeta.title,
   description: blogMeta.description,
   path: blogMeta.path,
   keywords: [

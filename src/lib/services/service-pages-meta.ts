@@ -212,9 +212,9 @@ export const servicePagesMeta: ServicePageMeta[] = [
   {
     slug: "leak-detection-no-damage-riyadh",
     keyword: "كشف تسربات بدون تكسير بالرياض",
-    title: "كشف تسربات بدون تكسير بالرياض | ManzilCare",
+    title: "كشف تسربات بدون تكسير بالرياض",
     description:
-      "كشف تسربات بدون تكسير في الرياض: صوتي، حراري، وغاز تتبع. تحديد موقع التسرب بدقة قبل أي تكسير. معاينة مجانية في كل الأحياء.",
+      "كشف تسربات بدون تكسير في الرياض: صوتي، حراري، وغاز تتبع. تحديد موقع التسرب بدقة قبل أي تكسير. معاينة مجانية — اتصل بـ ManzilCare.",
     coverImage: "leak-detection-no-damage-riyadh-hero.webp",
     imageAlt:
       "كشف تسربات بدون تكسير في فيلا بالرياض — فريق ManzilCare يحدد موقع التسرب قبل فتح البلاط",

@@ -12,7 +12,7 @@ export type BreadcrumbItem = {
 };
 
 export function formatPageTitle(title: string, suffix?: string): string {
-  const s = suffix ?? "فحص دقيق بدون تكسير";
+  const s = suffix ?? "ManzilCare";
   return `${title} | ${s}`;
 }
 

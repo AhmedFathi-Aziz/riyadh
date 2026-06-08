@@ -116,7 +116,7 @@ export function FeaturedServiceGuideSection() {
         </h2>
         <p className="mx-auto max-w-2xl text-body-md leading-relaxed text-on-surface-muted sm:text-body-lg">
           محتوى تفصيلي لكل خدمة — كشف التسربات، عزل الأسطح، عزل الفوم، عزل
-          مائي وحراري، خطوات العمل، الأسئلة الشائعة، وتغطية الأحياء. اختر
+          مائي وحراري وخزانات، خطوات العمل، الأسئلة الشائعة، وتغطية الأحياء. اختر
           الدليل المناسب لحالتك.
         </p>
       </div>

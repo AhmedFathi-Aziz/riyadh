@@ -58,6 +58,14 @@ export const servicePageImages = {
       height: 1080,
     },
   },
+  "عزل-خزانات-بالرياض": {
+    hero: {
+      src: "/images/tanks-insulation-riyadh-hero.webp",
+      alt: "ManzilCare — عزل خزانات بالرياض: حماية المياه ومنع التسربات",
+      width: 1920,
+      height: 1080,
+    },
+  },
   "leak-detection-no-damage-riyadh": {
     hero: {
       src: "/images/leak-detection-no-damage-riyadh-hero.webp",

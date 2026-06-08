@@ -145,6 +145,23 @@ export const servicePagesMeta: ServicePageMeta[] = [
     ],
   },
   {
+    slug: "عزل-خزانات-بالرياض",
+    keyword: "عزل خزانات بالرياض",
+    title: "عزل خزانات بالرياض",
+    description:
+      "عزل خزانات بالرياض للفلل والعمائر: إيبوكسي معتمد، معالجة تشققات، اختبار ضغط. معاينة مجانية وضمان مكتوب في كل أحياء الرياض.",
+    coverImage: "tanks-insulation-riyadh-hero.webp",
+    imageAlt:
+      "شعار ManzilCare — عزل خزانات بالرياض: حماية المياه ومنع التسربات",
+    icon: "water_drop",
+    relatedSlugs: [
+      "leak-detection-tanks-riyadh",
+      "leak-repair-water-riyadh",
+      "عزل-مائي-بالرياض",
+      "roof-insulation-riyadh",
+    ],
+  },
+  {
     slug: "tank-insulation-riyadh",
     keyword: "عزل الخزانات بالرياض",
     title: "عزل الخزانات بالرياض",
@@ -155,7 +172,7 @@ export const servicePagesMeta: ServicePageMeta[] = [
       "عزل خزانات بالرياض — خزان مياه معزول من الداخل بطلاء إيبوكسي أزرق احترافي",
     icon: "water_drop",
     relatedSlugs: [
-      "leak-detection-tanks-riyadh",
+      "عزل-خزانات-بالرياض",
       "leak-repair-water-riyadh",
       "roof-insulation-riyadh",
     ],
@@ -218,6 +235,7 @@ export const SERVICES_PAGE_SPOTLIGHT_SLUGS = [
   "foam-insulation-riyadh",
   "عزل-مائي-بالرياض",
   "عزل-حراري-بالرياض",
+  "عزل-خزانات-بالرياض",
 ] as const;
 
 export type ServicesPageSpotlightSlug =
@@ -260,6 +278,11 @@ export const SERVICES_PAGE_SPOTLIGHT_HIGHLIGHTS: Record<
     "XPS و EPS وصوف صخري للفلل والمستودعات والمباني التجارية",
     "تقليل حرارة الغرف العلوية وفاتورة التكييف في صيف الرياض",
     "معاينة مجانية، مواصفات سماكة وكثافة، وضمان مكتوب",
+  ],
+  "عزل-خزانات-بالرياض": [
+    "إيبوكسي معتمد للمياه الصالحة للشرب ومعالجة تشققات",
+    "خزانات علوية وأرضية للفلل والعمائر والمباني التجارية",
+    "معاينة مجانية، اختبار ضغط، وضمان مكتوب في كل الأحياء",
   ],
 };
 

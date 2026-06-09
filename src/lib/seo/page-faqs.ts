@@ -58,7 +58,7 @@ const SERVICE_FAQ_EXTRAS: Record<string, FaqItem[]> = {
         "عندما يكون التسرب في شبكة ضغط أو صرف يمكن تتبعه acoustically أو حرارياً؛ نحدد ذلك في المعاينة الأولية.",
     },
   ],
-  "leak-detection-tanks-riyadh": [
+  "كشف-تسربات-الخزانات-بالرياض": [
     {
       question: "كيف تكشفون تسربات الخزانات العلوية دون تخمين؟",
       answer:

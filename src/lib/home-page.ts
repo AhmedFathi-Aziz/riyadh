@@ -85,6 +85,10 @@ export const homeServiceLinks = [
     label: "عزل مائي بالرياض",
   },
   {
+    href: "/services/كشف-تسربات-الخزانات-بالرياض",
+    label: "كشف تسربات الخزانات بالرياض",
+  },
+  {
     href: "/services/عزل-خزانات-بالرياض",
     label: "عزل خزانات بالرياض",
   },

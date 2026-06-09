@@ -24,19 +24,21 @@ export const servicePagesMeta: ServicePageMeta[] = [
     relatedSlugs: [
       "leak-detection-no-damage-riyadh",
       "leak-repair-water-riyadh",
-      "leak-detection-tanks-riyadh",
+      "كشف-تسربات-الخزانات-بالرياض",
     ],
   },
   {
-    slug: "leak-detection-tanks-riyadh",
+    slug: "كشف-تسربات-الخزانات-بالرياض",
     keyword: "كشف تسربات الخزانات بالرياض",
     title: "كشف تسربات الخزانات بالرياض",
     description:
-      "كشف تسربات الخزانات العلوية والأرضية في الرياض دون تخمين: فحص ضغط، كاميرا، وعزل إيبوكسي. حماية الأساسات ومياه الشرب.",
-    coverImage: "blog-tank-leak.png",
-    imageAlt: "فحص داخلي لخزان مياه معزول بالإيبوكسي في الرياض",
+      "كشف تسربات الخزانات بالرياض للفلل والعمائر: فحص ضغط، كاميرا، وغاز تتبع. معاينة مجانية وضمان حتى 10 سنوات. احجز مع ManzilCare.",
+    coverImage: "tank-leak-detection-riyadh-hero.webp",
+    imageAlt:
+      "شعار ManzilCare على خلفية بيضاء — كشف تسربات الخزانات بالرياض",
     icon: "water_drop",
     relatedSlugs: [
+      "عزل-خزانات-بالرياض",
       "tank-insulation-riyadh",
       "leak-detection-water-riyadh",
       "leak-repair-water-riyadh",
@@ -155,7 +157,7 @@ export const servicePagesMeta: ServicePageMeta[] = [
       "شعار ManzilCare — عزل خزانات بالرياض: حماية المياه ومنع التسربات",
     icon: "water_drop",
     relatedSlugs: [
-      "leak-detection-tanks-riyadh",
+      "كشف-تسربات-الخزانات-بالرياض",
       "leak-repair-water-riyadh",
       "عزل-مائي-بالرياض",
       "roof-insulation-riyadh",
@@ -222,7 +224,7 @@ export const servicePagesMeta: ServicePageMeta[] = [
     relatedSlugs: [
       "leak-detection-water-riyadh",
       "leak-repair-water-riyadh",
-      "leak-detection-tanks-riyadh",
+      "كشف-تسربات-الخزانات-بالرياض",
     ],
   },
 ];
@@ -230,6 +232,7 @@ export const servicePagesMeta: ServicePageMeta[] = [
 /** الصفحات التفصيلية المعروضة في سيكشن مميز على /services */
 export const SERVICES_PAGE_SPOTLIGHT_SLUGS = [
   "leak-detection-water-riyadh",
+  "كشف-تسربات-الخزانات-بالرياض",
   "leak-detection-no-damage-riyadh",
   "roof-insulation-riyadh",
   "foam-insulation-riyadh",
@@ -253,6 +256,11 @@ export const SERVICES_PAGE_SPOTLIGHT_HIGHLIGHTS: Record<
     "كشف شامل للتغذية والصرف والخزانات والأسطح",
     "تقرير مصور، تقدير تكلفة، وخطة إصلاح واضحة",
     "معاينة مجانية وتغطية لأحياء الرياض",
+  ],
+  "كشف-تسربات-الخزانات-بالرياض": [
+    "فحص خزانات علوية وأرضية ومركزية في الفلل والعمائر",
+    "اختبار ضغط، كاميرا داخلية، وغاز تتبع لتحديد مصدر التسرب",
+    "معاينة مجانية، تقرير مصور، وضمان حتى 10 سنوات",
   ],
   "leak-detection-no-damage-riyadh": [
     "تحديد موقع التسرب بالصوتيات والحرارة وغاز التتبع",

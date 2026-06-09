@@ -151,7 +151,7 @@ export const SERVICE_CATALOG: Record<
     title: "إصلاح تسربات المياه",
     reason: "إغلاق التسرب بعد التشخيص مع ضمان",
   },
-  "leak-detection-tanks-riyadh": {
+  "كشف-تسربات-الخزانات-بالرياض": {
     title: "كشف تسربات الخزانات",
     reason: "فحص الخزانات العلوية والأرضية الشائعة في الحي",
   },
@@ -193,14 +193,14 @@ export const PROFILE_SERVICES: Record<NeighborhoodProfile, string[]> = {
   villa_luxury: [
     "leak-detection-water-riyadh",
     "leak-detection-no-damage-riyadh",
-    "leak-detection-tanks-riyadh",
+    "كشف-تسربات-الخزانات-بالرياض",
     "roof-insulation-riyadh",
     "leak-detection-pools-riyadh",
   ],
   villa_standard: [
     "leak-detection-water-riyadh",
     "leak-repair-water-riyadh",
-    "leak-detection-tanks-riyadh",
+    "كشف-تسربات-الخزانات-بالرياض",
     "roof-insulation-riyadh",
   ],
   apartment_towers: [
@@ -217,7 +217,7 @@ export const PROFILE_SERVICES: Record<NeighborhoodProfile, string[]> = {
   ],
   compound_gated: [
     "leak-detection-water-riyadh",
-    "leak-detection-tanks-riyadh",
+    "كشف-تسربات-الخزانات-بالرياض",
     "tank-insulation-riyadh",
     "roof-insulation-riyadh",
   ],
@@ -235,7 +235,7 @@ export const PROFILE_SERVICES: Record<NeighborhoodProfile, string[]> = {
   ],
   industrial_edge: [
     "leak-detection-water-riyadh",
-    "leak-detection-tanks-riyadh",
+    "كشف-تسربات-الخزانات-بالرياض",
     "roof-insulation-riyadh",
     "foam-insulation-riyadh",
   ],

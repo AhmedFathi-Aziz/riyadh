@@ -40,7 +40,7 @@
 - **طبقة عزل قديمة** متقشرة، فقاعات تحت البيتومين، أو فوم بلا حماية UV متفتت.
 - **ماء راكد** على السطح أكثر من يومين بعد هطول المطر.
 - **حرارة شديدة** لمس السطح الداخلي للسقف المستعار في غرفة علوية.
-- **تسربات سابقة** من خزان علوي — يجب [عزل الخزانات بالرياض](/services/tank-insulation-riyadh) و[كشف تسربات الخزانات بالرياض](/services/leak-detection-tanks-riyadh) قبل عزل الفوم حول القاعدة.
+- **تسربات سابقة** من خزان علوي — يجب [عزل الخزانات بالرياض](/services/tank-insulation-riyadh) و[كشف تسربات الخزانات بالرياض](/services/كشف-تسربات-الخزانات-بالرياض) قبل عزل الفوم حول القاعدة.
 - **مستودع أو محل تجاري** لا يحافظ على درجة حرارة مناسبة للبضائع أو للعمل.
 
 إذا ظهرت أكثر من علامة، لا تؤجل. تأخير **عزل فوم بالرياض** يعني إعادة رش كامل أو ترميماً أوسع — التكلفة الإجمالية تصبح أعلى من المعالجة المبكرة.
@@ -198,7 +198,7 @@ Suggested Internal Links:
 - /services/bathroom-insulation-riyadh
 - /services/leak-detection-water-riyadh
 - /services/leak-detection-no-damage-riyadh
-- /services/leak-detection-tanks-riyadh
+- /services/كشف-تسربات-الخزانات-بالرياض
 - /services/leak-repair-water-riyadh
 - /areas/al-narjis
 - /areas/al-malqa

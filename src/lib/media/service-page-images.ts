@@ -66,6 +66,20 @@ export const servicePageImages = {
       height: 1080,
     },
   },
+  "كشف-تسربات-الخزانات-بالرياض": {
+    hero: {
+      src: "/images/tank-leak-detection-riyadh-hero.webp",
+      alt: "شعار ManzilCare على خلفية بيضاء — كشف تسربات الخزانات بالرياض",
+      width: 1920,
+      height: 1080,
+    },
+    field: {
+      src: "/images/tank-leak-detection-riyadh-field.webp",
+      alt: "فريق ManzilCare يفحص خزان مياه علوي في فيلا بالرياض بأجهزة قياس رطوبة واختبار ضغط",
+      width: 512,
+      height: 512,
+    },
+  },
   "leak-detection-no-damage-riyadh": {
     hero: {
       src: "/images/leak-detection-no-damage-riyadh-hero.webp",

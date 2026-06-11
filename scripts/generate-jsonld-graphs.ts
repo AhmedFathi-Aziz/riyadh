@@ -38,6 +38,7 @@ const JSONLD_GRAPH_FILE_SLUGS: Record<string, string> = {
   "عزل-حراري-بالرياض": "thermal-insulation-riyadh",
   "عزل-خزانات-بالرياض": "tanks-insulation-riyadh",
   "كشف-تسربات-الخزانات-بالرياض": "tank-leak-detection-riyadh",
+  "كشف-تسربات-المسابح-بالرياض": "pool-leak-detection-riyadh",
 };
 
 function serviceGraphRelPath(slug: string): string {

@@ -66,6 +66,20 @@ export const servicePageImages = {
       height: 1080,
     },
   },
+  "كشف-تسربات-المسابح-بالرياض": {
+    hero: {
+      src: "/images/pool-leak-detection-riyadh-hero.webp",
+      alt: "شعار ManzilCare على خلفية بيضاء — كشف تسربات المسابح بالرياض",
+      width: 1920,
+      height: 1080,
+    },
+    field: {
+      src: "/images/pool-leak-detection-riyadh-field.webp",
+      alt: "فريق ManzilCare يكشف تسرب مسبح في فيلا بالرياض بصبغة تتبعية واختبار مستوى الماء",
+      width: 1200,
+      height: 675,
+    },
+  },
   "كشف-تسربات-الخزانات-بالرياض": {
     hero: {
       src: "/images/tank-leak-detection-riyadh-hero.webp",

@@ -45,19 +45,20 @@ export const servicePagesMeta: ServicePageMeta[] = [
     ],
   },
   {
-    slug: "leak-detection-pools-riyadh",
+    slug: "كشف-تسربات-المسابح-بالرياض",
     keyword: "كشف تسربات المسابح بالرياض",
     title: "كشف تسربات المسابح بالرياض",
     description:
-      "تحديد تسربات المسابح في الرياض بالصبغة التتبعية والفحص الهيدروليكي. إصلاح الشقوق وعزل احترافي للفلل والاستراحات.",
-    coverImage: "service-pool-leak.jpg",
+      "كشف تسربات المسابح بالرياض للفلل والاستراحات: صبغة تتبعية، ضغط هيدروليكي، واختبار دلو. معاينة مجانية — احجز مع ManzilCare.",
+    coverImage: "pool-leak-detection-riyadh-hero.webp",
     imageAlt:
-      "فحص تسرب مسبح بصبغة تتبعية وأجهزة كشف في فيلا بالرياض",
+      "شعار ManzilCare على خلفية بيضاء — كشف تسربات المسابح بالرياض",
     icon: "pool",
     relatedSlugs: [
       "pool-insulation-riyadh",
       "leak-repair-water-riyadh",
       "leak-detection-water-riyadh",
+      "bathroom-insulation-riyadh",
     ],
   },
   {
@@ -206,7 +207,7 @@ export const servicePagesMeta: ServicePageMeta[] = [
       "مسبح فيلا يخضع لعزل مائي ومعالجة شقوق في الرياض",
     icon: "pool",
     relatedSlugs: [
-      "leak-detection-pools-riyadh",
+      "كشف-تسربات-المسابح-بالرياض",
       "bathroom-insulation-riyadh",
       "leak-repair-water-riyadh",
     ],
@@ -233,6 +234,7 @@ export const servicePagesMeta: ServicePageMeta[] = [
 export const SERVICES_PAGE_SPOTLIGHT_SLUGS = [
   "leak-detection-water-riyadh",
   "كشف-تسربات-الخزانات-بالرياض",
+  "كشف-تسربات-المسابح-بالرياض",
   "leak-detection-no-damage-riyadh",
   "roof-insulation-riyadh",
   "foam-insulation-riyadh",
@@ -261,6 +263,11 @@ export const SERVICES_PAGE_SPOTLIGHT_HIGHLIGHTS: Record<
     "فحص خزانات علوية وأرضية ومركزية في الفلل والعمائر",
     "اختبار ضغط، كاميرا داخلية، وغاز تتبع لتحديد مصدر التسرب",
     "معاينة مجانية، تقرير مصور، وضمان حتى 10 سنوات",
+  ],
+  "كشف-تسربات-المسابح-بالرياض": [
+    "تمييز التبخر عن التسرب باختبار الدلو والصبغة التتبعية",
+    "فحص هيكل المسبح وخطوط السيركليشن وغرفة المعدات",
+    "معاينة مجانية للفلل والاستراحات والفنادق في كل أحياء الرياض",
   ],
   "leak-detection-no-damage-riyadh": [
     "تحديد موقع التسرب بالصوتيات والحرارة وغاز التتبع",

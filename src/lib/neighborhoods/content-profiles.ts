@@ -179,7 +179,7 @@ export const SERVICE_CATALOG: Record<
     title: "عزل الحمامات",
     reason: "منع تسرب الرطوبة للأدوار السفلية",
   },
-  "leak-detection-pools-riyadh": {
+  "كشف-تسربات-المسابح-بالرياض": {
     title: "كشف تسربات المسابح",
     reason: "للفلل ذات المسابح الخاصة",
   },
@@ -195,7 +195,7 @@ export const PROFILE_SERVICES: Record<NeighborhoodProfile, string[]> = {
     "leak-detection-no-damage-riyadh",
     "كشف-تسربات-الخزانات-بالرياض",
     "roof-insulation-riyadh",
-    "leak-detection-pools-riyadh",
+    "كشف-تسربات-المسابح-بالرياض",
   ],
   villa_standard: [
     "leak-detection-water-riyadh",

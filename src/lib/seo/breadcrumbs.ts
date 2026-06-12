@@ -34,4 +34,12 @@ export const breadcrumbs = {
     { name: "الرئيسية", path: "/" },
     { name: "اتصل بنا", path: "/contact" },
   ],
+  about: (): BreadcrumbItem[] => [
+    { name: "الرئيسية", path: "/" },
+    { name: "من نحن", path: "/about" },
+  ],
+  team: (): BreadcrumbItem[] => [
+    { name: "الرئيسية", path: "/" },
+    { name: "فريق العمل", path: "/team" },
+  ],
 };

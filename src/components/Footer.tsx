@@ -7,6 +7,8 @@ const quickLinks = [
   { href: "/services", label: "خدماتنا" },
   { href: "/areas", label: "أحياء الرياض" },
   { href: "/insulation", label: "العزل" },
+  { href: "/about", label: "من نحن" },
+  { href: "/team", label: "فريق العمل" },
   { href: "/#testimonials", label: "آراء العملاء" },
   { href: "/contact", label: "اتصل بنا" },
 ];

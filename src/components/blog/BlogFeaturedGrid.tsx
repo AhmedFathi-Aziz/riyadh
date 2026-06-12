@@ -55,12 +55,15 @@ export function BlogFeaturedGrid() {
           />
         </div>
         <div className="p-8">
-          <div className="mb-4 flex items-center gap-3">
+          <div className="mb-4 flex flex-wrap items-center gap-3">
             <span className="rounded-full bg-secondary-container px-3 py-1 text-label-sm text-on-secondary-container">
               {featured.category}
             </span>
             <span className="text-label-sm text-on-surface-variant">
               {featured.readTime}
+            </span>
+            <span className="text-label-sm text-on-surface-variant">
+              {featured.author.name}
             </span>
           </div>
           <h2 className="mb-4 text-headline-md font-semibold text-primary transition-colors group-hover:text-secondary">

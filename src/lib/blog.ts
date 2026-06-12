@@ -1,6 +1,8 @@
 import { getAllPosts, type BlogPost } from "./blog/load-posts";
 
 export type { BlogPost };
+export type { BlogAuthor } from "./blog/authors";
+export { blogAuthors, getBlogAuthor } from "./blog/authors";
 
 export const blogMeta = {
   title: "مدونة عزل وكشف التسربات بالرياض",

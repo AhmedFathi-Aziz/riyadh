@@ -6,6 +6,7 @@ excerpt: >-
 category: دليل العزل
 readTime: ١٢ دقيقة قراءة
 publishedAt: '2024-11-15'
+author: abdulrahman-ghamdi
 featured: true
 draft: false
 ---

@@ -165,9 +165,15 @@ export function buildArticleSchema(post: {
   category: string;
   readTime: string;
   imageSrc: string;
+  author: {
+    name: string;
+    role: string;
+    id: string;
+  };
 }) {
   const { url, name } = siteConfig;
   const articleUrl = `${url}/blog/${post.slug}`;
+  const authorUrl = `${url}/team#${post.author.id}`;
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -177,7 +183,13 @@ export function buildArticleSchema(post: {
     image: post.imageSrc,
     datePublished: post.publishedAt,
     inLanguage: "ar-SA",
-    author: { "@type": "Organization", name, url },
+    author: {
+      "@type": "Person",
+      name: post.author.name,
+      jobTitle: post.author.role,
+      url: authorUrl,
+      worksFor: { "@type": "Organization", name, url },
+    },
     publisher: {
       "@type": "Organization",
       name,

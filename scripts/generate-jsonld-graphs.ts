@@ -6,6 +6,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { blogMeta } from "../src/lib/blog";
 import { contactPageMeta } from "../src/lib/contact-page";
+import { aboutFaqs, aboutPageMeta } from "../src/lib/about-page";
+import { teamFaqs, teamPageMeta } from "../src/lib/team-page";
 import { homePageMeta } from "../src/lib/home-page";
 import { areasPageMeta } from "../src/lib/areas-page";
 import { servicesPageMeta } from "../src/lib/services-page";
@@ -161,6 +163,34 @@ writeGraph(
   ),
 );
 
+writeGraph(
+  "about.json",
+  pageGraph(
+    `${siteConfig.url}${aboutPageMeta.path}`,
+    aboutPageMeta.title,
+    aboutPageMeta.description,
+    undefined,
+    [
+      buildBreadcrumbSchema(breadcrumbs.about()),
+      ...faqGraphs(getFaqsForPage({ extras: [...aboutFaqs] })),
+    ],
+  ),
+);
+
+writeGraph(
+  "team.json",
+  pageGraph(
+    `${siteConfig.url}${teamPageMeta.path}`,
+    teamPageMeta.title,
+    teamPageMeta.description,
+    undefined,
+    [
+      buildBreadcrumbSchema(breadcrumbs.team()),
+      ...faqGraphs(getFaqsForPage({ extras: [...teamFaqs] })),
+    ],
+  ),
+);
+
 for (const page of getAllServicePages()) {
   const cleaned = prepareServiceMarkdown(page.content);
   const markdownFaqs = extractFaqFromMarkdown(cleaned);
@@ -216,6 +246,11 @@ for (const post of getAllPosts()) {
         category: post.category,
         readTime: post.readTime,
         imageSrc: post.image.src,
+        author: {
+          name: post.author.name,
+          role: post.author.role,
+          id: post.author.id,
+        },
       }),
       ...faqGraphs(getFaqsForPage({ max: 8 })),
     ]),

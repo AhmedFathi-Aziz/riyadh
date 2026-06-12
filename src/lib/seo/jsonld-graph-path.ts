@@ -25,4 +25,6 @@ export const jsonLdGraphPath = {
   post: (slug: string) => `/seo/graphs/blog/${slug}.json`,
   insulation: () => "/seo/graphs/insulation.json",
   contact: () => "/seo/graphs/contact.json",
+  about: () => "/seo/graphs/about.json",
+  team: () => "/seo/graphs/team.json",
 } as const;

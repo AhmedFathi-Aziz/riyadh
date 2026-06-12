@@ -6,6 +6,7 @@ excerpt: >-
 category: كشف التسربات
 readTime: ١١ دقيقة قراءة
 publishedAt: '2024-10-28'
+author: mohammed-ahmed
 sidebar: true
 icon: stars
 sidebarLabel: الأكثر قراءة

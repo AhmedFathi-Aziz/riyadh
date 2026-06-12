@@ -35,6 +35,9 @@ export function BlogLatestGrid() {
               <span className="mb-3 inline-block rounded bg-secondary/10 px-2 py-0.5 text-label-sm text-secondary-fixed-dim">
                 {post.category}
               </span>
+              <p className="mb-2 text-label-sm text-on-surface-variant">
+                {post.author.name}
+              </p>
               <h3 className="mb-3 text-[18px] font-semibold text-primary">
                 {post.title}
               </h3>

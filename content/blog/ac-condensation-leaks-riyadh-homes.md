@@ -6,6 +6,7 @@ excerpt: >-
 category: كشف التسربات
 readTime: ١٠ دقائق قراءة
 publishedAt: '2025-01-10'
+author: sultan-harbi
 coverImage: blog-ac-leak-rooftop.png
 imageAlt: فني يكشف تسرب مياه التكييف على سطح مبنى بأجهزة كشف صوتية متخصصة
 draft: false

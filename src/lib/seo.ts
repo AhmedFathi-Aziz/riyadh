@@ -12,6 +12,7 @@ type PageMetadataOptions = {
   path: string;
   keywords?: string[];
   image?: { src: string; alt: string };
+  authors?: { name: string; url?: string }[];
 };
 
 export function createPageMetadata({
@@ -21,6 +22,7 @@ export function createPageMetadata({
   path,
   keywords = [],
   image,
+  authors,
 }: PageMetadataOptions): Metadata {
   const { name, url, locale, keywords: siteKeywords, images } = siteConfig;
   const canonicalPath = path.startsWith("/") ? path : `/${path}`;
@@ -33,6 +35,7 @@ export function createPageMetadata({
     title: { absolute: absoluteTitle },
     description,
     keywords: allKeywords,
+    ...(authors?.length ? { authors } : {}),
     alternates: {
       canonical: canonicalPath,
       languages: { "ar-SA": canonicalPath },

@@ -2,6 +2,10 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { blogImages } from "@/lib/media/images";
+import {
+  getBlogAuthor,
+  type BlogAuthor,
+} from "@/lib/blog/authors";
 
 const CONTENT_DIR = path.join(process.cwd(), "content", "blog");
 
@@ -12,6 +16,7 @@ export type BlogPost = {
   category: string;
   readTime: string;
   publishedAt: string;
+  author: BlogAuthor;
   image: { src: string; alt: string };
   featured?: boolean;
   sidebar?: boolean;
@@ -36,6 +41,8 @@ type BlogFrontmatter = {
   sidebar?: boolean;
   icon?: "stars" | "tips_and_updates";
   sidebarLabel?: string;
+  /** معرّف المؤلف — انظر src/lib/blog/authors.ts */
+  author?: string;
   draft?: boolean;
 };
 
@@ -104,6 +111,7 @@ function loadAllPosts(): BlogPost[] {
       category: fm.category,
       readTime: fm.readTime,
       publishedAt: fm.publishedAt,
+      author: getBlogAuthor(fm.author, fm.category),
       featured: fm.featured,
       sidebar: fm.sidebar,
       icon: fm.icon,

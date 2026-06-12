@@ -6,6 +6,7 @@ excerpt: >-
 category: عزل الحمامات
 readTime: ١٢ دقيقة قراءة
 publishedAt: '2025-03-12'
+author: khalid-otaibi
 coverImage: service-bathroom-kitchen-insulation.png
 imageAlt: عزل الحمامات والمطابخ — حماية من تسربات المياه والرطوبة في الرياض
 draft: false

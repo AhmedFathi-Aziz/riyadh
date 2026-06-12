@@ -4,6 +4,7 @@ excerpt: "ملخص قصير يظهر في بطاقة المدونة ونتائج
 category: "كشف التسربات"
 readTime: "١٠ دقائق قراءة"
 publishedAt: "2025-05-30"
+author: mohammed-ahmed
 coverImage: "my-article-cover.jpg"
 imageAlt: "وصف صورة الغلاف لإمكانية الوصول"
 draft: true

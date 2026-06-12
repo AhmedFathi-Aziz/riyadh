@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { BlogMarkdown } from "@/components/blog/BlogMarkdown";
+import {
+  BlogAuthorByline,
+  BlogAuthorSection,
+} from "@/components/blog/BlogAuthor";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { blogImages } from "@/lib/media/images";
 import Link from "next/link";
@@ -38,6 +42,7 @@ export async function generateMetadata({
     path: `/blog/${post.slug}`,
     keywords: [post.category, "ManzilCare", "كشف تسربات"],
     image: post.image,
+    authors: [{ name: post.author.name, url: `/team#${post.author.id}` }],
   });
 }
 
@@ -56,23 +61,26 @@ export default async function BlogArticlePage({ params }: PageProps) {
       <article className="mx-auto max-w-max-width px-6 pt-32 pb-16">
         <BreadcrumbNav items={crumb} />
 
-        <div className="mb-6 flex flex-wrap items-center gap-3">
-          <span className="rounded-full bg-secondary-container px-3 py-1 text-label-sm text-on-secondary-container">
-            {post.category}
-          </span>
-          <span className="text-label-sm text-on-surface-variant">
-            {post.readTime}
-          </span>
-          <time
-            dateTime={post.publishedAt}
-            className="text-label-sm text-on-surface-variant"
-          >
-            {new Date(post.publishedAt).toLocaleDateString("ar-SA", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </time>
+        <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3">
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="rounded-full bg-secondary-container px-3 py-1 text-label-sm text-on-secondary-container">
+              {post.category}
+            </span>
+            <span className="text-label-sm text-on-surface-variant">
+              {post.readTime}
+            </span>
+            <time
+              dateTime={post.publishedAt}
+              className="text-label-sm text-on-surface-variant"
+            >
+              {new Date(post.publishedAt).toLocaleDateString("ar-SA", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </time>
+          </div>
+          <BlogAuthorByline author={post.author} />
         </div>
 
         <h1 className="mb-8 text-display-lg-mobile font-bold text-primary md:text-display-lg">
@@ -93,6 +101,8 @@ export default async function BlogArticlePage({ params }: PageProps) {
         </div>
 
         <BlogMarkdown content={post.content} />
+
+        <BlogAuthorSection author={post.author} />
 
         <StandardPageSections faqs={faqs} showServices={false} />
 

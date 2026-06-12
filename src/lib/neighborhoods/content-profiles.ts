@@ -175,8 +175,8 @@ export const SERVICE_CATALOG: Record<
     title: "عزل خزانات بالرياض",
     reason: "حماية المياه ومنع تسربات الخزانات العلوية والأرضية",
   },
-  "bathroom-insulation-riyadh": {
-    title: "عزل الحمامات",
+  "عزل-حمامات-بالرياض": {
+    title: "عزل حمامات",
     reason: "منع تسرب الرطوبة للأدوار السفلية",
   },
   "كشف-تسربات-المسابح-بالرياض": {
@@ -207,7 +207,7 @@ export const PROFILE_SERVICES: Record<NeighborhoodProfile, string[]> = {
     "leak-detection-water-riyadh",
     "leak-detection-no-damage-riyadh",
     "leak-repair-water-riyadh",
-    "bathroom-insulation-riyadh",
+    "عزل-حمامات-بالرياض",
   ],
   mixed_residential: [
     "leak-detection-water-riyadh",
@@ -231,7 +231,7 @@ export const PROFILE_SERVICES: Record<NeighborhoodProfile, string[]> = {
     "leak-detection-no-damage-riyadh",
     "leak-detection-water-riyadh",
     "leak-repair-water-riyadh",
-    "bathroom-insulation-riyadh",
+    "عزل-حمامات-بالرياض",
   ],
   industrial_edge: [
     "leak-detection-water-riyadh",

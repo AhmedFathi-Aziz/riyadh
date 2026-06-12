@@ -94,6 +94,20 @@ export const servicePageImages = {
       height: 512,
     },
   },
+  "عزل-حمامات-بالرياض": {
+    hero: {
+      src: "/images/bathroom-insulation-riyadh-hero.webp",
+      alt: "شعار ManzilCare على خلفية بيضاء — عزل حمامات بالرياض",
+      width: 1920,
+      height: 1080,
+    },
+    field: {
+      src: "/images/bathroom-insulation-riyadh-field.webp",
+      alt: "فريق ManzilCare ينفّذ عزل حمامات بالرياض — غشاء سائل وأشرطة زوايا قبل تركيب البلاط",
+      width: 1200,
+      height: 675,
+    },
+  },
   "leak-detection-no-damage-riyadh": {
     hero: {
       src: "/images/leak-detection-no-damage-riyadh-hero.webp",

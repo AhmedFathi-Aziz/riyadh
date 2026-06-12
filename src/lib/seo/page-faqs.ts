@@ -121,7 +121,7 @@ const SERVICE_FAQ_EXTRAS: Record<string, FaqItem[]> = {
         "نستخدم إيبوكسي food-grade معتمداً للخزانات التي تُزوّد شبكة الشرب. نُجري اختبار ضغط بعد التنفيذ ونُسلّم شهادة ضمان.",
     },
   ],
-  "bathroom-insulation-riyadh": [
+  "عزل-حمامات-بالرياض": [
     {
       question: "هل يمكن عزل الحمام قبل تركيب البلاط؟",
       answer:

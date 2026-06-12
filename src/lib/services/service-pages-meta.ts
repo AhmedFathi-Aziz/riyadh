@@ -58,7 +58,7 @@ export const servicePagesMeta: ServicePageMeta[] = [
       "pool-insulation-riyadh",
       "leak-repair-water-riyadh",
       "leak-detection-water-riyadh",
-      "bathroom-insulation-riyadh",
+      "عزل-حمامات-بالرياض",
     ],
   },
   {
@@ -74,7 +74,7 @@ export const servicePagesMeta: ServicePageMeta[] = [
     relatedSlugs: [
       "leak-detection-water-riyadh",
       "leak-detection-no-damage-riyadh",
-      "bathroom-insulation-riyadh",
+      "عزل-حمامات-بالرياض",
     ],
   },
   {
@@ -125,7 +125,7 @@ export const servicePagesMeta: ServicePageMeta[] = [
     relatedSlugs: [
       "عزل-حراري-بالرياض",
       "roof-insulation-riyadh",
-      "bathroom-insulation-riyadh",
+      "عزل-حمامات-بالرياض",
       "tank-insulation-riyadh",
       "leak-detection-water-riyadh",
     ],
@@ -181,14 +181,14 @@ export const servicePagesMeta: ServicePageMeta[] = [
     ],
   },
   {
-    slug: "bathroom-insulation-riyadh",
-    keyword: "عزل الحمامات بالرياض",
-    title: "عزل الحمامات بالرياض",
+    slug: "عزل-حمامات-بالرياض",
+    keyword: "عزل حمامات بالرياض",
+    title: "عزل حمامات بالرياض",
     description:
-      "عزل حمامات ومطابخ في الرياض قبل وبعد التشطيب. منع الرطوبة والتسرب للأدوار السفلية مع مواد معتمدة.",
-    coverImage: "service-bathroom-kitchen-insulation.png",
+      "عزل حمامات بالرياض للفلل والعمائر: أغشية سائلة، عزل أسمنتي، وإيبوكسي. معاينة مجانية، اختبار ماء، وضمان حتى 10 سنوات.",
+    coverImage: "bathroom-insulation-riyadh-hero.webp",
     imageAlt:
-      "عزل الحمامات والمطابخ — حماية من تسربات المياه والرطوبة في الرياض",
+      "شعار ManzilCare على خلفية بيضاء — عزل حمامات بالرياض",
     icon: "bathtub",
     relatedSlugs: [
       "leak-repair-water-riyadh",
@@ -208,7 +208,7 @@ export const servicePagesMeta: ServicePageMeta[] = [
     icon: "pool",
     relatedSlugs: [
       "كشف-تسربات-المسابح-بالرياض",
-      "bathroom-insulation-riyadh",
+      "عزل-حمامات-بالرياض",
       "leak-repair-water-riyadh",
     ],
   },
@@ -241,6 +241,7 @@ export const SERVICES_PAGE_SPOTLIGHT_SLUGS = [
   "عزل-مائي-بالرياض",
   "عزل-حراري-بالرياض",
   "عزل-خزانات-بالرياض",
+  "عزل-حمامات-بالرياض",
 ] as const;
 
 export type ServicesPageSpotlightSlug =
@@ -298,6 +299,11 @@ export const SERVICES_PAGE_SPOTLIGHT_HIGHLIGHTS: Record<
     "إيبوكسي معتمد للمياه الصالحة للشرب ومعالجة تشققات",
     "خزانات علوية وأرضية للفلل والعمائر والمباني التجارية",
     "معاينة مجانية، اختبار ضغط، وضمان مكتوب في كل الأحياء",
+  ],
+  "عزل-حمامات-بالرياض": [
+    "أغشية سائلة، عزل أسمنتي مرن، وإيبوكسي تحت البلاط",
+    "اختبار غمر ماء 24–48 ساعة قبل التشطيب",
+    "معاينة مجانية للفلل والشقق والفنادق في كل أحياء الرياض",
   ],
 };
 

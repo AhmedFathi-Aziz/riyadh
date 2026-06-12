@@ -9,7 +9,7 @@ const serviceDetailLinks: Record<string, string> = {
   "leak-detection": "/services/leak-detection-water-riyadh",
   "tank-insulation": "/services/tank-insulation-riyadh",
   "roof-insulation": "/services/roof-insulation-riyadh",
-  "bathroom-insulation": "/services/bathroom-insulation-riyadh",
+  "bathroom-insulation": "/services/عزل-حمامات-بالرياض",
   "home-restoration": "/services/leak-repair-water-riyadh",
 };
 

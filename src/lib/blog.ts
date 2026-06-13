@@ -5,9 +5,9 @@ export type { BlogAuthor } from "./blog/authors";
 export { blogAuthors, getBlogAuthor } from "./blog/authors";
 
 export const blogMeta = {
-  title: "مدونة عزل وكشف التسربات بالرياض",
+  title: "مدونة عزل وكشف تسربات المياه بالرياض — نصائح خبراء",
   description:
-    "نصائح عزل الأسطح وكشف تسربات المياه في الرياض — فوم بولي يوريثان، بيتومين، وصيانة دورية. مقالات من خبراء ManzilCare. اقرأ الآن.",
+    "نصائح عزل الأسطح وكشف تسربات المياه في الرياض — فوم بولي يوريثان، بيتومين، وصيانة دورية. مقالات من مهندسي ManzilCare بخبرة ميدانية منذ 2018 في +500 مشروع.",
   path: "/blog",
 };
 

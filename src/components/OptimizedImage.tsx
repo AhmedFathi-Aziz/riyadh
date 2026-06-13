@@ -22,6 +22,7 @@ export function OptimizedImage({
   blurDataURL,
   responsive = true,
   lcp = false,
+  priority,
   src,
   ...props
 }: OptimizedImageProps) {
@@ -33,6 +34,8 @@ export function OptimizedImage({
       ? getResponsiveImageSources(src, { lcp })
       : null;
 
+  const loading = priority || lcp ? undefined : ("lazy" as const);
+
   return (
     <Image
       {...props}
@@ -42,6 +45,8 @@ export function OptimizedImage({
         ? { srcSet: responsiveSources.srcSet }
         : {})}
       quality={quality}
+      priority={priority}
+      loading={loading}
       placeholder={useBlur ? "blur" : placeholder}
       blurDataURL={useBlur ? blurDataURL : undefined}
     />

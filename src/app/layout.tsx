@@ -28,6 +28,12 @@ export default function RootLayout({
     >
       <head>
         <link rel="manifest" href="/manifest.webmanifest" />
+        <link
+          rel="sitemap"
+          type="application/xml"
+          title="Sitemap"
+          href="/sitemap.xml"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

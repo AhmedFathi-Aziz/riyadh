@@ -1,3 +1,6 @@
+import { OptimizedImage } from "@/components/OptimizedImage";
+import { siteConfig } from "@/lib/site";
+
 const testimonials = [
   {
     quote:
@@ -56,10 +59,16 @@ export function Testimonials() {
                 {item.quote}
               </p>
               <footer className="flex items-center gap-4">
-                <div
-                  className="h-12 w-12 rounded-full bg-surface-container-high"
-                  aria-hidden
-                />
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full border border-outline-variant/20 bg-white p-1.5">
+                  <OptimizedImage
+                    src={siteConfig.logo.src}
+                    alt={siteConfig.logo.alt}
+                    width={siteConfig.logo.width}
+                    height={siteConfig.logo.height}
+                    responsive={false}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
                 <div>
                   <cite className="font-bold text-primary not-italic">
                     {item.name}

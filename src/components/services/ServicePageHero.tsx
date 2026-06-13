@@ -41,7 +41,7 @@ export function ServicePageHero({
           className="absolute inset-0 opacity-40"
           style={{
             backgroundImage:
-              "radial-gradient(ellipse 80% 70% at 85% 70%, rgba(45,188,254,0.35) 0%, transparent 55%)",
+              "radial-gradient(ellipse 80% 70% at 85% 70%, color-mix(in srgb, var(--color-primary-fixed-dim) 35%, transparent) 0%, transparent 55%)",
           }}
         />
       </div>

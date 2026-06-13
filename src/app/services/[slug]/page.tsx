@@ -49,7 +49,7 @@ export async function generateMetadata({
   if (!page) return {};
 
   return createPageMetadata({
-    title: page.keyword,
+    title: page.title,
     description: page.description,
     path: `/services/${page.slug}`,
     keywords: [

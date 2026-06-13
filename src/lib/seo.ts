@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DEFAULT_META_DESCRIPTION, DEFAULT_TITLE_SUFFIX } from "./seo/constants";
+import { buildSeoDescription, buildSeoTitle } from "./seo/meta-copy";
 import { formatPageTitle } from "./seo/structured-data";
 import { siteConfig } from "./site";
 
@@ -26,14 +27,15 @@ export function createPageMetadata({
 }: PageMetadataOptions): Metadata {
   const { name, url, locale, keywords: siteKeywords, images } = siteConfig;
   const canonicalPath = path.startsWith("/") ? path : `/${path}`;
-  const absoluteTitle = formatPageTitle(title, titleSuffix);
+  const absoluteTitle = buildSeoTitle(title, titleSuffix);
+  const metaDescription = buildSeoDescription(description);
   const ogImage = image?.src ?? images.hero.src;
   const ogAlt = image?.alt ?? images.hero.alt;
   const allKeywords = [...new Set([...siteKeywords, ...keywords])];
 
   return {
     title: { absolute: absoluteTitle },
-    description,
+    description: metaDescription,
     keywords: allKeywords,
     ...(authors?.length ? { authors } : {}),
     alternates: {
@@ -46,14 +48,14 @@ export function createPageMetadata({
       url: canonicalPath,
       siteName: name,
       title: absoluteTitle,
-      description,
+      description: metaDescription,
       countryName: "Saudi Arabia",
       images: [{ url: ogImage, width: 1200, height: 630, alt: ogAlt }],
     },
     twitter: {
       card: "summary_large_image",
       title: absoluteTitle,
-      description,
+      description: metaDescription,
       images: [ogImage],
     },
   };

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { BlogMarkdown } from "@/components/blog/BlogMarkdown";
+import { BlogRelatedPosts } from "@/components/blog/BlogRelatedPosts";
 import {
   BlogAuthorByline,
   BlogAuthorSection,
@@ -37,7 +38,6 @@ export async function generateMetadata({
 
   return createPageMetadata({
     title: post.title,
-    titleSuffix: "مدونة ManzilCare",
     description: post.excerpt,
     path: `/blog/${post.slug}`,
     keywords: [post.category, "ManzilCare", "كشف تسربات"],
@@ -103,6 +103,12 @@ export default async function BlogArticlePage({ params }: PageProps) {
         <BlogMarkdown content={post.content} />
 
         <BlogAuthorSection author={post.author} />
+
+        <BlogRelatedPosts
+          currentSlug={post.slug}
+          category={post.category}
+          posts={blogPosts}
+        />
 
         <StandardPageSections faqs={faqs} showServices={false} />
 

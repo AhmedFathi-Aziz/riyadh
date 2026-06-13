@@ -42,7 +42,7 @@ export default function ContactPage() {
               <span>نرد خلال دقائق</span>
             </div>
             <h1 className="mb-4 text-display-lg-mobile font-bold text-primary md:text-display-lg">
-              اتصل بنا — كشف تسربات بالرياض
+              {contactPageIntro.heading}
             </h1>
             {contactPageIntro.paragraphs.map((p) => (
               <p

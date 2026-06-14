@@ -213,10 +213,11 @@ export function toNeighborhoodPage(
   return {
     ...n,
     keyword,
-    title,
+    title: keyword,
     description,
     content: buildNeighborhoodContent(n),
     relatedSlugs,
     serviceSlugs: PROFILE_SERVICES[n.profile],
+    contentSource: "generated" as const,
   };
 }

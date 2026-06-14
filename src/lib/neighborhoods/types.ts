@@ -33,9 +33,12 @@ export type NeighborhoodRecord = {
 
 export type NeighborhoodPage = NeighborhoodRecord & {
   keyword: string;
+  /** عنوان SEO — قد يختلف عن H1 */
   title: string;
   description: string;
   content: string;
   relatedSlugs: string[];
   serviceSlugs: string[];
+  /** مصدر المحتوى */
+  contentSource: "markdown" | "generated";
 };

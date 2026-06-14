@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { BlogMarkdown } from "@/components/blog/BlogMarkdown";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AreaPageHero } from "@/components/areas/AreaPageHero";
+import { AreaMidPageImage } from "@/components/areas/AreaMidPageImage";
 import { ServicePageCta } from "@/components/services/ServicePageCta";
 import { ServicesFooter } from "@/components/ServicesFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -19,6 +21,11 @@ import { extractFaqFromMarkdown } from "@/lib/seo/extract-markdown-faq";
 import { getFaqsForPage } from "@/lib/seo/page-faqs";
 import { createPageMetadata } from "@/lib/seo";
 import { jsonLdGraphPath } from "@/lib/seo/jsonld-graph-path";
+import {
+  getAreaHeroImage,
+  getNeighborhoodDisplayName,
+  splitContentForAreaMidImage,
+} from "@/lib/neighborhoods/area-images";
 import { stripFaqSection } from "@/lib/seo/strip-markdown-faq";
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -36,7 +43,7 @@ export async function generateMetadata({
   if (!page) return {};
 
   return createPageMetadata({
-    title: page.keyword,
+    title: page.title,
     description: page.description,
     path: `/areas/${page.slug}`,
     keywords: [
@@ -62,6 +69,10 @@ export default async function NeighborhoodPage({ params }: PageProps) {
   const related = page.relatedSlugs
     .map((s) => getNeighborhoodBySlug(s))
     .filter(Boolean);
+  const heroImage = getAreaHeroImage(page.slug);
+  const nameAr = getNeighborhoodDisplayName(page.slug, page.nameAr);
+  const { before: contentBeforeMid, after: contentAfterMid, mid: midImage } =
+    splitContentForAreaMidImage(page.slug, bodyContent);
 
   return (
     <>
@@ -70,20 +81,38 @@ export default async function NeighborhoodPage({ params }: PageProps) {
       <article className="mx-auto max-w-max-width px-gutter pt-32 pb-20">
         <BreadcrumbNav items={crumb} />
 
-        <header className="mb-10">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-secondary/20 bg-secondary-container/10 px-4 py-1 text-label-sm text-secondary">
-            <Icon name="location_on" size="sm" />
-            <span>{REGION_LABELS[page.region]}</span>
-          </div>
-          <h1 className="mb-4 text-display-lg-mobile font-bold text-primary md:text-display-lg">
-            {page.keyword}
-          </h1>
-          <p className="max-w-3xl text-body-lg text-on-surface-variant">
-            {page.description}
-          </p>
-        </header>
+        {heroImage ? (
+          <AreaPageHero
+            title={page.keyword}
+            description={page.description}
+            regionLabel={REGION_LABELS[page.region]}
+            nameAr={nameAr}
+            image={heroImage}
+          />
+        ) : (
+          <header className="mb-10">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-secondary/20 bg-secondary-container/10 px-4 py-1 text-label-sm text-secondary">
+              <Icon name="location_on" size="sm" />
+              <span>{REGION_LABELS[page.region]}</span>
+            </div>
+            <h1 className="mb-4 text-display-lg-mobile font-bold text-primary md:text-display-lg">
+              {page.keyword}
+            </h1>
+            <p className="max-w-3xl text-body-lg text-on-surface-variant">
+              {page.description}
+            </p>
+          </header>
+        )}
 
-        <BlogMarkdown content={bodyContent} />
+        {midImage ? (
+          <>
+            <BlogMarkdown content={contentBeforeMid} />
+            <AreaMidPageImage image={midImage} />
+            {contentAfterMid ? <BlogMarkdown content={contentAfterMid} /> : null}
+          </>
+        ) : (
+          <BlogMarkdown content={bodyContent} />
+        )}
 
         <StandardPageSections
           faqs={faqs}

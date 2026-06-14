@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { Icon } from "@/components/Icon";
+import { AreasSeoIntro } from "@/components/areas/AreasSeoIntro";
+import { AreaNeighborhoodCard } from "@/components/areas/AreaNeighborhoodCard";
 import { PageStructuredData } from "@/components/seo/PageStructuredData";
 import { StandardPageSections } from "@/components/seo/StandardPageSections";
 import { ServicesFooter } from "@/components/ServicesFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import { AreasSeoIntro } from "@/components/areas/AreasSeoIntro";
 import { areasPageMeta } from "@/lib/areas-page";
 import { REGION_LABELS } from "@/lib/neighborhoods/content-profiles";
 import { getAllNeighborhoodPages } from "@/lib/neighborhoods/load-neighborhoods";
-import { breadcrumbs } from "@/lib/seo/breadcrumbs";
+import type { NeighborhoodPage } from "@/lib/neighborhoods/types";
 import { getFaqsForPage } from "@/lib/seo/page-faqs";
 import { jsonLdGraphPath } from "@/lib/seo/jsonld-graph-path";
 import { createPageMetadata } from "@/lib/seo";
@@ -35,9 +34,20 @@ const regionOrder: NeighborhoodRegion[] = [
   "south",
 ];
 
+function sortFeaturedNeighborhoods(pages: NeighborhoodPage[]): NeighborhoodPage[] {
+  return pages
+    .filter((p) => p.featured)
+    .sort((a, b) => {
+      if (a.slug === "al-narjis") return -1;
+      if (b.slug === "al-narjis") return 1;
+      return a.nameAr.localeCompare(b.nameAr, "ar");
+    });
+}
+
 export default function AreasIndexPage() {
   const pages = getAllNeighborhoodPages();
   const faqs = getFaqsForPage();
+  const featured = sortFeaturedNeighborhoods(pages);
 
   return (
     <>
@@ -58,8 +68,28 @@ export default function AreasIndexPage() {
           <AreasSeoIntro />
         </header>
 
+        {featured.length > 0 && (
+          <section className="mb-14" aria-labelledby="featured-areas-heading">
+            <h2
+              id="featured-areas-heading"
+              className="mb-6 text-headline-md font-semibold text-primary"
+            >
+              أحياء مميزة
+            </h2>
+            <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {featured.map((n) => (
+                <li key={n.slug}>
+                  <AreaNeighborhoodCard neighborhood={n} />
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
         {regionOrder.map((region) => {
-          const group = pages.filter((p) => p.region === region);
+          const group = pages.filter(
+            (p) => p.region === region && !p.featured,
+          );
           if (group.length === 0) return null;
 
           return (
@@ -70,26 +100,10 @@ export default function AreasIndexPage() {
                   ({group.length})
                 </span>
               </h2>
-              <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {group.map((n) => (
                   <li key={n.slug}>
-                    <Link
-                      href={`/areas/${n.slug}`}
-                      className="shadow-soft-md flex h-full flex-col rounded-2xl bg-white p-6 transition-shadow hover:shadow-soft-lg"
-                    >
-                      <span className="text-card-title block">حي {n.nameAr}</span>
-                      <span className="text-card-body mt-2 flex-grow line-clamp-2">
-                        {n.keyword}
-                      </span>
-                      <span className="text-card-link mt-4 inline-flex items-center gap-1">
-                        الدليل
-                        <Icon
-                          name="arrow_forward"
-                          size="sm"
-                          className="rtl:rotate-180"
-                        />
-                      </span>
-                    </Link>
+                    <AreaNeighborhoodCard neighborhood={n} />
                   </li>
                 ))}
               </ul>

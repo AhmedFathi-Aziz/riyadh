@@ -22,6 +22,7 @@
     "images": "powershell -ExecutionPolicy Bypass -File scripts/download-original-images.ps1",
     "images:optimize-page": "node scripts/optimize-page-images.mjs",
     "images:logo-hero": "node scripts/generate-logo-hero-cover.mjs",
+    "areas:content": "node scripts/generate-area-markdown.mjs",
     "areas:data": "node scripts/build-neighborhoods-registry.mjs"
   },
   "dependencies": {

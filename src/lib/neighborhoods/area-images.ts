@@ -4,6 +4,7 @@ import { IMAGE_BLUR, insulationImages } from "@/lib/media/images";
 /** أسماء أحياء — للتأكد من كتابة عربية صحيحة في الواجهة */
 const NEIGHBORHOOD_NAMES: Partial<Record<string, string>> = {
   "al-narjis": "النرجس",
+  "al-yasmin": "الياسمين",
 };
 
 export function getNeighborhoodDisplayName(slug: string, fallback: string): string {
@@ -35,6 +36,24 @@ const AREA_IMAGE_CONFIG: Partial<Record<string, AreaImageConfig>> = {
       height: 864,
       blurDataURL: IMAGE_BLUR,
       caption: `حي ${NEIGHBORHOOD_NAMES["al-narjis"]} — واجهة شمال الرياض، فلل مستقلة وأسطح مسطحة`,
+    },
+    midSplitBefore: "## مشاكل التسرب",
+  },
+  "al-yasmin": {
+    hero: {
+      src: insulationImages.portfolioCommercial.src,
+      alt: "فيلا ومجمع سكني في حي الياسمين شمال الرياض — كشف تسربات وعزل ManzilCare",
+      width: insulationImages.portfolioCommercial.width,
+      height: insulationImages.portfolioCommercial.height,
+      blurDataURL: insulationImages.portfolioCommercial.blurDataURL,
+    },
+    mid: {
+      src: "/images/services-roof-insulation-riyadh.png",
+      alt: "حي الياسمين شمال الرياض — فلل حديثة ومجمعات سكنية مغلقة قرب محور الشمال التجاري",
+      width: 1024,
+      height: 686,
+      blurDataURL: IMAGE_BLUR,
+      caption: `حي ${NEIGHBORHOOD_NAMES["al-yasmin"]} — فلل حديثة ومجمعات مغلقة شمال الرياض`,
     },
     midSplitBefore: "## مشاكل التسرب",
   },

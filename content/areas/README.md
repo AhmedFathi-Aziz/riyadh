@@ -22,4 +22,4 @@ relatedSlugs: [al-yasmin, al-malqa]
 serviceSlugs: [leak-detection-water-riyadh, ...]
 ```
 
-صفحة **حي النرجس** (`al-narjis.md`) مكتوبة يدوياً كمرجع جودة — لا تُستبدل إلا بـ `--force`.
+صفحات **حي النرجس** (`al-narjis.md`) و**حي الياسمين** (`al-yasmin.md`) مكتوبة يدوياً كمرجع جودة — لا تُستبدل إلا بـ `--force`.

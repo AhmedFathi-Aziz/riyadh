@@ -838,7 +838,7 @@ function countWords(text) {
     .filter((w) => w.length > 1).length;
 }
 
-const PREMIUM_HANDCRAFTED = new Set(["al-narjis", "al-yasmin"]);
+const PREMIUM_HANDCRAFTED = new Set(["al-narjis", "al-yasmin", "al-malqa"]);
 
 // ─── main ───
 const force = process.argv.includes("--force");

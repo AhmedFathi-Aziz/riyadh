@@ -5,6 +5,7 @@ import { IMAGE_BLUR, insulationImages } from "@/lib/media/images";
 const NEIGHBORHOOD_NAMES: Partial<Record<string, string>> = {
   "al-narjis": "النرجس",
   "al-yasmin": "الياسمين",
+  "al-malqa": "الملقا",
 };
 
 export function getNeighborhoodDisplayName(slug: string, fallback: string): string {
@@ -54,6 +55,24 @@ const AREA_IMAGE_CONFIG: Partial<Record<string, AreaImageConfig>> = {
       height: 686,
       blurDataURL: IMAGE_BLUR,
       caption: `حي ${NEIGHBORHOOD_NAMES["al-yasmin"]} — فلل حديثة ومجمعات مغلقة شمال الرياض`,
+    },
+    midSplitBefore: "## مشاكل التسرب",
+  },
+  "al-malqa": {
+    hero: {
+      src: "/images/areas/al-malqa-neighborhood.webp",
+      alt: "حي الملقا شمال الرياض — فلل فاخرة وشوارع واسعة قرب بوليفارد الرياض",
+      width: 1536,
+      height: 864,
+      blurDataURL: IMAGE_BLUR,
+    },
+    mid: {
+      src: "/images/pool-leak-detection-riyadh-hero-1080.webp",
+      alt: "فيلا فاخرة بمسبح خاص في حي الملقا — كشف تسربات المسابح ManzilCare",
+      width: 1080,
+      height: 608,
+      blurDataURL: IMAGE_BLUR,
+      caption: `حي ${NEIGHBORHOOD_NAMES["al-malqa"]} — فلل فاخرة ومسابح خاصة قرب بوليفارد الرياض`,
     },
     midSplitBefore: "## مشاكل التسرب",
   },

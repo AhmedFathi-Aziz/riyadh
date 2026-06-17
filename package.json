@@ -5,6 +5,11 @@
   "engines": {
     "node": ">=20"
   },
+  "overrides": {
+    "@emnapi/core": "1.11.1",
+    "@emnapi/runtime": "1.11.1",
+    "@emnapi/wasi-threads": "1.2.2"
+  },
   "scripts": {
     "predev": "npm run seo && npm run favicons && npm run fonts:material",
     "dev": "next dev",

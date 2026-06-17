@@ -34,21 +34,6 @@ export default function RootLayout({
           title="Sitemap"
           href="/sitemap.xml"
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0..1&display=swap"
-          as="style"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0..1&display=swap"
-          rel="stylesheet"
-        />
       </head>
       <body
         className={`${bodyFont.className} min-h-screen bg-background font-sans text-on-surface antialiased`}

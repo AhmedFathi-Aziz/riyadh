@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { Icon } from "@/components/Icon";
 import { serviceAreas } from "@/lib/contact-page";
-import { siteConfig } from "@/lib/site";
+import { formatPhoneDisplay, formatSiteAddress, siteConfig } from "@/lib/site";
 import { primaryCtaOnDark } from "@/lib/ui/button-styles";
 
 const contactMethods = [
   {
     icon: "call",
     title: "اتصل مباشرة",
-    value: "0500 000 000",
+    value: formatPhoneDisplay(),
     href: `tel:${siteConfig.phoneE164}`,
     dir: "ltr" as const,
   },
@@ -29,7 +29,7 @@ const contactMethods = [
   {
     icon: "location_on",
     title: "العنوان",
-    value: "الرياض، حي الصحافة، طريق الملك فهد",
+    value: formatSiteAddress(),
     href: `https://www.google.com/maps/search/?api=1&query=${siteConfig.geo.latitude},${siteConfig.geo.longitude}`,
     external: true,
   },

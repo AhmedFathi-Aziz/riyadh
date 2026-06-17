@@ -1,6 +1,6 @@
 /**
  * يولّد ملفات JSON-LD في public/seo/graphs/ قبل البناء.
- * الصفحات تربطها عبر <script src="..."> لتفادي تكرار FAQPage في حمولة RSC.
+ * الصفحات تُضمّنها inline عبر loadJsonLdGraph() + PageStructuredData.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -260,6 +260,44 @@ for (const post of getAllPosts()) {
 const serviceCount = getAllServicePages().length;
 const areaCount = getAllNeighborhoodPages().length;
 const blogCount = getAllPosts().length;
+
+/** Maps static export HTML paths → graph files (site graph on every page). */
+const pageGraphManifest: Record<string, string[]> = {};
+const siteGraph = "seo/graphs/site.json";
+
+function addPage(htmlRel: string, ...graphs: string[]) {
+  pageGraphManifest[htmlRel] = [siteGraph, ...graphs];
+}
+
+addPage("index.html", "seo/graphs/home.json");
+addPage("about.html", "seo/graphs/about.json");
+addPage("team.html", "seo/graphs/team.json");
+addPage("contact.html", "seo/graphs/contact.json");
+addPage("insulation.html", "seo/graphs/insulation.json");
+addPage("services.html", "seo/graphs/services.json");
+addPage("areas.html", "seo/graphs/areas.json");
+addPage("blog.html", "seo/graphs/blog.json");
+
+for (const page of getAllServicePages()) {
+  addPage(
+    `services/${page.slug}.html`,
+    `seo/graphs/${serviceGraphRelPath(page.slug)}`,
+  );
+}
+for (const page of getAllNeighborhoodPages()) {
+  addPage(`areas/${page.slug}.html`, `seo/graphs/areas/${page.slug}.json`);
+}
+for (const post of getAllPosts()) {
+  addPage(`blog/${post.slug}.html`, `seo/graphs/blog/${post.slug}.json`);
+}
+
+fs.writeFileSync(
+  path.join(process.cwd(), "public", "seo", "page-graph-manifest.json"),
+  `${JSON.stringify(pageGraphManifest, null, 2)}\n`,
+  "utf8",
+);
+
 console.log(
   `Generated JSON-LD graphs: site + ${serviceCount} services, ${areaCount} areas, ${blogCount} blog posts + static pages`,
 );
+console.log(`Page graph manifest: ${Object.keys(pageGraphManifest).length} HTML routes`);

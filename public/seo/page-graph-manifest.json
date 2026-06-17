@@ -1,0 +1,702 @@
+{
+  "index.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/home.json"
+  ],
+  "about.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/about.json"
+  ],
+  "team.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/team.json"
+  ],
+  "contact.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/contact.json"
+  ],
+  "insulation.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/insulation.json"
+  ],
+  "services.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/services.json"
+  ],
+  "areas.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas.json"
+  ],
+  "blog.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/blog.json"
+  ],
+  "services/leak-detection-water-riyadh.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/services/leak-detection-water-riyadh.json"
+  ],
+  "services/كشف-تسربات-الخزانات-بالرياض.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/services/tank-leak-detection-riyadh.json"
+  ],
+  "services/كشف-تسربات-المسابح-بالرياض.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/services/pool-leak-detection-riyadh.json"
+  ],
+  "services/leak-repair-water-riyadh.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/services/leak-repair-water-riyadh.json"
+  ],
+  "services/roof-insulation-riyadh.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/services/roof-insulation-riyadh.json"
+  ],
+  "services/عزل-حراري-بالرياض.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/services/thermal-insulation-riyadh.json"
+  ],
+  "services/عزل-مائي-بالرياض.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/services/waterproofing-riyadh.json"
+  ],
+  "services/foam-insulation-riyadh.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/services/foam-insulation-riyadh.json"
+  ],
+  "services/عزل-خزانات-بالرياض.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/services/tanks-insulation-riyadh.json"
+  ],
+  "services/tank-insulation-riyadh.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/services/tank-insulation-riyadh.json"
+  ],
+  "services/عزل-حمامات-بالرياض.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/services/bathroom-insulation-riyadh.json"
+  ],
+  "services/pool-insulation-riyadh.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/services/pool-insulation-riyadh.json"
+  ],
+  "services/leak-detection-no-damage-riyadh.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/services/leak-detection-no-damage-riyadh.json"
+  ],
+  "areas/al-narjis.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-narjis.json"
+  ],
+  "areas/al-yasmin.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-yasmin.json"
+  ],
+  "areas/al-malqa.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-malqa.json"
+  ],
+  "areas/hittin.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/hittin.json"
+  ],
+  "areas/al-sahafa.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-sahafa.json"
+  ],
+  "areas/al-arid.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-arid.json"
+  ],
+  "areas/al-nafil.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-nafil.json"
+  ],
+  "areas/al-aqiq.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-aqiq.json"
+  ],
+  "areas/al-rabie.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-rabie.json"
+  ],
+  "areas/al-nakheel.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-nakheel.json"
+  ],
+  "areas/al-wadi.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-wadi.json"
+  ],
+  "areas/al-ghadir.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-ghadir.json"
+  ],
+  "areas/al-muhammadiyah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-muhammadiyah.json"
+  ],
+  "areas/al-sulaimaniyah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-sulaimaniyah.json"
+  ],
+  "areas/al-murooj.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-murooj.json"
+  ],
+  "areas/king-fahd-district.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/king-fahd-district.json"
+  ],
+  "areas/al-qirawan.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-qirawan.json"
+  ],
+  "areas/salahuddin.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/salahuddin.json"
+  ],
+  "areas/al-mughrazat.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-mughrazat.json"
+  ],
+  "areas/al-mursalat.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-mursalat.json"
+  ],
+  "areas/al-nuzha.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-nuzha.json"
+  ],
+  "areas/al-waha.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-waha.json"
+  ],
+  "areas/al-izdihar.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-izdihar.json"
+  ],
+  "areas/al-khuzama.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-khuzama.json"
+  ],
+  "areas/al-thumamah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-thumamah.json"
+  ],
+  "areas/king-abdullah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/king-abdullah.json"
+  ],
+  "areas/king-khalid.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/king-khalid.json"
+  ],
+  "areas/al-rafiah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-rafiah.json"
+  ],
+  "areas/al-andalus.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-andalus.json"
+  ],
+  "areas/al-zahra.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-zahra.json"
+  ],
+  "areas/al-mather.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-mather.json"
+  ],
+  "areas/umm-al-hamam-west.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/umm-al-hamam-west.json"
+  ],
+  "areas/al-aqrabiyah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-aqrabiyah.json"
+  ],
+  "areas/al-olaya.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-olaya.json"
+  ],
+  "areas/al-faisaliyah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-faisaliyah.json"
+  ],
+  "areas/al-mutamarat.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-mutamarat.json"
+  ],
+  "areas/al-safa.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-safa.json"
+  ],
+  "areas/al-rahmaniyah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-rahmaniyah.json"
+  ],
+  "areas/al-wurud.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-wurud.json"
+  ],
+  "areas/al-murabba.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-murabba.json"
+  ],
+  "areas/al-foutah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-foutah.json"
+  ],
+  "areas/al-wizarat.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-wizarat.json"
+  ],
+  "areas/al-malaz.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-malaz.json"
+  ],
+  "areas/skakah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/skakah.json"
+  ],
+  "areas/al-mansourah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-mansourah.json"
+  ],
+  "areas/al-shumaisi.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-shumaisi.json"
+  ],
+  "areas/al-dubbat.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-dubbat.json"
+  ],
+  "areas/al-batha.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-batha.json"
+  ],
+  "areas/manfouha.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/manfouha.json"
+  ],
+  "areas/al-oud.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-oud.json"
+  ],
+  "areas/al-murqab.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-murqab.json"
+  ],
+  "areas/qurtubah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/qurtubah.json"
+  ],
+  "areas/al-yarmuk.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-yarmuk.json"
+  ],
+  "areas/ishbiliyah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/ishbiliyah.json"
+  ],
+  "areas/al-khalij.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-khalij.json"
+  ],
+  "areas/al-rawdah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-rawdah.json"
+  ],
+  "areas/al-hamra.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-hamra.json"
+  ],
+  "areas/al-rimal.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-rimal.json"
+  ],
+  "areas/al-naseem-east.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-naseem-east.json"
+  ],
+  "areas/al-naseem-west.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-naseem-west.json"
+  ],
+  "areas/al-munsiyah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-munsiyah.json"
+  ],
+  "areas/al-falah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-falah.json"
+  ],
+  "areas/al-nahdah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-nahdah.json"
+  ],
+  "areas/al-saadah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-saadah.json"
+  ],
+  "areas/al-maizaliyah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-maizaliyah.json"
+  ],
+  "areas/al-shuhada.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-shuhada.json"
+  ],
+  "areas/al-rawabi.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-rawabi.json"
+  ],
+  "areas/al-manar.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-manar.json"
+  ],
+  "areas/al-janadriyah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-janadriyah.json"
+  ],
+  "areas/al-qadisiyah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-qadisiyah.json"
+  ],
+  "areas/al-namudhajiyah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-namudhajiyah.json"
+  ],
+  "areas/al-dubiyat.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-dubiyat.json"
+  ],
+  "areas/al-farooq.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-farooq.json"
+  ],
+  "areas/al-rayyan-east.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-rayyan-east.json"
+  ],
+  "areas/al-salam-east.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-salam-east.json"
+  ],
+  "areas/al-jamiyah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-jamiyah.json"
+  ],
+  "areas/al-nasriyah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-nasriyah.json"
+  ],
+  "areas/al-khaleej-north.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-khaleej-north.json"
+  ],
+  "areas/al-dahiyah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-dahiyah.json"
+  ],
+  "areas/al-rabwah-east.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-rabwah-east.json"
+  ],
+  "areas/al-shemaysi-east.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-shemaysi-east.json"
+  ],
+  "areas/al-aziziyah-east.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-aziziyah-east.json"
+  ],
+  "areas/al-sinaiyah-east.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-sinaiyah-east.json"
+  ],
+  "areas/dhahrat-laban.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/dhahrat-laban.json"
+  ],
+  "areas/al-suwaidi.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-suwaidi.json"
+  ],
+  "areas/al-ariqah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-ariqah.json"
+  ],
+  "areas/al-sultanah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-sultanah.json"
+  ],
+  "areas/laban.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/laban.json"
+  ],
+  "areas/al-duraihimiyah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-duraihimiyah.json"
+  ],
+  "areas/tuwaiq.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/tuwaiq.json"
+  ],
+  "areas/namar.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/namar.json"
+  ],
+  "areas/al-awali.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-awali.json"
+  ],
+  "areas/al-badee.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-badee.json"
+  ],
+  "areas/al-mahdiyah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-mahdiyah.json"
+  ],
+  "areas/al-hazm-west.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-hazm-west.json"
+  ],
+  "areas/al-suwaidi-west.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-suwaidi-west.json"
+  ],
+  "areas/diriyah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/diriyah.json"
+  ],
+  "areas/al-uyaynah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-uyaynah.json"
+  ],
+  "areas/al-jubailah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-jubailah.json"
+  ],
+  "areas/shubra.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/shubra.json"
+  ],
+  "areas/al-awaly-west.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-awaly-west.json"
+  ],
+  "areas/al-ghroob.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-ghroob.json"
+  ],
+  "areas/al-hada-west.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-hada-west.json"
+  ],
+  "areas/al-mahamid.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-mahamid.json"
+  ],
+  "areas/al-salam-west.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-salam-west.json"
+  ],
+  "areas/al-aziziyah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-aziziyah.json"
+  ],
+  "areas/al-shifa.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-shifa.json"
+  ],
+  "areas/badr.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/badr.json"
+  ],
+  "areas/al-maseef.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-maseef.json"
+  ],
+  "areas/al-manakh.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-manakh.json"
+  ],
+  "areas/al-marwah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-marwah.json"
+  ],
+  "areas/al-yamamah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-yamamah.json"
+  ],
+  "areas/al-dar-al-bayda.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-dar-al-bayda.json"
+  ],
+  "areas/al-uqayqiyah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-uqayqiyah.json"
+  ],
+  "areas/khashm-al-an.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/khashm-al-an.json"
+  ],
+  "areas/al-hazm-south.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-hazm-south.json"
+  ],
+  "areas/al-iskan-south.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-iskan-south.json"
+  ],
+  "areas/al-shemaysi-south.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-shemaysi-south.json"
+  ],
+  "areas/al-fakhriyah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-fakhriyah.json"
+  ],
+  "areas/al-mansourah-south.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-mansourah-south.json"
+  ],
+  "areas/al-shaab.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-shaab.json"
+  ],
+  "areas/al-zahra-south.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-zahra-south.json"
+  ],
+  "areas/al-safa-south.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-safa-south.json"
+  ],
+  "areas/al-rawdah-south.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-rawdah-south.json"
+  ],
+  "areas/al-nafl-south.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-nafl-south.json"
+  ],
+  "areas/al-ajwad.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-ajwad.json"
+  ],
+  "areas/al-masani.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-masani.json"
+  ],
+  "areas/al-shubra-south.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-shubra-south.json"
+  ],
+  "areas/al-amal.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-amal.json"
+  ],
+  "areas/al-sinaiyah.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-sinaiyah.json"
+  ],
+  "areas/al-nakhil-central.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-nakhil-central.json"
+  ],
+  "areas/al-faiha.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-faiha.json"
+  ],
+  "areas/al-wadi-east.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-wadi-east.json"
+  ],
+  "areas/al-ghadir-east.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-ghadir-east.json"
+  ],
+  "areas/al-narjis-east.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-narjis-east.json"
+  ],
+  "areas/al-yasmin-south.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-yasmin-south.json"
+  ],
+  "areas/al-malqa-east.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-malqa-east.json"
+  ],
+  "areas/al-sahafa-south.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-sahafa-south.json"
+  ],
+  "areas/al-arid-west.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-arid-west.json"
+  ],
+  "areas/al-nafal-north.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-nafal-north.json"
+  ],
+  "areas/al-qirawan-east.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-qirawan-east.json"
+  ],
+  "areas/al-rabie-west.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-rabie-west.json"
+  ],
+  "areas/al-nakheel-north.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-nakheel-north.json"
+  ],
+  "blog/bathroom-waterproofing-riyadh-guide.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/blog/bathroom-waterproofing-riyadh-guide.json"
+  ],
+  "blog/roof-insulation-save-electricity-riyadh.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/blog/roof-insulation-save-electricity-riyadh.json"
+  ],
+  "blog/signs-roof-needs-waterproofing.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/blog/signs-roof-needs-waterproofing.json"
+  ],
+  "blog/ac-condensation-leaks-riyadh-homes.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/blog/ac-condensation-leaks-riyadh-homes.json"
+  ],
+  "blog/waterproofing-warranty-checklist.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/blog/waterproofing-warranty-checklist.json"
+  ],
+  "blog/best-waterproofing-riyadh-climate.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/blog/best-waterproofing-riyadh-climate.json"
+  ],
+  "blog/detect-water-leaks-without-tiling.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/blog/detect-water-leaks-without-tiling.json"
+  ],
+  "blog/foam-insulation-commercial-warehouses.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/blog/foam-insulation-commercial-warehouses.json"
+  ],
+  "blog/roof-insulation-maintenance-schedule.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/blog/roof-insulation-maintenance-schedule.json"
+  ],
+  "blog/tank-leaks-building-foundation.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/blog/tank-leaks-building-foundation.json"
+  ],
+  "blog/cement-vs-epoxy-waterproofing.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/blog/cement-vs-epoxy-waterproofing.json"
+  ]
+}

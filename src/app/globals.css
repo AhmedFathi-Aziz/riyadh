@@ -155,6 +155,15 @@ body {
   box-shadow: 0 8px 32px rgba(0, 30, 64, 0.12);
 }
 
+/* Material Symbols — self-hosted for LCP (no Google Fonts CDN) */
+@font-face {
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/material-symbols-outlined.woff2") format("woff2");
+}
+
 /* Material Symbols — MUST set font-family + LTR or icons show as text in RTL */
 .material-symbols-outlined {
   font-family: "Material Symbols Outlined";

@@ -1,6 +1,9 @@
 import { siteImages } from "@/lib/media/images";
 
-/** Central site configuration — update phone, URL, and email before production. */
+const DEFAULT_STREET =
+  "طريق الملك فهد، حي الصحافة، الرياض";
+
+/** Central site configuration — override via NEXT_PUBLIC_* env vars before production. */
 export const siteConfig = {
   name: "ManzilCare",
   legalName: "ManzilCare",
@@ -13,12 +16,17 @@ export const siteConfig = {
   locale: "ar_SA",
   language: "ar",
   country: "SA",
-  phoneDisplay: "0500000000",
-  phoneE164: "+966500000000",
-  whatsapp: "966500000000",
-  email: "info@manzilcare.com",
+  phoneDisplay:
+    process.env.NEXT_PUBLIC_PHONE_DISPLAY?.trim() || "0500000000",
+  phoneE164:
+    process.env.NEXT_PUBLIC_PHONE_E164?.trim() || "+966500000000",
+  whatsapp:
+    process.env.NEXT_PUBLIC_WHATSAPP?.trim() || "966500000000",
+  email:
+    process.env.NEXT_PUBLIC_EMAIL?.trim() || "info@manzilcare.com",
   address: {
-    streetAddress: "الرياض، المملكة العربية السعودية",
+    streetAddress:
+      process.env.NEXT_PUBLIC_STREET_ADDRESS?.trim() || DEFAULT_STREET,
     addressLocality: "الرياض",
     addressRegion: "منطقة الرياض",
     postalCode: "11564",
@@ -99,3 +107,21 @@ export const siteConfig = {
     email: "mailto:info@manzilcare.com",
   },
 } as const;
+
+/** Single NAP string for footers and contact UI — matches LocalBusiness schema. */
+export function formatSiteAddress(): string {
+  const { streetAddress, addressLocality } = siteConfig.address;
+  if (streetAddress.includes(addressLocality)) {
+    return `${streetAddress}، المملكة العربية السعودية`;
+  }
+  return `${streetAddress}، ${addressLocality}، المملكة العربية السعودية`;
+}
+
+/** Human-readable phone for UI (supports spaced env override). */
+export function formatPhoneDisplay(): string {
+  const raw = siteConfig.phoneDisplay.replace(/\D/g, "");
+  if (raw.length === 10 && raw.startsWith("05")) {
+    return `${raw.slice(0, 4)} ${raw.slice(4, 7)} ${raw.slice(7)}`;
+  }
+  return siteConfig.phoneDisplay;
+}

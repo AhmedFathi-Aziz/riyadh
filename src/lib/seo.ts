@@ -66,7 +66,7 @@ export function getBaseMetadata(): Metadata {
     siteConfig;
 
   const defaultTitle = formatPageTitle(
-    "كشف تسربات المياه بالرياض",
+    "ManzilCare — كشف تسربات وعزل مائي بالرياض",
     DEFAULT_TITLE_SUFFIX,
   );
   const ogImage = images.hero.src;
@@ -125,7 +125,9 @@ export function getBaseMetadata(): Metadata {
       },
     },
     verification: {
-      // google: "YOUR_GOOGLE_SEARCH_CONSOLE_CODE",
+      ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim()
+        ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION.trim() }
+        : {}),
     },
     other: {
       "geo.region": "SA-01",

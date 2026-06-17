@@ -1,10 +1,10 @@
 import { OptimizedImage } from "@/components/OptimizedImage";
 import Link from "next/link";
-import { siteConfig } from "@/lib/site";
+import { formatSiteAddress, siteConfig } from "@/lib/site";
 
 export function ServicesFooter() {
   const year = new Date().getFullYear();
-  const { phoneE164, email, address } = siteConfig;
+  const { phoneE164, email } = siteConfig;
 
   return (
     <footer className="w-full bg-primary px-4 py-12 text-on-primary sm:px-gutter sm:py-margin-desktop rtl">
@@ -108,7 +108,7 @@ export function ServicesFooter() {
                   location_on
                 </span>
                 <span className="min-w-0 flex-1 text-body-md leading-relaxed">
-                  {address.addressLocality}، المملكة العربية السعودية
+                  {formatSiteAddress()}
                 </span>
               </li>
               <li className="flex items-start gap-3 text-on-primary/80">

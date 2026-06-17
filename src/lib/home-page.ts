@@ -1,8 +1,8 @@
-/** SEO content for the homepage — primary keyword: كشف تسربات المياه بالرياض */
+/** SEO content for the homepage — brand hub; head term targets /services/leak-detection-water-riyadh */
 export const homePageMeta = {
-  title: "كشف تسربات المياه بالرياض — معاينة مجانية الآن",
+  title: "ManzilCare — كشف تسربات وعزل مائي بالرياض",
   description:
-    "كشف تسربات المياه بالرياض بدون تكسير — أجهزة صوتية وحرارية، معاينة مجانية في كل الأحياء، تقرير مصور، وضمان حتى 10 سنوات. اتصل بـ ManzilCare اليوم.",
+    "ManzilCare — كشف تسربات المياه وعزل الأسطح والخزانات بالرياض. معاينة مجانية، فحص بدون تكسير، تقرير مصور، وضمان حتى 10 سنوات. اتصل اليوم.",
   path: "/",
 } as const;
 

@@ -1,16 +1,26 @@
+import { loadJsonLdGraph } from "@/lib/seo/load-jsonld-graph";
+
 /**
- * JSON-LD عبر ملف خارجي (public/seo/graphs) — يمنع تكرار FAQPage في حمولة RSC لـ Next.js.
- * الملفات تُولَّد في prebuild: scripts/generate-jsonld-graphs.ts
+ * Inline JSON-LD for Google rich results.
+ * Production HTML is injected post-build (scripts/inline-jsonld-html.mjs) to avoid
+ * Next.js RSC payload duplicating schema. Dev mode inlines here for preview.
  */
 type PageStructuredDataProps = {
   graphPath: string;
 };
 
 export function PageStructuredData({ graphPath }: PageStructuredDataProps) {
+  if (process.env.NODE_ENV === "production") {
+    return null;
+  }
+
+  const graphs = loadJsonLdGraph(graphPath);
+  if (graphs.length === 0) return null;
+
   return (
     <script
       type="application/ld+json"
-      src={graphPath}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(graphs) }}
       suppressHydrationWarning
     />
   );

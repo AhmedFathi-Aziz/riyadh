@@ -11,6 +11,15 @@ export type BreadcrumbItem = {
   path: string;
 };
 
+/** Plain text for schema.org — strips markdown links and bold. */
+export function sanitizeSchemaText(text: string): string {
+  return text
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/\*\*([^*]+)\*\*/g, "$1")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 export function formatPageTitle(title: string, suffix?: string): string {
   const s = suffix ?? "ManzilCare";
   return `${title} | ${s}`;
@@ -122,7 +131,7 @@ export function buildFaqSchema(faqs: FaqItem[]) {
       name: faq.question,
       acceptedAnswer: {
         "@type": "Answer",
-        text: faq.answer,
+        text: sanitizeSchemaText(faq.answer),
       },
     })),
   };

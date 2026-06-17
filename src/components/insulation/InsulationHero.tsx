@@ -30,13 +30,22 @@ export function InsulationHero() {
             {hero.title}
           </h1>
           <p className="mb-8 text-body-lg opacity-90">{hero.subtitle}</p>
-          <Link
-            href={`tel:${siteConfig.phoneE164}`}
-            className={`inline-flex items-center justify-center gap-2 rounded-xl px-8 py-3 font-semibold hover:scale-[1.02] ${primaryCtaOnDark}`}
-          >
-            <Icon name="bolt" size="md" className="text-primary" />
-            احجز فحصاً مجانياً
-          </Link>
+          <div className="flex flex-wrap gap-4">
+            <Link
+              href={`tel:${siteConfig.phoneE164}`}
+              className={`inline-flex items-center justify-center gap-2 rounded-xl px-8 py-3 font-semibold hover:scale-[1.02] ${primaryCtaOnDark}`}
+            >
+              <Icon name="bolt" size="md" className="text-primary" />
+              احجز فحصاً مجانياً
+            </Link>
+            <Link
+              href="/services/roof-insulation-riyadh"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-on-primary/80 bg-on-primary/10 px-8 py-3 font-semibold text-on-primary backdrop-blur-sm transition-colors hover:bg-on-primary/20"
+            >
+              <Icon name="wb_sunny" size="md" />
+              عزل أسطح بالرياض — التفاصيل
+            </Link>
+          </div>
         </div>
       </div>
     </section>

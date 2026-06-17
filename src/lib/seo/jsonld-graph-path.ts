@@ -1,4 +1,4 @@
-/** مسارات ملفات JSON-LD المُولَّدة في prebuild — تُربط بـ script src لتجنب تكرار Schema في HTML */
+/** مسارات ملفات JSON-LD المُولَّدة في prebuild — تُحمَّل inline عبر loadJsonLdGraph() */
 /** slugs عربية → اسم ملف ASCII لتفادي مشاكل Windows/dev */
 const JSONLD_GRAPH_FILE_SLUGS: Record<string, string> = {
   "عزل-مائي-بالرياض": "waterproofing-riyadh",

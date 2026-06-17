@@ -1,5 +1,5 @@
 /**
- * بعد next build: يتأكد أن HTML لا يحتوي FAQPage مضمّناً (سبب Duplicate field في Search Console).
+ * After inline-jsonld-html: validates production HTML has parseable inline JSON-LD.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -19,6 +19,16 @@ function walkHtml(dir, files = []) {
   return files;
 }
 
+function extractInlineLdJson(html) {
+  const blocks = [];
+  const re = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g;
+  let match;
+  while ((match = re.exec(html)) !== null) {
+    blocks.push(match[1]);
+  }
+  return blocks;
+}
+
 const htmlFiles = walkHtml(outDir);
 if (htmlFiles.length === 0) {
   console.error("verify-jsonld-html: no HTML in out/ — run npm run build first");
@@ -28,31 +38,40 @@ if (htmlFiles.length === 0) {
 const offenders = [];
 for (const file of htmlFiles) {
   const html = fs.readFileSync(file, "utf8");
-  const faqCount = (html.match(/FAQPage/g) ?? []).length;
-  if (faqCount > 0) {
-    offenders.push({ file: path.relative(root, file), faqCount });
+  const rel = path.relative(outDir, file).replace(/\\/g, "/");
+  const srcScripts = (html.match(/type="application\/ld\+json" src="/g) ?? []).length;
+  const blocks = extractInlineLdJson(html);
+
+  if (srcScripts > 0) {
+    offenders.push({ file: rel, reason: `external ld+json src (${srcScripts})` });
+  }
+  if (blocks.length === 0 && rel !== "404.html" && rel !== "_not-found.html") {
+    offenders.push({ file: rel, reason: "no inline ld+json" });
+  }
+
+  let faqInLdJson = 0;
+  for (const block of blocks) {
+    try {
+      const parsed = JSON.parse(block);
+      const items = Array.isArray(parsed) ? parsed : [parsed];
+      faqInLdJson += items.filter((item) => item["@type"] === "FAQPage").length;
+    } catch {
+      offenders.push({ file: rel, reason: "invalid JSON-LD JSON" });
+    }
+  }
+  if (faqInLdJson > 1) {
+    offenders.push({ file: rel, reason: `duplicate FAQPage in ld+json (${faqInLdJson})` });
   }
 }
 
 if (offenders.length > 0) {
-  console.error("verify-jsonld-html: inline FAQPage found in HTML:");
-  for (const o of offenders) console.error(`  ${o.file}: ${o.faqCount}`);
+  console.error("verify-jsonld-html: structured data issues:");
+  for (const o of offenders) {
+    console.error(`  ${o.file}: ${o.reason}`);
+  }
   process.exit(1);
 }
 
-const sample = path.join(outDir, "services", "leak-detection-no-damage-riyadh.html");
-if (fs.existsSync(sample)) {
-  const html = fs.readFileSync(sample, "utf8");
-  const srcScripts = (html.match(/type="application\/ld\+json" src="/g) ?? []).length;
-  const inlineScripts = (html.match(/type="application\/ld\+json">/g) ?? []).length;
-  if (srcScripts < 2 || inlineScripts > 0) {
-    console.error(
-      `verify-jsonld-html: expected 2 external ld+json scripts and 0 inline on sample page (src=${srcScripts}, inline=${inlineScripts})`,
-    );
-    process.exit(1);
-  }
-}
-
 console.log(
-  `verify-jsonld-html: OK — ${htmlFiles.length} pages, no inline FAQPage`,
+  `verify-jsonld-html: OK — ${htmlFiles.length} pages with inline JSON-LD`,
 );

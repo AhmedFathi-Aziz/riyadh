@@ -6,13 +6,14 @@
     "node": ">=20"
   },
   "scripts": {
-    "predev": "npm run seo && npm run favicons",
+    "predev": "npm run seo && npm run favicons && npm run fonts:material",
     "dev": "next dev",
     "seo": "node scripts/generate-static-seo.mjs",
     "favicons": "python scripts/generate-favicons.py",
-    "prebuild": "node scripts/verify-no-metadata-routes.mjs && node scripts/verify-public-images.mjs && node scripts/generate-static-seo.mjs && npx tsx scripts/generate-jsonld-graphs.ts && npm run typecheck",
+    "fonts:material": "node scripts/copy-material-symbols-font.mjs",
+    "prebuild": "node scripts/verify-no-metadata-routes.mjs && node scripts/verify-public-images.mjs && npm run fonts:material && node scripts/generate-static-seo.mjs && npx tsx scripts/generate-jsonld-graphs.ts && npm run typecheck",
     "build": "next build",
-    "postbuild": "node scripts/verify-jsonld-html.mjs",
+    "postbuild": "node scripts/inline-jsonld-html.mjs && node scripts/verify-jsonld-html.mjs",
     "deploy:cloudflare": "npm run build && npx wrangler pages deploy out --project-name=manzilcare",
     "preview:static": "npx serve out",
     "start": "next start",
@@ -34,6 +35,7 @@
     "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
+    "@fontsource/material-symbols-outlined": "^5.2.45",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

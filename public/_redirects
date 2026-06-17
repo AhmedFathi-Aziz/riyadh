@@ -1,0 +1,4 @@
+# Apex HTTPS — Cloudflare Pages static redirects
+http://manzilcare.com/* https://manzilcare.com/:splat 301
+http://www.manzilcare.com/* https://manzilcare.com/:splat 301
+https://www.manzilcare.com/* https://manzilcare.com/:splat 301

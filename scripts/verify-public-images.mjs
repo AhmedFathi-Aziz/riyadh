@@ -102,4 +102,24 @@ if (missing.length > 0) {
   process.exit(1);
 }
 
+const MAX_HERO_BYTES = 180_000;
+const heroOversized = [];
+for (const name of required) {
+  if (!/-hero(-1080)?\.webp$/i.test(name)) continue;
+  const filePath = path.join(imagesDir, name);
+  if (!fs.existsSync(filePath)) continue;
+  const size = fs.statSync(filePath).size;
+  if (size > MAX_HERO_BYTES) {
+    heroOversized.push({ name, size });
+  }
+}
+
+if (heroOversized.length > 0) {
+  console.error("Hero images exceed LCP size budget:");
+  for (const { name, size } of heroOversized) {
+    console.error(`  - ${name}: ${Math.round(size / 1024)}KB (max ${MAX_HERO_BYTES / 1024}KB)`);
+  }
+  process.exit(1);
+}
+
 console.log(`verify-public-images: OK (${required.size} assets in public/images/)`);

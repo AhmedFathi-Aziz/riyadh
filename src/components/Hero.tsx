@@ -16,7 +16,7 @@ export function Hero() {
       <div className="relative z-20 flex flex-1 flex-col justify-center bg-white px-gutter py-12 shadow-soft-lg lg:py-20 lg:shadow-[-12px_0_40px_rgba(0,30,64,0.1)]">
         <div className="mx-auto w-full max-w-xl lg:mx-0">
           <h1 className="mb-6 text-display-lg-mobile leading-tight font-bold text-primary md:text-display-lg">
-            كشف تسربات المياه بالرياض
+            ManzilCare — كشف تسربات وعزل مائي في الرياض
           </h1>
           <p className="mb-10 text-body-lg text-on-surface-muted">
             <strong className="font-semibold text-primary">

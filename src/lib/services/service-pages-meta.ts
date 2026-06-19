@@ -228,6 +228,23 @@ export const servicePagesMeta: ServicePageMeta[] = [
       "كشف-تسربات-الخزانات-بالرياض",
     ],
   },
+  {
+    slug: "leak-detection-al-arid",
+    keyword: "كشف تسربات المياه حي العارض",
+    title: "كشف تسربات المياه حي العارض — شمال الرياض",
+    description:
+      "كشف تسربات المياه في حي العارض بالرياض — أجهزة صوتية وحرارية، بدون تكسير، معاينة مجانية، وضمان مكتوب. احجز مع ManzilCare.",
+    coverImage: "leak-detection-water-riyadh-hero.webp",
+    imageAlt:
+      "فريق ManzilCare يكشف تسرب مياه في فيلا بحي العارض شمال الرياض بأجهزة دقيقة",
+    icon: "search_check",
+    relatedSlugs: [
+      "leak-detection-water-riyadh",
+      "leak-detection-no-damage-riyadh",
+      "leak-repair-water-riyadh",
+      "كشف-تسربات-الخزانات-بالرياض",
+    ],
+  },
 ];
 
 /** الصفحات التفصيلية المعروضة في سيكشن مميز على /services */

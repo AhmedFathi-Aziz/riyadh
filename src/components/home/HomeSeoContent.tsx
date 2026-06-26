@@ -2,6 +2,7 @@ import Link from "next/link";
 import {
   homeSeoSections,
   homeServiceLinks,
+  homeAreaLinks,
 } from "@/lib/home-page";
 import { siteConfig } from "@/lib/site";
 
@@ -114,6 +115,32 @@ export function HomeSeoContent() {
                 className="text-label-sm font-semibold text-primary hover:underline"
               >
                 عرض جميع الخدمات ←
+              </Link>
+            </p>
+          </div>
+
+          <div className="mb-10 rounded-2xl border border-outline-variant/30 bg-surface-container-low p-6 sm:p-8">
+            <h3 className="mb-4 text-body-lg font-bold text-primary">
+              أحياء الرياض التي نخدمها
+            </h3>
+            <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+              {homeAreaLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-body-md font-semibold text-secondary hover:underline"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4">
+              <Link
+                href="/areas"
+                className="text-label-sm font-semibold text-primary hover:underline"
+              >
+                عرض جميع أحياء الرياض ←
               </Link>
             </p>
           </div>

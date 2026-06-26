@@ -93,3 +93,38 @@ export const homeServiceLinks = [
     label: "عزل خزانات بالرياض",
   },
 ] as const;
+
+export const homeAreaLinks = [
+  {
+    href: "/areas/al-narjis",
+    label: "حي النرجس",
+  },
+  {
+    href: "/areas/al-yasmin",
+    label: "حي الياسمين",
+  },
+  {
+    href: "/areas/al-malqa",
+    label: "حي الملقا",
+  },
+  {
+    href: "/areas/hittin",
+    label: "حي حطين",
+  },
+  {
+    href: "/areas/al-sahafa",
+    label: "حي الصحافة",
+  },
+  {
+    href: "/areas/al-arid",
+    label: "حي العارض",
+  },
+  {
+    href: "/areas/al-aqiq",
+    label: "حي العقيق",
+  },
+  {
+    href: "/areas/qurtubah",
+    label: "حي قرطبة",
+  },
+] as const;

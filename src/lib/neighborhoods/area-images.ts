@@ -6,6 +6,8 @@ const NEIGHBORHOOD_NAMES: Partial<Record<string, string>> = {
   "al-narjis": "النرجس",
   "al-yasmin": "الياسمين",
   "al-malqa": "الملقا",
+  "hittin": "حطين",
+  "al-arid": "العارض",
 };
 
 export function getNeighborhoodDisplayName(slug: string, fallback: string): string {
@@ -75,6 +77,42 @@ const AREA_IMAGE_CONFIG: Partial<Record<string, AreaImageConfig>> = {
       caption: `حي ${NEIGHBORHOOD_NAMES["al-malqa"]} — فلل فاخرة ومسابح خاصة قرب بوليفارد الرياض`,
     },
     midSplitBefore: "## مشاكل التسرب",
+  },
+  "hittin": {
+    hero: {
+      src: "/images/areas/hittin-neighborhood.webp",
+      alt: "حي حطين شمال غرب الرياض — فلل فاخرة بمسابح خاصة وشوارع واسعة",
+      width: 1536,
+      height: 864,
+      blurDataURL: IMAGE_BLUR,
+    },
+    mid: {
+      src: "/images/pool-leak-detection-riyadh-hero-1080.webp",
+      alt: "فيلا فاخرة بمسبح خاص في حي حطين — كشف تسربات المسابح ManzilCare",
+      width: 1080,
+      height: 608,
+      blurDataURL: IMAGE_BLUR,
+      caption: `حي ${NEIGHBORHOOD_NAMES["hittin"]} — فلل فاخرة ومسابح خاصة في شمال غرب الرياض`,
+    },
+    midSplitBefore: "## مشاكل التسرب والعزل الأكثر شيوعاً في حي حطين",
+  },
+  "al-arid": {
+    hero: {
+      src: "/images/areas/al-arid-neighborhood.webp",
+      alt: "حي العارض شمال الرياض — فلل متوسطة وعمائر حديثة وشوارع واسعة",
+      width: 1536,
+      height: 864,
+      blurDataURL: IMAGE_BLUR,
+    },
+    mid: {
+      src: "/images/services-roof-insulation-riyadh.png",
+      alt: "فيلا متوسطة في حي العارض — عزل الأسطح وكشف التسربات ManzilCare",
+      width: 1024,
+      height: 686,
+      blurDataURL: IMAGE_BLUR,
+      caption: `حي ${NEIGHBORHOOD_NAMES["al-arid"]} — فلل متوسطة وعمائر حديثة في توسع سكني شمالي`,
+    },
+    midSplitBefore: "## مشاكل التسرب والعزل الشائعة في حي العارض",
   },
 };
 

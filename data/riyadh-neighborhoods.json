@@ -1428,5 +1428,15 @@
     "landmark": "شمال النخيل",
     "housingNote": "فلل",
     "featured": false
+  },
+  {
+    "slug": "al-nada",
+    "nameAr": "الندى",
+    "region": "north",
+    "profile": "villa_luxury",
+    "era": "growth_2000s",
+    "landmark": "طريق الملك فهد",
+    "housingNote": "فلل فاخرة وشقق عصرية مع تصميمات حديثة",
+    "featured": true
   }
 ]

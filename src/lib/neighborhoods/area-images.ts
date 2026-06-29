@@ -9,6 +9,7 @@ const NEIGHBORHOOD_NAMES: Partial<Record<string, string>> = {
   "hittin": "حطين",
   "al-arid": "العارض",
   "al-sahafa": "الصحافة",
+  "al-nada": "الندى",
 };
 
 export function getNeighborhoodDisplayName(slug: string, fallback: string): string {
@@ -132,6 +133,24 @@ const AREA_IMAGE_CONFIG: Partial<Record<string, AreaImageConfig>> = {
       caption: `حي ${NEIGHBORHOOD_NAMES["al-sahafa"]} — قرب طريق الملك فهد، فلل وعمائر ومحلات تجارية`,
     },
     midSplitBefore: "## مشاكل التسرب والعزل الأكثر شيوعاً في حي الصحافة",
+  },
+  "al-nada": {
+    hero: {
+      src: insulationImages.portfolioFoam.src,
+      alt: "فيلا فاخرة في حي الندى شمال الرياض على طريق الملك فهد — كشف تسربات وعزل ManzilCare",
+      width: insulationImages.portfolioFoam.width,
+      height: insulationImages.portfolioFoam.height,
+      blurDataURL: insulationImages.portfolioFoam.blurDataURL,
+    },
+    mid: {
+      src: "/images/areas/al-nada-neighborhood.webp",
+      alt: "حي الندى شمال الرياض على طريق الملك فهد — فلل فاخرة وشقق عصرية بتصميمات حديثة",
+      width: 1536,
+      height: 864,
+      blurDataURL: IMAGE_BLUR,
+      caption: `حي ${NEIGHBORHOOD_NAMES["al-nada"]} — فلل فاخرة وشقق عصرية على طريق الملك فهد`,
+    },
+    midSplitBefore: "## مشاكل التسرب والعزل الشائعة في حي الندى",
   },
 };
 

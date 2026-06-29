@@ -83,6 +83,10 @@
     "seo/graphs/site.json",
     "seo/graphs/services/leak-detection-no-damage-riyadh.json"
   ],
+  "services/leak-detection-al-arid.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/services/leak-detection-al-arid.json"
+  ],
   "areas/al-narjis.html": [
     "seo/graphs/site.json",
     "seo/graphs/areas/al-narjis.json"
@@ -654,6 +658,10 @@
   "areas/al-nakheel-north.html": [
     "seo/graphs/site.json",
     "seo/graphs/areas/al-nakheel-north.json"
+  ],
+  "areas/al-nada.html": [
+    "seo/graphs/site.json",
+    "seo/graphs/areas/al-nada.json"
   ],
   "blog/bathroom-waterproofing-riyadh-guide.html": [
     "seo/graphs/site.json",
